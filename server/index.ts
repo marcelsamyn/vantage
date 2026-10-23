@@ -5,6 +5,7 @@ import { coreSource } from "./core";
 import { serverConfig } from "./lib/config";
 import { json } from "./lib/http";
 import { log } from "./lib/log";
+import { absoluteShareUrls } from "./lib/share";
 import { collectProbes, discoverPluginSources, makeGuard, mountAssets, mountSources } from "./lib/router";
 import { extraLoginsFromEnv, readTailnet, tailnetAccess } from "./lib/tailnet";
 
@@ -45,22 +46,22 @@ async function apiRoutes(): Promise<AppRoutes> {
 }
 
 /**
- * The icons and screenshots the web app manifest names (see scripts/manifest.ts). The bundler serves the manifest under
- * a hashed name but leaves the paths inside it alone, so these need fixed URLs, the same in development and production.
+ * The icons and screenshots the web app manifest names (see scripts/manifest.ts), and the link-preview image index.html
+ * names. The bundler leaves these paths alone, so they need fixed URLs, the same in development and production.
  */
-async function manifestFiles(): Promise<AppRoutes> {
+async function fixedImages(): Promise<AppRoutes> {
   const routes: AppRoutes = {};
-  for (const dir of ["icons", "screenshots"]) {
-    for await (const name of new Bun.Glob("*.png").scan({ cwd: join(ROOT, "app", dir) })) {
-      const bytes = await Bun.file(join(ROOT, "app", dir, name)).bytes();
-      routes[`/${dir}/${name}`] = new Response(bytes, { headers: { "content-type": "image/png", "cache-control": "public, max-age=86400" } });
+  for (const dir of ["icons", "screenshots", "social"]) {
+    for await (const name of new Bun.Glob("*.{png,jpg}").scan({ cwd: join(ROOT, "app", dir) })) {
+      const file = Bun.file(join(ROOT, "app", dir, name));
+      routes[`/${dir}/${name}`] = new Response(await file.bytes(), { headers: { "content-type": file.type, "cache-control": "public, max-age=86400" } });
     }
   }
   return routes;
 }
 
 async function frontend(): Promise<AppRoutes> {
-  const icons = await manifestFiles();
+  const icons = await fixedImages();
   if (!production) {
     const { default: index } = await import("../app/index.html");
     return { "/": index, ...icons };
@@ -71,6 +72,10 @@ async function frontend(): Promise<AppRoutes> {
   await rm(outdir, { recursive: true, force: true });
   const build = await Bun.build({ entrypoints: [join(ROOT, "app", "index.html")], outdir, splitting: true, minify: true, target: "browser" });
   if (!build.success) throw new AggregateError(build.logs, "Frontend build failed");
+  if (config.origin) {
+    const page = Bun.file(join(outdir, "index.html"));
+    await Bun.write(page, absoluteShareUrls(await page.text(), config.origin));
+  }
   // No other page may frame the app and trick clicks onto its controls.
   const headers = { "content-security-policy": "frame-ancestors 'none'", "x-frame-options": "DENY" };
   return {

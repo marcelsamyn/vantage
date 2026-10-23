@@ -16,7 +16,7 @@ Open <http://localhost:4747>. To use another address, set `VANTAGE_ORIGIN` to th
 VANTAGE_ORIGIN=https://vantage.example.com docker compose up --build -d
 ```
 
-A hosted origin enables the `0.0.0.0:4747` listener. Requests must use its host, and browser Origin checks still apply. A reverse proxy must preserve `Host` or set `X-Forwarded-Host` to the configured host. TLS normally ends at the proxy. Camera, microphone, GPS and orientation permissions require HTTPS outside localhost.
+The origin also makes link previews work: the server writes it into the page's Open Graph and X card tags, which need absolute URLs for the preview image (`app/social/og.jpg`). A hosted origin enables the `0.0.0.0:4747` listener. Requests must use its host, and browser Origin checks still apply. A reverse proxy must preserve `Host` or set `X-Forwarded-Host` to the configured host. TLS normally ends at the proxy. Camera, microphone, GPS and orientation permissions require HTTPS outside localhost.
 
 The image runs as the `bun` user. It includes production dependencies and builds the split browser bundle at startup, as the local production app does. It has no host filesystem, Docker socket or host-network mount. The `private/` tree, secrets and local state are excluded from the image.
 
