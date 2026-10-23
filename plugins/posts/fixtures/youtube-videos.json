@@ -1,0 +1,75 @@
+{
+ "kind": "youtube#videoListResponse",
+ "etag": "Cd1yL1oJ9Zm8pB5tR0nS2eW4uQk",
+ "items": [
+  {
+   "kind": "youtube#video",
+   "etag": "vH0oRzEo2C7tTL4hJx9g4QkXyZ0",
+   "id": "Xo3sRbF1k2M",
+   "snippet": {
+    "publishedAt": "2026-10-09T04:12:03Z",
+    "channelId": "UCaB1cD2eF3gH4iJ5kL6mN7o",
+    "title": "Roma LIVE: Piazza Navona webcam",
+    "description": "Live from Piazza Navona.",
+    "tags": ["rome", "webcam", "piazza navona"],
+    "thumbnails": {
+     "default": { "url": "https://i.ytimg.com/vi/Xo3sRbF1k2M/default_live.jpg", "width": 120, "height": 90 },
+     "medium": { "url": "https://i.ytimg.com/vi/Xo3sRbF1k2M/mqdefault_live.jpg", "width": 320, "height": 180 },
+     "high": { "url": "https://i.ytimg.com/vi/Xo3sRbF1k2M/hqdefault_live.jpg", "width": 480, "height": 360 }
+    },
+    "channelTitle": "Example Channel Roma",
+    "categoryId": "19",
+    "liveBroadcastContent": "live",
+    "localized": { "title": "Roma LIVE: Piazza Navona webcam", "description": "Live from Piazza Navona." }
+   },
+   "recordingDetails": { "location": { "latitude": 41.8992, "longitude": 12.4731, "altitude": 0 }, "locationDescription": "Piazza Navona" },
+   "liveStreamingDetails": { "actualStartTime": "2026-10-09T04:12:30Z", "scheduledStartTime": "2026-10-09T04:10:00Z", "concurrentViewers": "1342", "activeLiveChatId": "Cg0KC1hvM3NSYkYxazJN" }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "aB2cD3eF4gH5iJ6kL7mN8oP9qR0",
+   "id": "pT7wQe9LmNa",
+   "snippet": {
+    "publishedAt": "2026-10-08T22:00:00Z",
+    "channelId": "UCzZ9yY8xX7wW6vV5uU4tT3s",
+    "title": "Night walk through Trastevere",
+    "description": "",
+    "thumbnails": { "default": { "url": "https://i.ytimg.com/vi/pT7wQe9LmNa/default_live.jpg", "width": 120, "height": 90 } },
+    "channelTitle": "Walker Example",
+    "liveBroadcastContent": "live"
+   },
+   "recordingDetails": {},
+   "liveStreamingDetails": { "actualStartTime": "2026-10-08T22:00:12Z", "concurrentViewers": "88" }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "sT1uV2wX3yZ4aB5cD6eF7gH8iJ9",
+   "id": "Zr4kLm8QwEr",
+   "snippet": {
+    "publishedAt": "2026-10-09T03:00:00Z",
+    "channelId": "UCqQ1wW2eE3rR4tT5yY6uU7i",
+    "title": "Tiber river cam",
+    "thumbnails": { "default": { "url": "https://i.ytimg.com/vi/Zr4kLm8QwEr/default_live.jpg", "width": 120, "height": 90 } },
+    "channelTitle": "River Example",
+    "liveBroadcastContent": "live"
+   },
+   "recordingDetails": { "location": { "latitude": 41.8857, "longitude": 12.4776 } },
+   "liveStreamingDetails": { "actualStartTime": "2026-10-09T03:00:05Z" }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "kL0mN1oP2qR3sT4uV5wX6yZ7aB8",
+   "id": "Hq2pVn6TzXc",
+   "snippet": {
+    "publishedAt": "2026-10-08T18:00:00Z",
+    "channelId": "UCmM1nN2bB3vV4cC5xX6zZ7l",
+    "title": "Concert replay",
+    "channelTitle": "Venue Example",
+    "liveBroadcastContent": "none"
+   },
+   "recordingDetails": { "location": { "latitude": 41.9, "longitude": 12.48 } },
+   "liveStreamingDetails": { "actualStartTime": "2026-10-08T18:00:00Z", "actualEndTime": "2026-10-08T20:00:00Z" }
+  }
+ ],
+ "pageInfo": { "totalResults": 4, "resultsPerPage": 4 }
+}

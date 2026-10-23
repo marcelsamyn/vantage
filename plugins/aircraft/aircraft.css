@@ -1,0 +1,253 @@
+.aircraft-tile {
+  display: flex;
+  align-items: center;
+  gap: var(--s5);
+}
+
+.aircraft-scope {
+  position: relative;
+  flex: none;
+}
+.aircraft-scope__plot {
+  position: relative;
+  display: block;
+  overflow: visible;
+}
+.aircraft-scope__ring {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-width: 1;
+}
+/* A wedge of 0.5 rad from north, inside the outer ring (radius: half the scope less 2 px). */
+.aircraft-scope__sweep {
+  position: absolute;
+  inset: 1.2%;
+  border-radius: 50%;
+  background: conic-gradient(rgba(255, 181, 71, 0.08) 0 28.65deg, transparent 28.65deg);
+  animation: aircraft-sweep 4s linear infinite var(--v-loop);
+}
+.aircraft-scope__blip {
+  cursor: pointer;
+}
+.aircraft-scope__blip path {
+  fill: var(--sodium);
+  opacity: 0.7;
+  transition: opacity var(--fast);
+}
+.aircraft-scope__blip:hover path {
+  opacity: 1;
+}
+.aircraft-scope__blip--near path {
+  fill: var(--bone);
+  opacity: 1;
+}
+.aircraft-scope__you {
+  fill: var(--ice);
+}
+
+.aircraft-tile__stats {
+  display: grid;
+  gap: var(--s4);
+  min-width: 0;
+}
+.aircraft-tile__call {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 72;
+  font-size: var(--t-h3);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.aircraft-tile__alerts {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  min-width: 0;
+  margin-top: var(--s4);
+  padding-top: var(--s3);
+  border-top: 1px solid var(--line);
+  color: var(--fog);
+  font-size: var(--t-small);
+}
+.aircraft-tile__squawks ul {
+  display: grid;
+  gap: var(--s2);
+  margin: var(--s3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ── A list row: thumbnail, then the text that opens the profile ── */
+.aircraft-row {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  min-width: 0;
+}
+.aircraft-row__open {
+  display: grid;
+  flex: 1;
+  gap: 2px;
+  min-width: 0;
+  min-height: 32px;
+  padding: 6px 8px;
+  margin: -6px -8px;
+  border-radius: var(--radius);
+  text-align: left;
+  color: var(--bone);
+  transition: background-color var(--fast);
+}
+.aircraft-row__open:hover {
+  background: rgba(226, 234, 240, 0.05);
+}
+.aircraft-row__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--t-small);
+}
+/* Wraps rather than cuts: Planespotters asks for the photographer's name in full next to the photo. */
+.aircraft-row__credit {
+  overflow-wrap: anywhere;
+  font-family: var(--font-data);
+  font-size: 10px;
+  color: var(--ash);
+}
+.aircraft-thumb {
+  flex: none;
+  display: block;
+  width: 64px;
+  height: 43px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--raise);
+}
+.aircraft-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Profile ───────────────────────────────────────────────────── */
+.aircraft-photo {
+  margin: 0 0 var(--s3);
+}
+.aircraft-photo__frame {
+  display: block;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--raise);
+}
+.aircraft-photo__frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform var(--fast) var(--ease-out);
+}
+a.aircraft-photo__frame:hover img {
+  transform: scale(1.02);
+}
+.aircraft-photo figcaption {
+  margin-top: var(--s1);
+  font-family: var(--font-data);
+  font-size: 10px;
+}
+.aircraft-photo__credit {
+  color: var(--fog);
+  text-decoration: none;
+}
+a.aircraft-photo__credit:hover {
+  color: var(--ice);
+  text-decoration: underline;
+}
+
+.aircraft-rows {
+  margin-bottom: var(--s3);
+}
+.aircraft-rows + .aircraft-rows {
+  padding-top: var(--s3);
+  border-top: 1px solid var(--line);
+}
+
+/* Identifiers that open a page or a profile: quiet until pointed at. */
+.aircraft-id {
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: var(--line-bright);
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: color var(--fast), text-decoration-color var(--fast);
+}
+.aircraft-id:hover,
+.aircraft-id:focus-visible {
+  color: var(--ice);
+  text-decoration-color: var(--ice);
+}
+.aircraft-id__extra {
+  color: var(--fog);
+}
+
+.aircraft-note {
+  margin: 0 0 var(--s3);
+  font-size: var(--t-small);
+  color: var(--fog);
+}
+
+.aircraft-badges {
+  display: grid;
+  gap: var(--s3);
+}
+.aircraft-badge {
+  display: grid;
+  gap: var(--s2);
+  justify-items: start;
+  padding: var(--s3);
+  border-left: 2px solid var(--sodium);
+  background: rgba(255, 181, 71, 0.06);
+}
+.aircraft-badge--alarm {
+  border-left-color: var(--alarm);
+  background: rgba(255, 79, 94, 0.08);
+}
+.aircraft-badge p {
+  margin: 0;
+  color: var(--fog);
+  font-size: var(--t-small);
+  line-height: 1.5;
+}
+
+@keyframes aircraft-sweep {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@container tile (max-width: 380px) {
+  .aircraft-scope__plot {
+    width: 128px;
+    height: 128px;
+  }
+  .aircraft-tile {
+    gap: var(--s4);
+  }
+  .aircraft-tile__stats .aircraft-thumb {
+    width: 48px;
+    height: 32px;
+  }
+}
+
+/* Touch: finger-sized targets. */
+@media (max-width: 720px), (pointer: coarse) {
+  .aircraft-row__open {
+    min-height: 40px;
+  }
+  .aircraft-thumb {
+    min-width: 60px;
+    min-height: 40px;
+  }
+}

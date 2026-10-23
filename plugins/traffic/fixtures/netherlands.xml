@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<messageContainer modelBaseVersion="3">
+  <payload type="sit:SituationPublication" lang="nl" modelBaseVersion="3">
+    <publicationTime>2026-10-11T08:42:00.003082678Z</publicationTime>
+    <publicationCreator>
+      <country>nl</country>
+      <nationalIdentifier>NDWNL</nationalIdentifier>
+    </publicationCreator>
+    <situation id="NDW18_5db53aee-5bfc-44e5-b941-a860a315e879_SIT">
+      <overallSeverity>high</overallSeverity>
+      <situationVersionTime>2026-09-29T18:10:17.011553895Z</situationVersionTime>
+      <headerInformation>
+        <confidentiality>noRestriction</confidentiality>
+        <informationStatus>real</informationStatus>
+      </headerInformation>
+      <situationRecord type="sit:RoadOrCarriagewayOrLaneManagement" id="NDW18_5db53aee-5bfc-44e5-b941-a860a315e879" version="1">
+        <situationRecordCreationReference>NDW03_553513_RSC_835968_AB</situationRecordCreationReference>
+        <situationRecordCreationTime>2026-09-24T18:51:15.481976044Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-09-29T18:10:17.011553895Z</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <source>
+          <sourceName>
+            <values>
+              <value lang="nl">Provincie Overijssel</value>
+            </values>
+          </sourceName>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <overrunning>false</overrunning>
+          <validityTimeSpecification>
+            <overallStartTime>2026-09-24T18:51:15.481976044Z</overallStartTime>
+            <overallEndTime>2026-11-06T15:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <cause>
+          <causeType>roadMaintenance</causeType>
+        </cause>
+        <locationReference type="loc:ItineraryByIndexedLocations">
+          <locationContainedInItinerary index="0">
+            <location type="loc:LinearLocation">
+              <gmlLineString srsName="WGS 84">
+                <posList>52.58548 6.128689 52.584437 6.129386 52.584316 6.129493 52.584178 6.129663 52.584022 6.129953 52.583876 6.130365 52.58379 6.130761 52.58377 6.130982 52.583768 6.1312 52.583798 6.131563 52.584314 6.135899 52.584414 6.136918 52.58513 6.144934 52.586561 6.16165 52.588066 6.179205 52.588089 6.179937 52.588019 6.182145 52.587999 6.182427 52.587959 6.182713 52.587812 6.18325 52.585402 6.189832</posList>
+              </gmlLineString>
+            </location>
+          </locationContainedInItinerary>
+        </locationReference>
+        <operatorActionStatus>approved</operatorActionStatus>
+        <complianceOption>mandatory</complianceOption>
+        <roadOrCarriagewayOrLaneManagementType>carriagewayClosures</roadOrCarriagewayOrLaneManagementType>
+      </situationRecord>
+    </situation>
+    <situation id="NDW18_3f0c15c7-741e-4c95-815d-074d15899e17_SIT">
+      <overallSeverity>medium</overallSeverity>
+      <situationVersionTime>2026-09-29T18:10:16.999359807Z</situationVersionTime>
+      <headerInformation>
+        <confidentiality>noRestriction</confidentiality>
+        <informationStatus>real</informationStatus>
+      </headerInformation>
+      <situationRecord type="sit:RoadOrCarriagewayOrLaneManagement" id="NDW18_3f0c15c7-741e-4c95-815d-074d15899e17" version="1">
+        <situationRecordCreationReference>NDW03_614242_RSC_827741_AB</situationRecordCreationReference>
+        <situationRecordCreationTime>2026-09-25T05:03:15.659885639Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-09-29T18:10:16.999359807Z</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <source>
+          <sourceName>
+            <values>
+              <value lang="nl">Gemeente Nuenen, Gerwen en Nederwetten</value>
+            </values>
+          </sourceName>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <overrunning>false</overrunning>
+          <validityTimeSpecification>
+            <overallStartTime>2026-09-25T05:03:15.659885639Z</overallStartTime>
+            <overallEndTime>2026-09-30T14:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <cause>
+          <causeType>roadMaintenance</causeType>
+        </cause>
+        <locationReference type="loc:ItineraryByIndexedLocations">
+          <locationContainedInItinerary index="0">
+            <location type="loc:LinearLocation">
+              <gmlLineString srsName="WGS 84">
+                <posList>51.460438 5.529982 51.460548 5.530266 51.461512 5.532297</posList>
+              </gmlLineString>
+            </location>
+          </locationContainedInItinerary>
+        </locationReference>
+        <operatorActionStatus>approved</operatorActionStatus>
+        <complianceOption>mandatory</complianceOption>
+        <roadOrCarriagewayOrLaneManagementType>carriagewayClosures</roadOrCarriagewayOrLaneManagementType>
+      </situationRecord>
+    </situation>
+    <situation id="NDW18_211d1072-87e4-4f4f-b1a1-cea2c59c29eb_SIT">
+      <overallSeverity>medium</overallSeverity>
+      <situationVersionTime>2026-10-05T15:03:18.380227379Z</situationVersionTime>
+      <headerInformation>
+        <confidentiality>noRestriction</confidentiality>
+        <informationStatus>real</informationStatus>
+      </headerInformation>
+      <situationRecord type="sit:RoadOrCarriagewayOrLaneManagement" id="NDW18_211d1072-87e4-4f4f-b1a1-cea2c59c29eb" version="1">
+        <situationRecordCreationReference>NDW03_629691_RSC_852744_AB</situationRecordCreationReference>
+        <situationRecordCreationTime>2026-10-05T15:03:18.380227379Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-10-05T15:03:18.380227379Z</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <source>
+          <sourceName>
+            <values>
+              <value lang="nl">Gemeente Wierden</value>
+            </values>
+          </sourceName>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <overrunning>false</overrunning>
+          <validityTimeSpecification>
+            <overallStartTime>2026-10-05T15:03:18.380227379Z</overallStartTime>
+            <overallEndTime>2026-10-23T14:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <cause>
+          <causeType>roadMaintenance</causeType>
+        </cause>
+        <locationReference type="loc:ItineraryByIndexedLocations">
+          <locationContainedInItinerary index="0">
+            <location type="loc:LinearLocation">
+              <gmlLineString srsName="WGS 84">
+                <posList>52.359973 6.574267 52.360011 6.57439 52.359961 6.574465 52.359944 6.574573 52.359982 6.574708 52.360031 6.574752 52.360079 6.574757 52.360128 6.574727 52.360167 6.574657 52.360231 6.574707</posList>
+              </gmlLineString>
+            </location>
+          </locationContainedInItinerary>
+        </locationReference>
+        <operatorActionStatus>approved</operatorActionStatus>
+        <complianceOption>mandatory</complianceOption>
+        <roadOrCarriagewayOrLaneManagementType>carriagewayClosures</roadOrCarriagewayOrLaneManagementType>
+      </situationRecord>
+    </situation>
+    <situation id="RWS01_SM1170125_D2_WWA">
+      <overallSeverity>medium</overallSeverity>
+      <situationVersionTime>2026-09-21T05:14:01Z</situationVersionTime>
+      <headerInformation>
+        <confidentiality>noRestriction</confidentiality>
+        <informationStatus>real</informationStatus>
+      </headerInformation>
+      <situationRecord type="sit:RoadOrCarriagewayOrLaneManagement" id="RWS01_M1170125_CLOSED_LANES_D2_WWA" version="33">
+        <situationRecordCreationReference>RWS01_M1170125_CLOSED_LANES_D2</situationRecordCreationReference>
+        <situationRecordCreationTime>2026-08-03T13:21:55Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-09-21T05:14:01Z</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <source>
+          <sourceName>
+            <values>
+              <value lang="nl">NN-O [RWS Noord Nederland District Oost]</value>
+            </values>
+          </sourceName>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <overrunning>true</overrunning>
+          <validityTimeSpecification>
+            <overallStartTime>2026-09-21T05:13:59Z</overallStartTime>
+          </validityTimeSpecification>
+        </validity>
+        <impact>
+          <numberOfLanesRestricted>0</numberOfLanesRestricted>
+          <numberOfOperationalLanes>2</numberOfOperationalLanes>
+        </impact>
+        <cause>
+          <causeType>roadMaintenance</causeType>
+        </cause>
+        <locationReference type="loc:ItineraryByIndexedLocations">
+          <locationContainedInItinerary index="0">
+            <location type="loc:LinearLocation">
+              <supplementaryPositionalDescription>
+                <carriageway>
+                  <carriageway>exitSlipRoad</carriageway>
+                  <originalNumberOfLanes>2</originalNumberOfLanes>
+                </carriageway>
+              </supplementaryPositionalDescription>
+              <gmlLineString srsName="WGS 84">
+                <posList>52.972794 6.642632 52.972972 6.643419 52.973417 6.645162 52.973429 6.645428 52.973627 6.646274</posList>
+              </gmlLineString>
+            </location>
+          </locationContainedInItinerary>
+          <locationContainedInItinerary index="1">
+            <location type="loc:SingleRoadLinearLocation">
+              <supplementaryPositionalDescription>
+                <carriageway>
+                  <carriageway>exitSlipRoad</carriageway>
+                </carriageway>
+              </supplementaryPositionalDescription>
+              <alertCLinear type="loc:AlertCMethod4Linear">
+                <alertCLocationCountryCode>8</alertCLocationCountryCode>
+                <alertCLocationTableNumber>6.13</alertCLocationTableNumber>
+                <alertCLocationTableVersion>A</alertCLocationTableVersion>
+                <alertCDirection>
+                  <alertCDirectionCoded>positive</alertCDirectionCoded>
+                  <alertCAffectedDirection>aligned</alertCAffectedDirection>
+                </alertCDirection>
+                <alertCMethod4PrimaryPointLocation>
+                  <alertCLocation>
+                    <specificLocation>13701</specificLocation>
+                  </alertCLocation>
+                  <offsetDistance>
+                    <offsetDistance>350</offsetDistance>
+                  </offsetDistance>
+                </alertCMethod4PrimaryPointLocation>
+                <alertCMethod4SecondaryPointLocation>
+                  <alertCLocation>
+                    <specificLocation>21674</specificLocation>
+                  </alertCLocation>
+                  <offsetDistance>
+                    <offsetDistance>1990</offsetDistance>
+                  </offsetDistance>
+                </alertCMethod4SecondaryPointLocation>
+              </alertCLinear>
+            </location>
+          </locationContainedInItinerary>
+        </locationReference>
+        <operatorActionStatus>implemented</operatorActionStatus>
+        <complianceOption>mandatory</complianceOption>
+        <roadOrCarriagewayOrLaneManagementType>laneClosures</roadOrCarriagewayOrLaneManagementType>
+      </situationRecord>
+      <situationRecord type="sit:RoadOrCarriagewayOrLaneManagement" id="RWS01_M1170125_JUNCTION_CLOSURE_1_D2_WWA" version="33">
+        <situationRecordCreationReference>RWS01_M1170125_JUNCTION_CLOSURE_1_D2</situationRecordCreationReference>
+        <situationRecordCreationTime>2026-08-03T13:21:55Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-09-21T05:14:01Z</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <source>
+          <sourceName>
+            <values>
+              <value lang="nl">NN-O [RWS Noord Nederland District Oost]</value>
+            </values>
+          </sourceName>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <overrunning>true</overrunning>
+          <validityTimeSpecification>
+            <overallStartTime>2026-09-21T05:13:59Z</overallStartTime>
+            <validPeriod>
+              <startOfPeriod>2026-09-21T02:00:00Z</startOfPeriod>
+              <endOfPeriod>2026-10-09T15:00:00Z</endOfPeriod>
+            </validPeriod>
+          </validityTimeSpecification>
+        </validity>
+        <cause>
+          <causeType>roadMaintenance</causeType>
+        </cause>
+        <locationReference type="loc:ItineraryByIndexedLocations">
+          <locationContainedInItinerary index="0">
+            <location type="loc:LinearLocation">
+              <supplementaryPositionalDescription>
+                <carriageway>
+                  <carriageway>exitSlipRoad</carriageway>
+                </carriageway>
+              </supplementaryPositionalDescription>
+              <gmlLineString srsName="WGS 84">
+                <posList>52.9734169 6.6451618 52.9734291 6.6454276 52.9735793 6.6460503 52.9736102 6.6461903 52.9736382 6.6463317 52.9736636 6.6464857 52.9736826 6.646631 52.9736975 6.6467778 52.9737069 6.6469128 52.973713 6.6470609 52.9737151 6.6472099 52.9737144 6.6472843 52.9737076 6.6474733 52.9737029 6.6475473 52.9736903 6.6476948 52.9736674 6.6479042 52.9735802 6.6485846 52.9735646 6.6487313 52.9735528 6.648879 52.973546 6.6490173 52.973544 6.6491663 52.9735466 6.6493151 52.9735504 6.6493953 52.9735556 6.6494685 52.9735666 6.6495801 52.9735845 6.649724 52.9736068 6.6498681 52.9736448 6.6500814 52.9737318 6.6505042 52.9739335 6.6514596 52.9740934 6.6522033 52.9741043 6.6522704 52.9741327 6.6524467</posList>
+              </gmlLineString>
+            </location>
+          </locationContainedInItinerary>
+          <locationContainedInItinerary index="1">
+            <location type="loc:PointLocation">
+              <supplementaryPositionalDescription>
+                <carriageway>
+                  <carriageway>exitSlipRoad</carriageway>
+                </carriageway>
+              </supplementaryPositionalDescription>
+              <alertCPoint type="loc:AlertCMethod2Point">
+                <alertCLocationCountryCode>8</alertCLocationCountryCode>
+                <alertCLocationTableNumber>6.13</alertCLocationTableNumber>
+                <alertCLocationTableVersion>A</alertCLocationTableVersion>
+                <alertCDirection>
+                  <alertCDirectionCoded>positive</alertCDirectionCoded>
+                  <alertCAffectedDirection>aligned</alertCAffectedDirection>
+                </alertCDirection>
+                <alertCMethod2PrimaryPointLocation>
+                  <alertCLocation>
+                    <specificLocation>13701</specificLocation>
+                  </alertCLocation>
+                </alertCMethod2PrimaryPointLocation>
+              </alertCPoint>
+            </location>
+          </locationContainedInItinerary>
+        </locationReference>
+        <operatorActionStatus>implemented</operatorActionStatus>
+        <complianceOption>mandatory</complianceOption>
+        <roadOrCarriagewayOrLaneManagementType>carriagewayClosures</roadOrCarriagewayOrLaneManagementType>
+      </situationRecord>
+      <relatedSituation>
+        <objectReference targetClass="sit:Situation" id="RWS01_SM1170125_D2"></objectReference>
+      </relatedSituation>
+    </situation>
+    <situation id="RWS01_SM1172508_D2_WWA">
+      <overallSeverity>medium</overallSeverity>
+      <situationVersionTime>2026-10-09T19:00:24Z</situationVersionTime>
+      <headerInformation>
+        <confidentiality>noRestriction</confidentiality>
+        <informationStatus>real</informationStatus>
+      </headerInformation>
+      <situationRecord type="sit:SpeedManagement" id="RWS01_M1172508_SPEED_MANAGEMENT_D2_WWA" version="34">
+        <situationRecordCreationReference>RWS01_M1172508_SPEED_MANAGEMENT_D2</situationRecordCreationReference>
+        <situationRecordCreationTime>2026-08-13T16:02:17Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-10-09T19:00:24Z</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <source>
+          <sourceName>
+            <values>
+              <value lang="nl">ZN-W [RWS Zuid-Nederland District West]</value>
+            </values>
+          </sourceName>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-10-09T19:00:24Z</overallStartTime>
+            <overallEndTime>2026-10-12T03:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <cause>
+          <causeType>roadMaintenance</causeType>
+        </cause>
+        <locationReference type="loc:ItineraryByIndexedLocations">
+          <locationContainedInItinerary index="0">
+            <location type="loc:LinearLocation">
+              <supplementaryPositionalDescription>
+                <carriageway>
+                  <carriageway>mainCarriageway</carriageway>
+                </carriageway>
+              </supplementaryPositionalDescription>
+              <gmlLineString srsName="WGS 84">
+                <posList>51.643803 4.557729 51.652945 4.570493</posList>
+              </gmlLineString>
+            </location>
+          </locationContainedInItinerary>
+          <locationContainedInItinerary index="1">
+            <location type="loc:SingleRoadLinearLocation">
+              <supplementaryPositionalDescription>
+                <carriageway>
+                  <carriageway>mainCarriageway</carriageway>
+                </carriageway>
+              </supplementaryPositionalDescription>
+              <alertCLinear type="loc:AlertCMethod4Linear">
+                <alertCLocationCountryCode>8</alertCLocationCountryCode>
+                <alertCLocationTableNumber>6.13</alertCLocationTableNumber>
+                <alertCLocationTableVersion>A</alertCLocationTableVersion>
+                <alertCDirection>
+                  <alertCDirectionCoded>positive</alertCDirectionCoded>
+                  <alertCAffectedDirection>aligned</alertCAffectedDirection>
+                </alertCDirection>
+                <alertCMethod4PrimaryPointLocation>
+                  <alertCLocation>
+                    <specificLocation>7720</specificLocation>
+                  </alertCLocation>
+                  <offsetDistance>
+                    <offsetDistance>3900</offsetDistance>
+                  </offsetDistance>
+                </alertCMethod4PrimaryPointLocation>
+                <alertCMethod4SecondaryPointLocation>
+                  <alertCLocation>
+                    <specificLocation>7716</specificLocation>
+                  </alertCLocation>
+                  <offsetDistance>
+                    <offsetDistance>450</offsetDistance>
+                  </offsetDistance>
+                </alertCMethod4SecondaryPointLocation>
+              </alertCLinear>
+            </location>
+          </locationContainedInItinerary>
+        </locationReference>
+        <operatorActionStatus>implemented</operatorActionStatus>
+        <complianceOption>mandatory</complianceOption>
+        <speedManagementType>speedRestrictionInOperation</speedManagementType>
+        <temporarySpeedLimit>90</temporarySpeedLimit>
+      </situationRecord>
+      <situationRecord type="sit:RoadOrCarriagewayOrLaneManagement" id="RWS01_M1172508_CLOSED_LANES_D2_WWA" version="34">
+        <situationRecordCreationReference>RWS01_M1172508_CLOSED_LANES_D2</situationRecordCreationReference>
+        <situationRecordCreationTime>2026-08-13T16:02:17Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-10-09T19:00:24Z</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <source>
+          <sourceName>
+            <values>
+              <value lang="nl">ZN-W [RWS Zuid-Nederland District West]</value>
+            </values>
+          </sourceName>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-10-09T19:00:24Z</overallStartTime>
+            <overallEndTime>2026-10-12T03:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <impact>
+          <numberOfLanesRestricted>0</numberOfLanesRestricted>
+          <numberOfOperationalLanes>2</numberOfOperationalLanes>
+        </impact>
+        <cause>
+          <causeType>roadMaintenance</causeType>
+        </cause>
+        <locationReference type="loc:ItineraryByIndexedLocations">
+          <locationContainedInItinerary index="0">
+            <location type="loc:LinearLocation">
+              <supplementaryPositionalDescription>
+                <carriageway>
+                  <carriageway>mainCarriageway</carriageway>
+                  <originalNumberOfLanes>2</originalNumberOfLanes>
+                </carriageway>
+              </supplementaryPositionalDescription>
+              <gmlLineString srsName="WGS 84">
+                <posList>51.643803 4.557729 51.652945 4.570493</posList>
+              </gmlLineString>
+            </location>
+          </locationContainedInItinerary>
+          <locationContainedInItinerary index="1">
+            <location type="loc:SingleRoadLinearLocation">
+              <supplementaryPositionalDescription>
+                <carriageway>
+                  <carriageway>mainCarriageway</carriageway>
+                </carriageway>
+              </supplementaryPositionalDescription>
+              <alertCLinear type="loc:AlertCMethod4Linear">
+                <alertCLocationCountryCode>8</alertCLocationCountryCode>
+                <alertCLocationTableNumber>6.13</alertCLocationTableNumber>
+                <alertCLocationTableVersion>A</alertCLocationTableVersion>
+                <alertCDirection>
+                  <alertCDirectionCoded>positive</alertCDirectionCoded>
+                  <alertCAffectedDirection>aligned</alertCAffectedDirection>
+                </alertCDirection>
+                <alertCMethod4PrimaryPointLocation>
+                  <alertCLocation>
+                    <specificLocation>7720</specificLocation>
+                  </alertCLocation>
+                  <offsetDistance>
+                    <offsetDistance>3900</offsetDistance>
+                  </offsetDistance>
+                </alertCMethod4PrimaryPointLocation>
+                <alertCMethod4SecondaryPointLocation>
+                  <alertCLocation>
+                    <specificLocation>7716</specificLocation>
+                  </alertCLocation>
+                  <offsetDistance>
+                    <offsetDistance>450</offsetDistance>
+                  </offsetDistance>
+                </alertCMethod4SecondaryPointLocation>
+              </alertCLinear>
+            </location>
+          </locationContainedInItinerary>
+        </locationReference>
+        <operatorActionStatus>implemented</operatorActionStatus>
+        <complianceOption>mandatory</complianceOption>
+        <roadOrCarriagewayOrLaneManagementType>laneClosures</roadOrCarriagewayOrLaneManagementType>
+      </situationRecord>
+      <situationRecord type="sit:ReroutingManagement" id="RWS01_M1172508_REROUTING_1_D2_WWA" version="34">
+        <situationRecordCreationReference>RWS01_M1172508_REROUTING_1_D2</situationRecordCreationReference>
+        <situationRecordCreationTime>2026-08-13T16:02:17Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-10-09T19:00:24Z</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <source>
+          <sourceName>
+            <values>
+              <value lang="nl">ZN-W [RWS Zuid-Nederland District West]</value>
+            </values>
+          </sourceName>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-10-09T19:00:24Z</overallStartTime>
+            <overallEndTime>2026-10-12T03:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <cause>
+          <causeType>roadMaintenance</causeType>
+        </cause>
+        <locationReference type="loc:PointLocation">
+          <supplementaryPositionalDescription>
+            <carriageway>
+              <carriageway>mainCarriageway</carriageway>
+            </carriageway>
+          </supplementaryPositionalDescription>
+          <pointByCoordinates>
+            <bearing>50</bearing>
+            <pointCoordinates>
+              <latitude>51.63826</latitude>
+              <longitude>4.5487084</longitude>
+            </pointCoordinates>
+          </pointByCoordinates>
+          <alertCPoint type="loc:AlertCMethod4Point">
+            <alertCLocationCountryCode>8</alertCLocationCountryCode>
+            <alertCLocationTableNumber>6.13</alertCLocationTableNumber>
+            <alertCLocationTableVersion>A</alertCLocationTableVersion>
+            <alertCDirection>
+              <alertCDirectionCoded>positive</alertCDirectionCoded>
+              <alertCAffectedDirection>aligned</alertCAffectedDirection>
+            </alertCDirection>
+            <alertCMethod4PrimaryPointLocation>
+              <alertCLocation>
+                <specificLocation>7721</specificLocation>
+              </alertCLocation>
+              <offsetDistance>
+                <offsetDistance>0</offsetDistance>
+              </offsetDistance>
+            </alertCMethod4PrimaryPointLocation>
+          </alertCPoint>
+        </locationReference>
+        <operatorActionStatus>implemented</operatorActionStatus>
+        <complianceOption>advisory</complianceOption>
+        <reroutingManagementType>followDiversionSigns</reroutingManagementType>
+        <reroutingItineraryDescription>
+          <values>
+            <value lang="nl">Op de A17 van knooppunt Noordhoek richting knooppunt Klaverpolder is afrit 25 Zevenbergen afgesloten. Het verkeer wordt d.m.v. tekstborden en routepijlen omgeleid via aansluiting 27 Moerdijk. [Volg route Z]</value>
+          </values>
+        </reroutingItineraryDescription>
+        <signedRerouting>true</signedRerouting>
+        <alternativeRoute type="loc:ItineraryByIndexedLocations">
+          <locationContainedInItinerary index="0">
+            <location type="loc:LinearLocation">
+              <gmlLineString srsName="WGS 84">
+                <posList>51.638259 4.548709 51.639292 4.550776 51.639981 4.552053 51.640823 4.553466 51.641599 4.554643 51.660818 4.581488 51.661433 4.582368 51.661824 4.582965 51.662277 4.583695 51.662752 4.584504 51.663649 4.58618 51.664408 4.587775 51.665072 4.589346 51.665717 4.591064 51.666266 4.592718 51.666722 4.594278 51.666979 4.59525 51.668603 4.601684 51.669118 4.603475 51.669591 4.60493 51.670048 4.606202 51.670484 4.607298 51.670867 4.608208 51.671586 4.609761 51.672241 4.611037 51.672745 4.611948 51.673415 4.613064 51.673982 4.613939 51.688985 4.635876 51.689064 4.63612 51.68949 4.636824 51.689664 4.637143 51.689827 4.637511 51.689969 4.637926 51.690101 4.638478 51.690183 4.6391 51.690206 4.639708 51.690206 4.640667 51.69028 4.641313 51.690441 4.641924 51.69052 4.642126 51.690726 4.642557 51.690877 4.642805 51.691748 4.644131 51.691934 4.643708 51.69285 4.64193 51.693393 4.640917 51.693702 4.640295 51.693908 4.639917 51.69423 4.639421 51.694194 4.639262 51.694046 4.63909 51.693127 4.637842</posList>
+              </gmlLineString>
+            </location>
+          </locationContainedInItinerary>
+        </alternativeRoute>
+      </situationRecord>
+      <situationRecord type="sit:RoadOrCarriagewayOrLaneManagement" id="RWS01_M1172508_JUNCTION_CLOSURE_1_D2_WWA" version="34">
+        <situationRecordCreationReference>RWS01_M1172508_JUNCTION_CLOSURE_1_D2</situationRecordCreationReference>
+        <situationRecordCreationTime>2026-08-13T16:02:17Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-10-09T19:00:24Z</situationRecordVersionTime>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <source>
+          <sourceName>
+            <values>
+              <value lang="nl">ZN-W [RWS Zuid-Nederland District West]</value>
+            </values>
+          </sourceName>
+        </source>
+        <validity>
+          <validityStatus>definedByValidityTimeSpec</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-10-09T19:00:24Z</overallStartTime>
+            <overallEndTime>2026-10-12T03:00:00Z</overallEndTime>
+            <validPeriod>
+              <startOfPeriod>2026-10-09T19:00:00Z</startOfPeriod>
+              <endOfPeriod>2026-10-12T03:00:00Z</endOfPeriod>
+            </validPeriod>
+          </validityTimeSpecification>
+        </validity>
+        <cause>
+          <causeType>roadMaintenance</causeType>
+        </cause>
+        <locationReference type="loc:ItineraryByIndexedLocations">
+          <locationContainedInItinerary index="0">
+            <location type="loc:LinearLocation">
+              <supplementaryPositionalDescription>
+                <carriageway>
+                  <carriageway>exitSlipRoad</carriageway>
+                </carriageway>
+              </supplementaryPositionalDescription>
+              <gmlLineString srsName="WGS 84">
+                <posList>51.6499258 4.5662777 51.6500764 4.5666175 51.6501401 4.5667198 51.6502022 4.5668243 51.6503132 4.5670225 51.6503705 4.5671342 51.6504536 4.5673052 51.6504799 4.5673639 51.6505552 4.5675436 51.650619 4.5677076 51.6506646 4.5678322 51.6507084 4.5679584 51.6507662 4.5681375 51.6508049 4.5682681 51.6508419 4.5683997 51.6508764 4.5685331 51.6509092 4.5686679 51.6509805 4.5689816 51.651148 4.5697559 51.6511945 4.5699594 51.6512285 4.5700931 51.6512656 4.5702292 51.6512854 4.5702948 51.6513291 4.5704212 51.6513521 4.5704832 51.6513982 4.5705954 51.6514517 4.5707116 51.6515092 4.5708227 51.6515652 4.5709191 51.6516298 4.5710187 51.6516637 4.5710662 51.6517336 4.5711591 51.651805 4.5712461 51.651879 4.5713282 51.6519167 4.5713675 51.6519557 4.5714037 51.6520277 4.571459 51.6521273 4.5715263 51.6521516 4.5715162 51.6523155 4.5715837 51.6524388 4.5716344</posList>
+              </gmlLineString>
+            </location>
+          </locationContainedInItinerary>
+          <locationContainedInItinerary index="1">
+            <location type="loc:PointLocation">
+              <supplementaryPositionalDescription>
+                <carriageway>
+                  <carriageway>exitSlipRoad</carriageway>
+                </carriageway>
+              </supplementaryPositionalDescription>
+              <alertCPoint type="loc:AlertCMethod2Point">
+                <alertCLocationCountryCode>8</alertCLocationCountryCode>
+                <alertCLocationTableNumber>6.13</alertCLocationTableNumber>
+                <alertCLocationTableVersion>A</alertCLocationTableVersion>
+                <alertCDirection>
+                  <alertCDirectionCoded>positive</alertCDirectionCoded>
+                  <alertCAffectedDirection>aligned</alertCAffectedDirection>
+                </alertCDirection>
+                <alertCMethod2PrimaryPointLocation>
+                  <alertCLocation>
+                    <specificLocation>7717</specificLocation>
+                  </alertCLocation>
+                </alertCMethod2PrimaryPointLocation>
+              </alertCPoint>
+            </location>
+          </locationContainedInItinerary>
+        </locationReference>
+        <operatorActionStatus>implemented</operatorActionStatus>
+        <complianceOption>mandatory</complianceOption>
+        <roadOrCarriagewayOrLaneManagementType>carriagewayClosures</roadOrCarriagewayOrLaneManagementType>
+      </situationRecord>
+      <relatedSituation>
+        <objectReference targetClass="sit:Situation" id="RWS01_SM1172508_D2"></objectReference>
+      </relatedSituation>
+    </situation>
+  </payload>
+  <exchangeInformation modelBaseVersion="3">
+    <exchangeContext>
+      <codedExchangeProtocol>snapshotPull</codedExchangeProtocol>
+      <exchangeSpecificationVersion>3</exchangeSpecificationVersion>
+      <supplierOrCisRequester>
+        <internationalIdentifier>
+          <country>nl</country>
+          <nationalIdentifier>NDWNL</nationalIdentifier>
+        </internationalIdentifier>
+      </supplierOrCisRequester>
+    </exchangeContext>
+    <dynamicInformation>
+      <exchangeStatus>online</exchangeStatus>
+      <messageGenerationTimestamp>2026-10-11T08:42:00.003082678Z</messageGenerationTimestamp>
+    </dynamicInformation>
+  </exchangeInformation>
+</messageContainer>

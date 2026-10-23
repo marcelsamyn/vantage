@@ -1,0 +1,138 @@
+/* Fonts — latin subsets only, bundled locally so the app works offline.
+   Big Shoulders was commissioned by the City of Chicago, the city Watch Dogs is set in. */
+@font-face {
+  font-family: "Big Shoulders";
+  font-style: normal;
+  font-display: block;
+  font-weight: 100 900;
+  src: url("../../node_modules/@fontsource-variable/big-shoulders/files/big-shoulders-latin-standard-normal.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "Plex Sans";
+  font-style: normal;
+  font-display: block;
+  font-weight: 100 700;
+  font-stretch: 85% 100%;
+  src: url("../../node_modules/@fontsource-variable/ibm-plex-sans/files/ibm-plex-sans-latin-standard-normal.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "Plex Mono";
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src: url("../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plex Mono";
+  font-style: normal;
+  font-display: block;
+  font-weight: 500;
+  src: url("../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plex Mono";
+  font-style: normal;
+  font-display: block;
+  font-weight: 600;
+  src: url("../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-600-normal.woff2") format("woff2");
+}
+
+:root {
+  color-scheme: dark;
+
+  /* Surfaces: a city at night. Blue-black, never pure black. */
+  --void: #05070a;
+  --deep: #0a0e13;
+  --raise: #10161d;
+  --glass: rgba(9, 13, 18, 0.78);
+  --line: rgba(226, 234, 240, 0.08);
+  --line-strong: rgba(226, 234, 240, 0.16);
+  --line-bright: rgba(226, 234, 240, 0.32);
+
+  /* Ink */
+  --bone: #e6ecf0;
+  --fog: #8b97a3;
+  --ash: #56616d;
+
+  /* Signal colours carry meaning — use them only for what they mean.
+     ice:    you, your devices, selection, interactive focus
+     sodium: live signals from the outside world (aircraft, satellites, radio, quakes) — the colour of street lights
+     alarm:  surveillance, danger, failures
+     mint:   healthy / good / available */
+  --ice: #82e4ff;
+  --ice-dim: rgba(130, 228, 255, 0.14);
+  --sodium: #ffb547;
+  --sodium-dim: rgba(255, 181, 71, 0.14);
+  --alarm: #ff4f5e;
+  --alarm-dim: rgba(255, 79, 94, 0.14);
+  --mint: #6ff2b4;
+  --mint-dim: rgba(111, 242, 180, 0.12);
+
+  /* Type */
+  --font-display: "Big Shoulders", "Arial Narrow", sans-serif;
+  --font-ui: "Plex Sans", system-ui, sans-serif;
+  --font-data: "Plex Mono", ui-monospace, "SF Mono", monospace;
+
+  --t-micro: 10.5px;
+  --t-small: 12px;
+  --t-body: 13.5px;
+  --t-lead: 16px;
+  --t-h3: 22px;
+  --t-h2: 34px;
+  --t-h1: 56px;
+  --t-hero: 112px;
+
+  /* Space (4px rhythm) */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+
+  --radius: 3px;
+  --rail: 64px;
+  --bar: 44px;
+  --ticker: 34px;
+  /* The phone tab bar under the ticker, including the home-indicator inset; 0 where the rail shows instead.
+     Anything pinned to the bottom of the screen sits at `calc(var(--ticker) + var(--tabbar))`. */
+  --tabbar: 0px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --fast: 140ms;
+  --med: 260ms;
+  --slow: 520ms;
+  /* Play state of every ambient loop: `animation: name 2s linear infinite var(--v-loop)`. See app/core/motion.ts. */
+  --v-loop: running;
+
+  --shadow-pop: 0 0 0 1px var(--line-strong), 0 18px 48px -12px rgba(0, 0, 0, 0.7), 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Layout sizes per device. They live here, after the defaults, because the production bundle may place other
+   stylesheets before this one: an override in another file would then lose to the default it overrides. */
+/* Touch screens of any size: the ticker becomes finger-sized. */
+@media (pointer: coarse) {
+  :root {
+    --ticker: 40px;
+  }
+}
+
+/* Phones: a tab bar instead of the rail. The bar and the tab bar reach under the status bar and the home
+   indicator, and pad their content clear of them. */
+@media (max-width: 720px) {
+  :root {
+    --rail: 0px;
+    --bar: calc(44px + env(safe-area-inset-top));
+    --ticker: 40px;
+    --tabbar: calc(56px + env(safe-area-inset-bottom));
+  }
+}
+
+/* Hidden, idle for a while, or reduced motion: ambient loops hold their phase until the next input. */
+:root[data-motion="rest"] {
+  --v-loop: paused;
+}

@@ -1,0 +1,12 @@
+{
+ "kind": "youtube#searchListResponse",
+ "etag": "q4ibjmYp1KA3RqMF4jFLl6PBwOk",
+ "regionCode": "IT",
+ "pageInfo": { "totalResults": 4, "resultsPerPage": 50 },
+ "items": [
+  { "kind": "youtube#searchResult", "etag": "1kKdTV4L7bdx6CvmHgZ9q9i5DeE", "id": { "kind": "youtube#video", "videoId": "Xo3sRbF1k2M" } },
+  { "kind": "youtube#searchResult", "etag": "Ug5bS8zEQZxvM2jY0Yb9pSAqf0A", "id": { "kind": "youtube#video", "videoId": "pT7wQe9LmNa" } },
+  { "kind": "youtube#searchResult", "etag": "mX0h3bN1h0v2bN9cK1aQ3yX7p6E", "id": { "kind": "youtube#video", "videoId": "Zr4kLm8QwEr" } },
+  { "kind": "youtube#searchResult", "etag": "7cZb9w0Qx2m3N4o5P6q7R8s9T0u", "id": { "kind": "youtube#video", "videoId": "Hq2pVn6TzXc" } }
+ ]
+}

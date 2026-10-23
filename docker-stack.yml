@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  vantage:
+    image: ${VANTAGE_IMAGE:-ghcr.io/marcelsamyn/vantage:latest}
+    environment:
+      VANTAGE_LOCAL: "0"
+      VANTAGE_ORIGIN: ${VANTAGE_ORIGIN:?Set VANTAGE_ORIGIN to the browser URL, for example https://vantage.example.com}
+    ports:
+      - target: 4747
+        published: 4747
+        protocol: tcp
+        mode: ingress
+    volumes:
+      - vantage-cache:/app/.cache
+      - vantage-data:/app/.data
+    stop_grace_period: 20s
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+      update_config:
+        parallelism: 1
+        order: stop-first
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+        order: stop-first
+
+volumes:
+  vantage-cache:
+  vantage-data:

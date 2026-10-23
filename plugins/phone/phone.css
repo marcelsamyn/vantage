@@ -1,0 +1,148 @@
+/* Every class here starts with "phone-" (enforced by bun run check). */
+
+.phone-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
+  gap: var(--s4);
+  align-items: start;
+}
+@media (max-width: 860px) {
+  .phone-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.phone-mono {
+  font-family: var(--font-data);
+  font-size: 0.92em;
+  color: var(--bone);
+  overflow-wrap: anywhere;
+}
+
+.phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s1);
+  color: var(--ice);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Setup checklist ─────────────────────────────────────────────── */
+.phone-steps {
+  display: grid;
+  gap: var(--s5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.phone-step {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: var(--s3);
+}
+.phone-step__n {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  font-family: var(--font-data);
+  font-size: var(--t-small);
+  color: var(--fog);
+}
+.phone-step[data-done="true"] .phone-step__n {
+  border-color: var(--mint);
+  background: var(--mint-dim);
+  color: var(--mint);
+}
+.phone-step__main {
+  min-width: 0;
+}
+.phone-step__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s2);
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: var(--t-lead);
+  font-weight: 500;
+  color: var(--bone);
+}
+.phone-step__state {
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+.phone-step[data-done="true"] .phone-step__state {
+  color: var(--mint);
+}
+.phone-step__body {
+  margin-top: var(--s2);
+  color: var(--fog);
+  font-size: var(--t-body);
+  line-height: 1.55;
+}
+.phone-step__body p {
+  margin: 0;
+}
+
+.phone-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s3);
+  margin-top: var(--s3);
+}
+.phone-live {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fog);
+}
+.phone-error {
+  margin: var(--s3) 0 0;
+  color: var(--alarm);
+  font-size: var(--t-small);
+}
+
+/* ── QR code ─────────────────────────────────────────────────────── */
+.phone-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.phone-code__frame {
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+  padding: var(--s2);
+  background: var(--bone);
+  border-radius: 2px;
+  box-shadow: 0 0 0 5px var(--void), 0 0 0 6px var(--line-strong);
+}
+.phone-code__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}
+.phone-code__url {
+  margin: var(--s4) 0 0;
+  font-size: var(--t-small);
+}
+.phone-tip {
+  margin: var(--s4) 0 0;
+  color: var(--fog);
+  font-size: var(--t-small);
+  line-height: 1.5;
+}

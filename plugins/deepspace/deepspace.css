@@ -1,0 +1,822 @@
+/* Every class here starts with "deepspace" (enforced by bun run check). */
+
+.deepspace {
+  display: grid;
+  gap: var(--s4);
+}
+.deepspace-fine {
+  max-width: 84ch;
+  color: var(--fog);
+  font-size: var(--t-small);
+  line-height: 1.5;
+}
+.deepspace-notice {
+  padding: var(--s3) var(--s4);
+  border-radius: var(--radius);
+  background: var(--ice-dim);
+  color: var(--bone);
+}
+
+/* ── Headline ─────────────────────────────────────────────────── */
+.deepspace-headline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s5) var(--s7);
+  padding: var(--s2) 0 var(--s3);
+}
+.deepspace-headline__lead {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+.deepspace-headline__name {
+  display: block;
+  margin-top: var(--s2);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--sodium);
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 800;
+  line-height: 0.9;
+  text-align: left;
+  text-transform: uppercase;
+  text-shadow: 0 0 40px rgba(255, 181, 71, 0.26);
+  cursor: pointer;
+  transition: color var(--fast) var(--ease-out);
+}
+.deepspace-headline__name:hover,
+.deepspace-headline__name:focus-visible {
+  color: var(--bone);
+  outline: none;
+}
+.deepspace-headline__sub {
+  margin-top: var(--s3);
+  color: var(--fog);
+  font-size: var(--t-lead);
+}
+.deepspace-headline__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s5) var(--s6);
+}
+
+/* ── Complexes ────────────────────────────────────────────────── */
+.deepspace-complexes {
+  display: grid;
+  gap: var(--s4);
+}
+.deepspace-complexes__rest {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s4);
+}
+@media (max-width: 1180px) {
+  .deepspace-complexes__rest {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.deepspace-complex__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s3) var(--s5);
+  padding-bottom: var(--s4);
+  margin-bottom: var(--s4);
+  box-shadow: 0 1px 0 var(--line);
+}
+.deepspace-complex__titles {
+  min-width: 0;
+}
+.deepspace-complex__titles .v-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+.deepspace-complex__name {
+  margin-top: var(--s2);
+  font-size: var(--t-h2);
+  font-weight: 800;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+.deepspace-complex--lead .deepspace-complex__name {
+  font-size: clamp(44px, 6vw, 72px);
+}
+.deepspace-complex__place {
+  margin-top: var(--s2);
+  color: var(--fog);
+  font-size: var(--t-body);
+}
+.deepspace-complex__near {
+  color: var(--ice);
+}
+.deepspace-complex__clock {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+  text-align: right;
+}
+.deepspace-complex__time {
+  font-family: var(--font-display);
+  font-size: var(--t-h3);
+  font-weight: 600;
+  color: var(--bone);
+}
+.deepspace-complex__sun {
+  font-size: var(--t-small);
+  color: var(--fog);
+}
+
+.deepspace-dishes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: var(--s3);
+}
+.deepspace-complex--lead .deepspace-dishes {
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
+
+/* ── One dish ─────────────────────────────────────────────────── */
+.deepspace-dish {
+  display: grid;
+  align-content: start;
+  gap: var(--s2);
+  min-width: 0;
+  padding: var(--s3);
+  border-radius: var(--radius);
+  background: rgba(5, 7, 10, 0.4);
+  box-shadow: inset 0 0 0 1px var(--line);
+  transition: box-shadow var(--med) var(--ease-out);
+}
+.deepspace-dish--live {
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 181, 71, 0.3),
+    inset 0 0 36px -12px rgba(255, 181, 71, 0.22);
+}
+.deepspace-rest {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: var(--s3);
+  margin-top: var(--s3);
+}
+.deepspace-resting {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  min-width: 0;
+  padding: var(--s2) var(--s3);
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 0 1px var(--line);
+  opacity: 0.8;
+}
+.deepspace-resting .deepspace-art {
+  flex: none;
+  width: 84px;
+}
+.deepspace-resting__text {
+  display: grid;
+  min-width: 0;
+}
+.deepspace-resting__size {
+  margin-left: var(--s1);
+  color: var(--fog);
+}
+.deepspace-dish__body {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.deepspace-dish__head {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+.deepspace-dish__name {
+  color: var(--bone);
+  font-size: var(--t-body);
+  font-weight: 500;
+  
+}
+.deepspace-dish__who {
+  display: grid;
+}
+.deepspace-craft {
+  min-height: 32px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--sodium);
+  font-family: var(--font-ui);
+  font-size: var(--t-lead);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  cursor: pointer;
+}
+.deepspace-craft:hover,
+.deepspace-craft:focus-visible {
+  color: var(--bone);
+  outline: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.deepspace-dish__rest {
+  min-height: 32px;
+  padding-top: 6px;
+  color: var(--fog);
+  font-size: var(--t-small);
+}
+.deepspace-dish__pose {
+  display: flex;
+  gap: var(--s4);
+  color: var(--bone);
+  font-size: var(--t-small);
+}
+.deepspace-dish__pose .v-eyebrow {
+  display: inline;
+  margin-right: 2px;
+}
+.deepspace-sigs {
+  display: grid;
+  gap: 4px;
+  margin-top: var(--s2);
+  list-style: none;
+}
+.deepspace-sig {
+  display: grid;
+  grid-template-columns: 12px auto 1fr auto;
+  align-items: baseline;
+  gap: var(--s2);
+  font-family: var(--font-data);
+  font-size: var(--t-small);
+  font-variant-numeric: tabular-nums;
+}
+.deepspace-sig__dir {
+  font-weight: 500;
+}
+.deepspace-sig__dir--down {
+  color: var(--sodium);
+}
+.deepspace-sig__dir--up {
+  color: var(--bone);
+}
+.deepspace-sig__band {
+  color: var(--fog);
+}
+.deepspace-sig__rate {
+  color: var(--bone);
+}
+.deepspace-sig__power {
+  color: var(--fog);
+  text-align: right;
+}
+.deepspace-dish__words {
+  margin-top: var(--s2);
+  color: var(--fog);
+  font-size: var(--t-small);
+  line-height: 1.4;
+}
+
+/* ── Dish line art ────────────────────────────────────────────── */
+.deepspace-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  transition: opacity var(--med) var(--ease-out);
+}
+.deepspace-art * {
+  vector-effect: non-scaling-stroke;
+}
+.deepspace-art__ring {
+  fill: none;
+  stroke: var(--line-strong);
+}
+.deepspace-art__tick {
+  stroke: var(--line-strong);
+}
+.deepspace-art__tick--major {
+  stroke: var(--ash);
+}
+.deepspace-art__north {
+  fill: var(--ash);
+  font-family: var(--font-data);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+.deepspace-art__bearing {
+  fill: none;
+  stroke: var(--ash);
+  stroke-dasharray: 2 4;
+}
+.deepspace-art__mark {
+  fill: var(--fog);
+  vector-effect: none;
+}
+.deepspace-art__frame,
+.deepspace-art__hoop,
+.deepspace-art__strut {
+  fill: none;
+  stroke: var(--ash);
+}
+.deepspace-art__hoop {
+  opacity: 0.8;
+}
+.deepspace-art__rim {
+  fill: rgba(226, 234, 240, 0.035);
+  stroke: var(--fog);
+  stroke-width: 1.25px;
+}
+.deepspace-art__feed {
+  fill: var(--fog);
+  vector-effect: none;
+}
+.deepspace-art--live .deepspace-art__rim {
+  fill: rgba(255, 181, 71, 0.06);
+  stroke: var(--bone);
+}
+.deepspace-art--live .deepspace-art__frame,
+.deepspace-art--live .deepspace-art__strut {
+  stroke: var(--fog);
+}
+.deepspace-art--live .deepspace-art__feed,
+.deepspace-art--live .deepspace-art__mark {
+  fill: var(--sodium);
+}
+.deepspace-art--live .deepspace-art__bearing {
+  stroke: rgba(255, 181, 71, 0.5);
+}
+.deepspace-art--idle .deepspace-art__rim {
+  stroke: var(--ash);
+}
+
+.deepspace-beam {
+  fill: none;
+  stroke-linecap: round;
+}
+.deepspace-beam--down {
+  stroke-width: 2.4px;
+  stroke-dasharray: 0.1 11;
+  animation: deepspace-flow-in 0.9s linear infinite var(--v-loop);
+}
+.deepspace-beam--up {
+  stroke-width: 1.4px;
+  stroke-dasharray: 9 12;
+  animation: deepspace-flow-out 1.3s linear infinite var(--v-loop);
+}
+.deepspace-beam--wait {
+  stroke: var(--ash);
+  stroke-width: 1px;
+  stroke-dasharray: 1 7;
+}
+.deepspace-art--paused .deepspace-beam {
+  animation-play-state: paused;
+}
+@keyframes deepspace-flow-in {
+  to {
+    stroke-dashoffset: 11.1;
+  }
+}
+@keyframes deepspace-flow-out {
+  to {
+    stroke-dashoffset: -21;
+  }
+}
+
+/* ── Solar System view ────────────────────────────────────────── */
+.deepspace-solar {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(300px, 1fr);
+  align-items: start;
+  gap: var(--s4);
+}
+@media (max-width: 1040px) {
+  .deepspace-solar {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.deepspace-solar__pad {
+  position: relative;
+  padding: var(--s4);
+}
+.deepspace-solar__loading {
+  position: absolute;
+  right: var(--s4);
+  bottom: var(--s4);
+}
+.deepspace-solar__side {
+  display: grid;
+  gap: var(--s4);
+  min-width: 0;
+}
+.deepspace-stage__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s3) var(--s4);
+  margin-bottom: var(--s3);
+}
+.deepspace-stage__note {
+  flex: 1 1 220px;
+  color: var(--fog);
+  font-size: var(--t-small);
+  line-height: 1.4;
+}
+
+.deepspace-orrery {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+}
+.deepspace-orrery__svg,
+.deepspace-orrery__html {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.deepspace-ring {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-dasharray: 1 6;
+  vector-effect: non-scaling-stroke;
+  animation: deepspace-fade 0.8s var(--ease-out) both;
+}
+.deepspace-ring--lightday {
+  stroke: rgba(255, 181, 71, 0.5);
+  stroke-dasharray: 5 6;
+}
+.deepspace-orbit {
+  fill: none;
+  stroke: var(--line);
+  vector-effect: non-scaling-stroke;
+  animation: deepspace-fade 0.8s var(--ease-out) both;
+}
+.deepspace-link {
+  stroke: var(--sodium);
+  stroke-width: 1.6px;
+  stroke-dasharray: 0.1 10;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  animation: deepspace-travel 1.1s linear infinite var(--v-loop);
+}
+
+.deepspace-ringlabel {
+  position: absolute;
+  transform: translate(-50%, 2px);
+  color: var(--ash);
+  font-family: var(--font-data);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-shadow:
+    0 0 6px var(--void),
+    0 0 2px var(--void);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.deepspace-ringlabel--lightday {
+  color: rgba(255, 181, 71, 0.75);
+}
+.deepspace-sun {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bone);
+  box-shadow: 0 0 26px 7px rgba(230, 236, 240, 0.22);
+  transform: translate(-50%, -50%);
+}
+.deepspace-planet {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: deepspace-fade 0.6s var(--ease-out) both;
+}
+.deepspace-planet__dot {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--fog);
+}
+.deepspace-planet--earth .deepspace-planet__dot {
+  background: var(--ice);
+  box-shadow: 0 0 0 4px var(--ice-dim);
+}
+.deepspace-planet__name {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: var(--fog);
+  font-family: var(--font-data);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 6px var(--void),
+    0 0 2px var(--void);
+  white-space: nowrap;
+}
+.deepspace-planet--earth .deepspace-planet__name {
+  color: var(--ice);
+}
+
+.deepspace-probe {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: none;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  animation: deepspace-pop 0.5s var(--ease-out) both;
+}
+.deepspace-probe:focus-visible {
+  outline: 1px solid var(--ice);
+  outline-offset: -4px;
+  border-radius: 50%;
+}
+.deepspace-probe__mark {
+  width: 8px;
+  height: 8px;
+  background: var(--fog);
+  transform: rotate(45deg);
+  transition:
+    background-color var(--fast) var(--ease-out),
+    box-shadow var(--fast) var(--ease-out);
+}
+.deepspace-probe:hover .deepspace-probe__mark {
+  background: var(--bone);
+}
+.deepspace-probe--live .deepspace-probe__mark {
+  background: var(--sodium);
+  box-shadow: 0 0 14px 2px rgba(255, 181, 71, 0.65);
+}
+.deepspace-probe--selected .deepspace-probe__mark {
+  background: var(--ice);
+  box-shadow: 0 0 0 5px var(--ice-dim);
+}
+.deepspace-probe__name {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 11px);
+  transform: translateY(-50%);
+  color: var(--bone);
+  font-family: var(--font-ui);
+  font-size: 11.5px;
+  text-shadow:
+    0 0 6px var(--void),
+    0 0 2px var(--void);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--fast) var(--ease-out);
+}
+.deepspace-probe__name--shown,
+.deepspace-probe:hover .deepspace-probe__name,
+.deepspace-probe:focus-visible .deepspace-probe__name {
+  opacity: 1;
+}
+
+.deepspace-linklabel {
+  position: absolute;
+  display: grid;
+  gap: 1px;
+  transform: translate(0, -50%);
+  text-shadow:
+    0 0 8px var(--void),
+    0 0 3px var(--void);
+  pointer-events: none;
+  animation: deepspace-fade 0.6s var(--ease-out) both;
+}
+.deepspace-linklabel--left {
+  transform: translate(-100%, -50%);
+  text-align: right;
+}
+.deepspace-linklabel__name {
+  color: var(--sodium);
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.deepspace-linklabel__time {
+  color: var(--bone);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+@keyframes deepspace-fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes deepspace-pop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+}
+@keyframes deepspace-travel {
+  to {
+    stroke-dashoffset: -10.1;
+  }
+}
+
+/* ── Lists ────────────────────────────────────────────────────── */
+.deepspace-rows {
+  display: grid;
+  max-height: 380px;
+  margin: calc(var(--s2) * -1);
+  overflow: auto;
+  list-style: none;
+}
+.deepspace-row {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  width: 100%;
+  min-height: 44px;
+  padding: 6px var(--s2);
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--fast) var(--ease-out);
+}
+.deepspace-row:hover,
+.deepspace-row:focus-visible {
+  background: var(--ice-dim);
+  outline: none;
+}
+.deepspace-row__main {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+}
+.deepspace-row__name {
+  overflow: hidden;
+  color: var(--bone);
+  font-size: var(--t-body);
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.deepspace-row__sub {
+  color: var(--fog);
+  font-size: var(--t-small);
+}
+.deepspace-row__figures {
+  display: grid;
+  justify-items: end;
+  color: var(--bone);
+  font-size: var(--t-small);
+  text-align: right;
+}
+.deepspace-row__dim {
+  color: var(--fog);
+}
+
+/* ── Profile and tile ─────────────────────────────────────────── */
+.deepspace-facts {
+  display: grid;
+  gap: var(--s2);
+  list-style: none;
+}
+.deepspace-facts li {
+  padding-left: var(--s3);
+  box-shadow: inset 2px 0 0 var(--line-strong);
+  color: var(--fog);
+  font-size: var(--t-small);
+  line-height: 1.45;
+}
+
+.deepspace-tile {
+  display: grid;
+  align-content: space-between;
+  gap: var(--s4);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.deepspace-tile__text {
+  color: var(--bone);
+  font-size: var(--t-lead);
+  line-height: 1.5;
+}
+.deepspace-tile__craft {
+  color: var(--sodium);
+  font-weight: 600;
+}
+/* The signal comes home from the right: a row of dots on a layer one dot wider than the path, moved by transform,
+   so the compositor runs it instead of a repaint every frame. */
+.deepspace-tile__beam {
+  position: relative;
+  height: 8px;
+  margin: 0 2px;
+  overflow: hidden;
+}
+.deepspace-tile__beam::before {
+  content: "";
+  position: absolute;
+  inset: 0 -10px 0 0;
+  background: radial-gradient(circle, var(--sodium) 1.2px, transparent 1.7px) 0 50% / 10px 8px repeat-x;
+  animation: deepspace-tile-travel 0.9s linear infinite var(--v-loop);
+}
+@keyframes deepspace-tile-travel {
+  to {
+    translate: -10px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .deepspace-headline__stats {
+    gap: var(--s4) var(--s5);
+  }
+  .deepspace-solar__pad {
+    padding: var(--s3);
+  }
+  .deepspace-linklabel__name {
+    font-size: 11px;
+  }
+  .deepspace-linklabel__time {
+    font-size: 10px;
+  }
+}
+
+.deepspace-dish__head .deepspace-dish__name {
+  margin-right: auto;
+}
+
+.deepspace-tile__path {
+  display: grid;
+  gap: var(--s2);
+}
+.deepspace-tile__ends {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s3);
+}
+
+@media (max-width: 600px) {
+  .deepspace-row {
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+  .deepspace-row__main {
+    flex: 1 1 60%;
+  }
+  .deepspace-row__figures {
+    flex: 1 1 100%;
+    justify-items: start;
+    padding-left: calc(8px + var(--s3));
+    text-align: left;
+  }
+  .deepspace-rows {
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .deepspace-linklabel {
+    max-width: 112px;
+  }
+  .deepspace-linklabel__time {
+    white-space: normal;
+    line-height: 1.25;
+  }
+  .deepspace-solar__pad {
+    padding: var(--s2);
+  }
+}
+
+@media (max-width: 600px) {
+  .deepspace-complex__clock {
+    justify-items: start;
+    text-align: left;
+  }
+}
+
+/* Touch: finger-sized targets. */
+@media (max-width: 720px), (pointer: coarse) {
+  .deepspace-craft {
+    min-height: 40px;
+  }
+}

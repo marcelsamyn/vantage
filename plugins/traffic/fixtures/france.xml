@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope>
+  <Body>
+    <d2LogicalModel modelBaseVersion="2">
+      <exchange>
+        <supplierIdentification>
+          <country>fr</country>
+          <nationalIdentifier>Tipi</nationalIdentifier>
+        </supplierIdentification>
+        <subscription>
+          <operatingMode>operatingMode3</operatingMode>
+          <subscriptionStartTime>2026-10-11T09:57:44.792+02:00</subscriptionStartTime>
+          <subscriptionState>active</subscriptionState>
+          <subscriptionStopTime>2026-10-11T09:57:44.792+02:00</subscriptionStopTime>
+          <updateMethod>snapshot</updateMethod>
+          <target>
+            <address></address>
+            <protocol></protocol>
+          </target>
+        </subscription>
+      </exchange>
+      <payloadPublication type="ns2:SituationPublication" lang="fr">
+        <feedType>3584652</feedType>
+        <publicationTime>2026-10-11T09:57:44.792+02:00</publicationTime>
+        <publicationCreator>
+          <country>fr</country>
+          <nationalIdentifier>Tipi</nationalIdentifier>
+        </publicationCreator>
+        <situation id="230814-001797" version="4">
+          <overallSeverity>medium</overallSeverity>
+          <situationVersionTime>2025-03-06T08:40:36.720+01:00</situationVersionTime>
+          <headerInformation>
+            <confidentiality>noRestriction</confidentiality>
+            <informationStatus>real</informationStatus>
+          </headerInformation>
+          <situationRecord type="ns2:RoadOrCarriagewayOrLaneManagement" id="230814-001797-1" version="4">
+            <situationRecordCreationTime>2023-08-14T16:55:00.071+02:00</situationRecordCreationTime>
+            <situationRecordObservationTime>2025-03-06T08:40:04.071+01:00</situationRecordObservationTime>
+            <situationRecordVersionTime>2025-03-06T08:40:36.720+01:00</situationRecordVersionTime>
+            <situationRecordFirstSupplierVersionTime>2023-08-14T16:55:00.071+02:00</situationRecordFirstSupplierVersionTime>
+            <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+            <source>
+              <sourceIdentification>Direction interdépartementale des routes/DIR Sud-Ouest</sourceIdentification>
+              <reliable>true</reliable>
+            </source>
+            <validity>
+              <validityStatus>definedByValidityTimeSpec</validityStatus>
+              <validityTimeSpecification>
+                <overallStartTime>2023-08-14T16:55:00.071+02:00</overallStartTime>
+              </validityTimeSpecification>
+            </validity>
+            <generalPublicComment>
+              <comment>
+                <values>
+                  <value lang="fr">Arrêté A-154(Ter)-2022</value>
+                </values>
+              </comment>
+              <commentType>description</commentType>
+            </generalPublicComment>
+            <generalPublicComment>
+              <comment>
+                <values>
+                  <value lang="fr">situé 804 m au nord de Tarascon-sur-Ariège sud</value>
+                </values>
+              </comment>
+              <commentType>locationDescriptor</commentType>
+            </generalPublicComment>
+            <generalPublicComment>
+              <comment>
+                <values>
+                  <value lang="fr">DIR Sud-Ouest/District Sud (Foix)/CEI L&apos;Hospitalet</value>
+                </values>
+              </comment>
+              <commentType>locationDescriptor</commentType>
+            </generalPublicComment>
+            <groupOfLocations type="ns2:Point">
+              <tpegPointLocation type="ns2:TpegSimplePoint">
+                <tpegDirection>bothWays</tpegDirection>
+                <tpegSimplePointLocationType>nonLinkedPoint</tpegSimplePointLocationType>
+                <point type="ns2:TpegNonJunctionPoint">
+                  <pointCoordinates>
+                    <latitude>42.844486</latitude>
+                    <longitude>1.601671</longitude>
+                  </pointCoordinates>
+                  <name>
+                    <descriptor>
+                      <values>
+                        <value lang="fr">Tarascon-sur-Ariège</value>
+                      </values>
+                    </descriptor>
+                    <tpegOtherPointDescriptorType>townName</tpegOtherPointDescriptorType>
+                  </name>
+                  <name>
+                    <descriptor>
+                      <values>
+                        <value lang="fr">N20</value>
+                      </values>
+                    </descriptor>
+                    <tpegOtherPointDescriptorType>linkName</tpegOtherPointDescriptorType>
+                  </name>
+                </point>
+              </tpegPointLocation>
+              <alertCPoint type="ns2:AlertCMethod4Point">
+                <alertCLocationCountryCode>F</alertCLocationCountryCode>
+                <alertCLocationTableNumber>32</alertCLocationTableNumber>
+                <alertCLocationTableVersion>11</alertCLocationTableVersion>
+                <alertCDirection>
+                  <alertCDirectionCoded>both</alertCDirectionCoded>
+                </alertCDirection>
+                <alertCMethod4PrimaryPointLocation>
+                  <alertCLocation>
+                    <alertCLocationName>
+                      <values>
+                        <value lang="fr">Tarascon-sur-Ariège sud</value>
+                      </values>
+                    </alertCLocationName>
+                    <specificLocation>17389</specificLocation>
+                  </alertCLocation>
+                  <offsetDistance>
+                    <offsetDistance>804</offsetDistance>
+                  </offsetDistance>
+                </alertCMethod4PrimaryPointLocation>
+              </alertCPoint>
+              <pointAlongLinearElement>
+                <directionRelativeAtPoint>both</directionRelativeAtPoint>
+                <linearElement>
+                  <roadNumber>N0020</roadNumber>
+                </linearElement>
+                <distanceAlongLinearElement type="ns2:DistanceFromLinearElementReferent">
+                  <distanceAlong>107</distanceAlong>
+                  <fromReferent>
+                    <referentIdentifier>09PR54U</referentIdentifier>
+                    <referentType>referenceMarker</referentType>
+                  </fromReferent>
+                </distanceAlongLinearElement>
+              </pointAlongLinearElement>
+            </groupOfLocations>
+            <situationRecordExtension>
+              <situationRecordExtendedApproved>
+                <safetyRelatedMessage>false</safetyRelatedMessage>
+              </situationRecordExtendedApproved>
+            </situationRecordExtension>
+            <complianceOption>mandatory</complianceOption>
+            <forVehiclesWithCharacteristicsOf>
+              <vehicleType>lorry</vehicleType>
+              <grossWeightCharacteristic>
+                <comparisonOperator>greaterThan</comparisonOperator>
+                <grossVehicleWeight>48</grossVehicleWeight>
+              </grossWeightCharacteristic>
+            </forVehiclesWithCharacteristicsOf>
+            <roadOrCarriagewayOrLaneManagementType>weightRestrictionInOperation</roadOrCarriagewayOrLaneManagementType>
+          </situationRecord>
+        </situation>
+        <situation id="251022-000640" version="2">
+          <overallSeverity>medium</overallSeverity>
+          <situationVersionTime>2025-10-22T16:22:40.487+02:00</situationVersionTime>
+          <headerInformation>
+            <confidentiality>noRestriction</confidentiality>
+            <informationStatus>real</informationStatus>
+          </headerInformation>
+          <situationRecord type="ns2:RoadOrCarriagewayOrLaneManagement" id="251022-000640-1" version="2">
+            <situationRecordCreationReference>EVE_DIRO-S-251022-0025-EVE_DIRO-SR-251022-000029</situationRecordCreationReference>
+            <situationRecordCreationTime>2025-10-22T09:11:59.094+02:00</situationRecordCreationTime>
+            <situationRecordObservationTime>2025-10-22T16:22:06.525+02:00</situationRecordObservationTime>
+            <situationRecordVersionTime>2025-10-22T16:22:40.487+02:00</situationRecordVersionTime>
+            <situationRecordFirstSupplierVersionTime>2025-10-22T09:11:59.094+02:00</situationRecordFirstSupplierVersionTime>
+            <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+            <source>
+              <sourceIdentification>Direction interdépartementale des routes/DIR Ouest</sourceIdentification>
+              <reliable>true</reliable>
+            </source>
+            <validity>
+              <validityStatus>definedByValidityTimeSpec</validityStatus>
+              <validityTimeSpecification>
+                <overallStartTime>2025-10-22T09:11:58.953+02:00</overallStartTime>
+                <overallEndTime>2025-10-24T00:00:00.000+02:00</overallEndTime>
+              </validityTimeSpecification>
+            </validity>
+            <impact>
+              <numberOfLanesRestricted>1</numberOfLanesRestricted>
+              <originalNumberOfLanes>2</originalNumberOfLanes>
+            </impact>
+            <generalPublicComment>
+              <comment>
+                <values>
+                  <value lang="fr">La mesure est obligatoire</value>
+                </values>
+              </comment>
+              <commentType>description</commentType>
+            </generalPublicComment>
+            <generalPublicComment>
+              <comment>
+                <values>
+                  <value lang="fr">Point particulier : début : situé 447 m à l&apos;est de Le Rheu Les Landes d&apos;Apigné, fin : situé 2359 m à l&apos;ouest de Rennes Porte de Lorient</value>
+                </values>
+              </comment>
+              <commentType>locationDescriptor</commentType>
+            </generalPublicComment>
+            <generalPublicComment>
+              <comment>
+                <values>
+                  <value lang="fr">DIR Ouest/District de Rennes/CEI de Rennes</value>
+                </values>
+              </comment>
+              <commentType>locationDescriptor</commentType>
+            </generalPublicComment>
+            <generalPublicComment>
+              <comment>
+                <values>
+                  <value lang="fr">De Lorient vers Rennes</value>
+                </values>
+              </comment>
+              <commentType>locationDescriptor</commentType>
+            </generalPublicComment>
+            <groupOfLocations type="ns2:Linear">
+              <supplementaryPositionalDescription>
+                <affectedCarriagewayAndLanes>
+                  <carriageway>mainCarriageway</carriageway>
+                  <lane>lane1</lane>
+                </affectedCarriagewayAndLanes>
+              </supplementaryPositionalDescription>
+              <tpegLinearLocation>
+                <tpegDirection>eastBound</tpegDirection>
+                <tpegLinearLocationType>segment</tpegLinearLocationType>
+                <to type="ns2:TpegNonJunctionPoint">
+                  <pointCoordinates>
+                    <latitude>48.104973</latitude>
+                    <longitude>-1.7477167</longitude>
+                  </pointCoordinates>
+                  <name>
+                    <descriptor>
+                      <values>
+                        <value lang="fr">Vezin-le-Coquet</value>
+                      </values>
+                    </descriptor>
+                    <tpegOtherPointDescriptorType>townName</tpegOtherPointDescriptorType>
+                  </name>
+                  <name>
+                    <descriptor>
+                      <values>
+                        <value lang="fr">N24</value>
+                      </values>
+                    </descriptor>
+                    <tpegOtherPointDescriptorType>linkName</tpegOtherPointDescriptorType>
+                  </name>
+                </to>
+                <from type="ns2:TpegNonJunctionPoint">
+                  <pointCoordinates>
+                    <latitude>48.102207</latitude>
+                    <longitude>-1.7527946</longitude>
+                  </pointCoordinates>
+                  <name>
+                    <descriptor>
+                      <values>
+                        <value lang="fr">Le Rheu</value>
+                      </values>
+                    </descriptor>
+                    <tpegOtherPointDescriptorType>townName</tpegOtherPointDescriptorType>
+                  </name>
+                  <name>
+                    <descriptor>
+                      <values>
+                        <value lang="fr">N24</value>
+                      </values>
+                    </descriptor>
+                    <tpegOtherPointDescriptorType>linkName</tpegOtherPointDescriptorType>
+                  </name>
+                </from>
+              </tpegLinearLocation>
+              <alertCLinear type="ns2:AlertCMethod4Linear">
+                <alertCLocationCountryCode>F</alertCLocationCountryCode>
+                <alertCLocationTableNumber>32</alertCLocationTableNumber>
+                <alertCLocationTableVersion>11</alertCLocationTableVersion>
+                <alertCDirection>
+                  <alertCDirectionCoded>negative</alertCDirectionCoded>
+                </alertCDirection>
+                <alertCMethod4PrimaryPointLocation>
+                  <alertCLocation>
+                    <alertCLocationName>
+                      <values>
+                        <value lang="fr">Rennes Porte de Lorient</value>
+                      </values>
+                    </alertCLocationName>
+                    <specificLocation>47221</specificLocation>
+                  </alertCLocation>
+                  <offsetDistance>
+                    <offsetDistance>2359</offsetDistance>
+                  </offsetDistance>
+                </alertCMethod4PrimaryPointLocation>
+                <alertCMethod4SecondaryPointLocation>
+                  <alertCLocation>
+                    <alertCLocationName>
+                      <values>
+                        <value lang="fr">Le Rheu Les Landes d&apos;Apigné</value>
+                      </values>
+                    </alertCLocationName>
+                    <specificLocation>47222</specificLocation>
+                  </alertCLocation>
+                  <offsetDistance>
+                    <offsetDistance>447</offsetDistance>
+                  </offsetDistance>
+                </alertCMethod4SecondaryPointLocation>
+              </alertCLinear>
+              <linearWithinLinearElement>
+                <directionRelativeOnLinearSection>opposite</directionRelativeOnLinearSection>
+                <linearElement>
+                  <roadNumber>N0024</roadNumber>
+                </linearElement>
+                <fromPoint type="ns2:DistanceFromLinearElementReferent">
+                  <distanceAlong>0</distanceAlong>
+                  <fromReferent>
+                    <referentIdentifier>35PR4G</referentIdentifier>
+                    <referentType>referenceMarker</referentType>
+                  </fromReferent>
+                </fromPoint>
+                <toPoint type="ns2:DistanceFromLinearElementReferent">
+                  <distanceAlong>500</distanceAlong>
+                  <fromReferent>
+                    <referentIdentifier>35PR4G</referentIdentifier>
+                    <referentType>referenceMarker</referentType>
+                  </fromReferent>
+                </toPoint>
+              </linearWithinLinearElement>
+            </groupOfLocations>
+            <situationRecordExtension>
+              <situationRecordExtendedApproved>
+                <safetyRelatedMessage>false</safetyRelatedMessage>
+              </situationRecordExtendedApproved>
+            </situationRecordExtension>
+            <complianceOption>mandatory</complianceOption>
+            <roadOrCarriagewayOrLaneManagementType>laneClosures</roadOrCarriagewayOrLaneManagementType>
+          </situationRecord>
+        </situation>
+        <situation id="251023-001144" version="1">
+          <overallSeverity>medium</overallSeverity>
+          <situationVersionTime>2025-10-23T10:50:24.868+02:00</situationVersionTime>
+          <headerInformation>
+            <confidentiality>noRestriction</confidentiality>
+            <informationStatus>real</informationStatus>
+          </headerInformation>
+          <situationRecord type="ns2:WeatherRelatedRoadConditions" id="251023-001144-1" version="1">
+            <situationRecordCreationTime>2025-10-23T10:44:14.681+02:00</situationRecordCreationTime>
+            <situationRecordObservationTime>2025-10-23T10:44:14.681+02:00</situationRecordObservationTime>
+            <situationRecordVersionTime>2025-10-23T10:50:24.868+02:00</situationRecordVersionTime>
+            <situationRecordFirstSupplierVersionTime>2025-10-23T10:44:14.681+02:00</situationRecordFirstSupplierVersionTime>
+            <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+            <source>
+              <sourceIdentification>Direction interdépartementale des routes/DIR Centre-Est</sourceIdentification>
+              <sourceName>
+                <values>
+                  <value lang="fr">PC Osiris (Chambéry)</value>
+                </values>
+              </sourceName>
+              <reliable>true</reliable>
+            </source>
+            <validity>
+              <validityStatus>definedByValidityTimeSpec</validityStatus>
+              <validityTimeSpecification>
+                <overallStartTime>2025-10-23T10:44:14.681+02:00</overallStartTime>
+                <overallEndTime>2026-05-29T17:00:00.000+02:00</overallEndTime>
+              </validityTimeSpecification>
+            </validity>
+            <generalPublicComment>
+              <comment>
+                <values>
+                  <value lang="fr">Le col du Glandon est fermé pour la saison hivernale.
+
+Habituellement le col est fermé pour la saison hivernale du 2ème lundi de novembre jusqu&apos;au dernier vendredi de mai.</value>
+                </values>
+              </comment>
+              <commentType>description</commentType>
+            </generalPublicComment>
+            <generalPublicComment>
+              <comment>
+                <values>
+                  <value lang="fr">situé 19 m à l&apos;est de Col du Glandon</value>
+                </values>
+              </comment>
+              <commentType>locationDescriptor</commentType>
+            </generalPublicComment>
+            <groupOfLocations type="ns2:Point">
+              <tpegPointLocation type="ns2:TpegSimplePoint">
+                <tpegDirection>westBound</tpegDirection>
+                <tpegSimplePointLocationType>nonLinkedPoint</tpegSimplePointLocationType>
+                <point type="ns2:TpegNonJunctionPoint">
+                  <pointCoordinates>
+                    <latitude>45.23877</latitude>
+                    <longitude>6.1781034</longitude>
+                  </pointCoordinates>
+                  <name>
+                    <descriptor>
+                      <values>
+                        <value lang="fr">Saint-Colomban-des-Villards</value>
+                      </values>
+                    </descriptor>
+                    <tpegOtherPointDescriptorType>townName</tpegOtherPointDescriptorType>
+                  </name>
+                  <name>
+                    <descriptor>
+                      <values>
+                        <value lang="fr">D926</value>
+                      </values>
+                    </descriptor>
+                    <tpegOtherPointDescriptorType>linkName</tpegOtherPointDescriptorType>
+                  </name>
+                </point>
+              </tpegPointLocation>
+              <alertCPoint type="ns2:AlertCMethod4Point">
+                <alertCLocationCountryCode>F</alertCLocationCountryCode>
+                <alertCLocationTableNumber>32</alertCLocationTableNumber>
+                <alertCLocationTableVersion>11</alertCLocationTableVersion>
+                <alertCDirection>
+                  <alertCDirectionCoded>positive</alertCDirectionCoded>
+                </alertCDirection>
+                <alertCMethod4PrimaryPointLocation>
+                  <alertCLocation>
+                    <alertCLocationName>
+                      <values>
+                        <value lang="fr">Col du Glandon</value>
+                      </values>
+                    </alertCLocationName>
+                    <specificLocation>33202</specificLocation>
+                  </alertCLocation>
+                  <offsetDistance>
+                    <offsetDistance>19</offsetDistance>
+                  </offsetDistance>
+                </alertCMethod4PrimaryPointLocation>
+              </alertCPoint>
+            </groupOfLocations>
+            <situationRecordExtension>
+              <situationRecordExtendedApproved>
+                <safetyRelatedMessage>true</safetyRelatedMessage>
+              </situationRecordExtendedApproved>
+            </situationRecordExtension>
+            <drivingConditionType>impossible</drivingConditionType>
+            <weatherRelatedRoadConditionType>snowOnTheRoad</weatherRelatedRoadConditionType>
+          </situationRecord>
+          <situationRecord type="ns2:RoadOrCarriagewayOrLaneManagement" id="251023-001144-2" version="1">
+            <situationRecordCreationTime>2025-10-23T10:44:14.681+02:00</situationRecordCreationTime>
+            <situationRecordObservationTime>2025-10-23T10:44:14.681+02:00</situationRecordObservationTime>
+            <situationRecordVersionTime>2025-10-23T10:50:24.868+02:00</situationRecordVersionTime>
+            <situationRecordFirstSupplierVersionTime>2025-10-23T10:44:14.681+02:00</situationRecordFirstSupplierVersionTime>
+            <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+            <source>
+              <sourceIdentification>Direction interdépartementale des routes/DIR Centre-Est</sourceIdentification>
+              <sourceName>
+                <values>
+                  <value lang="fr">PC Osiris (Chambéry)</value>
+                </values>
+              </sourceName>
+              <reliable>true</reliable>
+            </source>
+            <validity>
+              <validityStatus>definedByValidityTimeSpec</validityStatus>
+              <validityTimeSpecification>
+                <overallStartTime>2025-10-23T10:44:14.681+02:00</overallStartTime>
+                <overallEndTime>2026-05-29T17:00:00.000+02:00</overallEndTime>
+              </validityTimeSpecification>
+            </validity>
+            <generalPublicComment>
+              <comment>
+                <values>
+                  <value lang="fr">Le col du Glandon est fermé pour la saison hivernale.
+
+Habituellement le col est fermé pour la saison hivernale du 2ème lundi de novembre jusqu&apos;au dernier vendredi de mai.</value>
+                </values>
+              </comment>
+              <commentType>description</commentType>
+            </generalPublicComment>
+            <generalPublicComment>
+              <comment>
+                <values>
+                  <value lang="fr">situé 19 m à l&apos;est de Col du Glandon</value>
+                </values>
+              </comment>
+              <commentType>locationDescriptor</commentType>
+            </generalPublicComment>
+            <groupOfLocations type="ns2:Point">
+              <tpegPointLocation type="ns2:TpegSimplePoint">
+                <tpegDirection>westBound</tpegDirection>
+                <tpegSimplePointLocationType>nonLinkedPoint</tpegSimplePointLocationType>
+                <point type="ns2:TpegNonJunctionPoint">
+                  <pointCoordinates>
+                    <latitude>45.23877</latitude>
+                    <longitude>6.1781034</longitude>
+                  </pointCoordinates>
+                  <name>
+                    <descriptor>
+                      <values>
+                        <value lang="fr">Saint-Colomban-des-Villards</value>
+                      </values>
+                    </descriptor>
+                    <tpegOtherPointDescriptorType>townName</tpegOtherPointDescriptorType>
+                  </name>
+                  <name>
+                    <descriptor>
+                      <values>
+                        <value lang="fr">D926</value>
+                      </values>
+                    </descriptor>
+                    <tpegOtherPointDescriptorType>linkName</tpegOtherPointDescriptorType>
+                  </name>
+                </point>
+              </tpegPointLocation>
+              <alertCPoint type="ns2:AlertCMethod4Point">
+                <alertCLocationCountryCode>F</alertCLocationCountryCode>
+                <alertCLocationTableNumber>32</alertCLocationTableNumber>
+                <alertCLocationTableVersion>11</alertCLocationTableVersion>
+                <alertCDirection>
+                  <alertCDirectionCoded>positive</alertCDirectionCoded>
+                </alertCDirection>
+                <alertCMethod4PrimaryPointLocation>
+                  <alertCLocation>
+                    <alertCLocationName>
+                      <values>
+                        <value lang="fr">Col du Glandon</value>
+                      </values>
+                    </alertCLocationName>
+                    <specificLocation>33202</specificLocation>
+                  </alertCLocation>
+                  <offsetDistance>
+                    <offsetDistance>19</offsetDistance>
+                  </offsetDistance>
+                </alertCMethod4PrimaryPointLocation>
+              </alertCPoint>
+            </groupOfLocations>
+            <situationRecordExtension>
+              <situationRecordExtendedApproved>
+                <safetyRelatedMessage>false</safetyRelatedMessage>
+              </situationRecordExtendedApproved>
+            </situationRecordExtension>
+            <complianceOption>mandatory</complianceOption>
+            <placesAtWhichApplicable>onPasses</placesAtWhichApplicable>
+            <roadOrCarriagewayOrLaneManagementType>closedPermanentlyForTheWinter</roadOrCarriagewayOrLaneManagementType>
+          </situationRecord>
+        </situation>
+      </payloadPublication>
+    </d2LogicalModel>
+  </Body>
+</Envelope>

@@ -1,0 +1,160 @@
+{
+ "horizonDays": 120,
+ "works": [
+  {
+   "id": "91849-161-2026-04-20-05:00:00",
+   "line": "161",
+   "tracks": "A+B",
+   "first": "2026-04-20",
+   "last": "2027-07-04",
+   "timeFrom": "05:00",
+   "timeTo": "16:00",
+   "continuity": "Continuous",
+   "impact": "Minor",
+   "effect": "Other Type of Restriction",
+   "start": "Etterbeek",
+   "end": "Etterbeek",
+   "shape": [
+    [
+     [
+      4.390942,
+      50.820799
+     ],
+     [
+      4.391023,
+      50.820725
+     ]
+    ],
+    [
+     [
+      4.39089,
+      50.820787
+     ],
+     [
+      4.390971,
+      50.820713
+     ]
+    ]
+   ],
+   "started": true
+  },
+  {
+   "id": "91849-161A-2026-04-20-05:00:00",
+   "line": "161A",
+   "tracks": "A+B",
+   "first": "2026-04-20",
+   "last": "2027-07-04",
+   "timeFrom": "05:00",
+   "timeTo": "16:00",
+   "continuity": "Continuous",
+   "impact": "Minor",
+   "effect": "Other Type of Restriction",
+   "start": "Etterbeek",
+   "end": "Etterbeek",
+   "shape": [
+    [
+     [
+      4.391109,
+      50.820881
+     ],
+     [
+      4.39119,
+      50.820806
+     ]
+    ],
+    [
+     [
+      4.391067,
+      50.820863
+     ],
+     [
+      4.391148,
+      50.820788
+     ]
+    ]
+   ],
+   "started": true
+  },
+  {
+   "id": "98460-161-2026-10-11-00:05:00",
+   "line": "161",
+   "tracks": "A",
+   "first": "2026-10-11",
+   "last": "2027-06-04",
+   "timeFrom": "00:05",
+   "timeTo": "23:00",
+   "continuity": "Continuous",
+   "impact": "Minor",
+   "effect": "Other Type of Restriction",
+   "start": null,
+   "end": null,
+   "shape": [
+    [
+     [
+      4.379283,
+      50.878351
+     ],
+     [
+      4.379175,
+      50.878291
+     ]
+    ]
+   ],
+   "started": false
+  },
+  {
+   "id": "77511-27-2027-01-04-07:00:00",
+   "line": "27",
+   "tracks": "A",
+   "first": "2027-01-04",
+   "last": "2027-05-16",
+   "timeFrom": "07:00",
+   "timeTo": "04:00",
+   "continuity": "Continuous",
+   "impact": "Minor",
+   "effect": "Other Type of Restriction",
+   "start": "Schaarbeek",
+   "end": "Schaarbeek",
+   "shape": [
+    [
+     [
+      4.378964,
+      50.878939
+     ],
+     [
+      4.379073,
+      50.878997
+     ]
+    ]
+   ],
+   "started": false
+  },
+  {
+   "id": "77512-27-2027-01-04-07:00:00",
+   "line": "27",
+   "tracks": "A",
+   "first": "2027-01-04",
+   "last": "2027-05-16",
+   "timeFrom": "07:00",
+   "timeTo": "04:00",
+   "continuity": "Continuous",
+   "impact": "Minor",
+   "effect": "Other Type of Restriction",
+   "start": "Schaarbeek",
+   "end": "Schaarbeek",
+   "shape": [
+    [
+     [
+      4.378964,
+      50.878939
+     ],
+     [
+      4.379073,
+      50.878997
+     ]
+    ]
+   ],
+   "started": false
+  }
+ ]
+}

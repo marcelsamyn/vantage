@@ -1,0 +1,31 @@
+.traffic-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  padding: var(--s3);
+}
+.traffic-note {
+  padding: var(--s3);
+  color: var(--fog);
+  line-height: 1.6;
+}
+.traffic-note a {
+  color: var(--ice);
+}
+.traffic-note code {
+  overflow-wrap: anywhere;
+}
+.traffic-sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--s3);
+  padding: var(--s3);
+}
+.traffic-sources a {
+  display: grid;
+  gap: var(--s1);
+  color: var(--ice);
+}
+.traffic-sources small {
+  color: var(--fog);
+}

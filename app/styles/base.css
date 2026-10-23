@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  /* Follow the visible viewport when mobile browser controls change its height. */
+  height: 100dvh;
+}
+
+@media (display-mode: standalone) {
+  #root {
+    /* WebKit's dynamic viewport can exclude safe-area space in Home Screen apps. */
+    height: 100vh;
+  }
+}
+
+html {
+  /* Controls draw their own pressed state; the grey iOS tap flash would sit on top of it. */
+  -webkit-tap-highlight-color: transparent;
+  /* Phones keep the type size the layout was drawn for, in portrait and landscape. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background: var(--void);
+  color: var(--bone);
+  font-family: var(--font-ui);
+  font-size: var(--t-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--ice);
+  text-decoration-color: rgba(130, 228, 255, 0.35);
+  text-underline-offset: 3px;
+}
+
+img,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  outline-offset: -1px;
+}
+
+::selection {
+  background: var(--ice);
+  color: var(--void);
+}
+
+:focus-visible {
+  outline: 1px solid var(--ice);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--line-bright);
+}
+
+/* Utilities */
+.mono {
+  font-family: var(--font-data);
+}
+.num {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+}
+.display {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 72;
+  letter-spacing: 0.01em;
+}
+.dim {
+  color: var(--fog);
+}
+.faint {
+  color: var(--ash);
+}
+.ice {
+  color: var(--ice);
+}
+.sodium {
+  color: var(--sodium);
+}
+.alarm {
+  color: var(--alarm);
+}
+.mint {
+  color: var(--mint);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.scroll {
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+/* Atmosphere: a faint dot matrix, like a survey grid laid over the city. */
+.v-atmosphere {
+  background-color: var(--void);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -10%, rgba(130, 228, 255, 0.05), transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(226, 234, 240, 0.055) 1px, transparent 0);
+  background-size:
+    100% 100%,
+    24px 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}

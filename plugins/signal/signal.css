@@ -1,0 +1,375 @@
+/* Every class here starts with "signal-" (enforced by bun run check). */
+.signal-stack {
+  display: grid;
+  gap: var(--s4);
+}
+.signal-status {
+  flex: 1 1 200px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s3);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--t-small);
+}
+
+/* ── Spectrogram ────────────────────────────────────────────────── */
+.signal-stage {
+  position: relative;
+  background: var(--void);
+}
+.signal-spectrum {
+  width: 100%;
+  height: 150px;
+  box-shadow: inset 0 -1px 0 var(--line);
+}
+.signal-waterfall {
+  width: 100%;
+  height: clamp(220px, 34dvh, 360px);
+}
+.signal-guides {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.signal-guide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(226, 234, 240, 0.06);
+}
+.signal-band {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--alarm-dim);
+  box-shadow: inset 1px 0 0 rgba(255, 79, 94, 0.45);
+}
+.signal-freqs {
+  position: relative;
+  height: 24px;
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  color: var(--ash);
+}
+.signal-freq {
+  position: absolute;
+  top: 6px;
+  translate: -50% 0;
+}
+.signal-freq[data-edge="start"] {
+  translate: 0 0;
+}
+.signal-freq[data-edge="end"] {
+  translate: -100% 0;
+}
+.signal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s3);
+  padding: var(--s1) var(--s4) var(--s3);
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  color: var(--fog);
+}
+.signal-ramp {
+  width: 120px;
+  height: 6px;
+  background: linear-gradient(90deg, #05070a, #82e4ff 40%, #e6ecf0 72%, #ffb547);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.signal-legend__note {
+  flex: 1;
+  min-width: 220px;
+  color: var(--ash);
+}
+.signal-prompt {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--s4);
+  overflow: auto;
+  background: rgba(5, 7, 10, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.signal-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2);
+  padding: var(--s3) var(--s4);
+  box-shadow: inset 0 1px 0 var(--line);
+}
+.signal-hint {
+  font-size: var(--t-small);
+}
+
+/* ── Panels ─────────────────────────────────────────────────────── */
+.signal-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: var(--s4);
+  align-items: stretch;
+}
+.signal-slot {
+  display: flex;
+  min-width: 0;
+}
+.signal-slot > * {
+  flex: 1;
+}
+.signal-note {
+  font-size: var(--t-small);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+.signal-note--warn {
+  padding-left: var(--s3);
+  color: var(--bone);
+  box-shadow: inset 2px 0 0 var(--line-bright);
+}
+
+/* Level */
+.signal-level {
+  display: grid;
+  gap: var(--s4);
+}
+.signal-bar {
+  position: relative;
+  height: 12px;
+  overflow: hidden;
+  background: repeating-linear-gradient(90deg, rgba(226, 234, 240, 0.08) 0 3px, transparent 3px 5px);
+}
+.signal-bar__fill {
+  position: absolute;
+  inset: 0;
+  transform-origin: left;
+  background: repeating-linear-gradient(90deg, var(--ice) 0 3px, transparent 3px 5px);
+  transition: transform 90ms linear;
+}
+.signal-bar__fill[data-hot="true"] {
+  background: repeating-linear-gradient(90deg, var(--alarm) 0 3px, transparent 3px 5px);
+}
+.signal-bar__peak {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -2px;
+  background: var(--bone);
+  transition: left 90ms linear;
+}
+.signal-bar__peak[data-hot="true"] {
+  background: var(--alarm);
+}
+.signal-bar__scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: calc(var(--s2) * -1 - 2px);
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  color: var(--ash);
+}
+.signal-calibrate {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s3);
+}
+.signal-range {
+  --fill: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  flex: 1;
+  min-width: 120px;
+  height: 32px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.signal-range::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--ice) var(--fill), rgba(226, 234, 240, 0.14) var(--fill));
+}
+.signal-range::-moz-range-track {
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--ice) var(--fill), rgba(226, 234, 240, 0.14) var(--fill));
+}
+.signal-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  margin-top: -4.5px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--bone);
+}
+.signal-range::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--bone);
+}
+
+/* Tuner */
+.signal-tuner {
+  display: grid;
+  gap: var(--s3);
+  justify-items: center;
+  text-align: center;
+}
+.signal-tuner > :is(dl, p) {
+  justify-self: stretch;
+  text-align: left;
+}
+.signal-gauge {
+  width: 100%;
+  max-width: 300px;
+  overflow: visible;
+}
+.signal-gauge__tick {
+  stroke: var(--line-bright);
+  stroke-width: 1.5;
+}
+.signal-gauge__tick[data-major="true"] {
+  stroke: var(--fog);
+}
+.signal-gauge__tick[data-centre="true"] {
+  stroke: var(--tone);
+  stroke-width: 2;
+}
+.signal-gauge__label {
+  fill: var(--ash);
+  font-family: var(--font-data);
+  font-size: 15px;
+}
+.signal-gauge__needle {
+  stroke: var(--tone);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.signal-gauge__hub {
+  fill: var(--tone);
+}
+.signal-note-name {
+  margin-top: calc(var(--s5) * -1);
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 0.9;
+  color: var(--tone);
+  transition: color var(--fast) var(--ease-out);
+}
+.signal-note-name[data-idle="true"] {
+  color: var(--ash);
+}
+.signal-note-name sub {
+  margin-left: 2px;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--fog);
+}
+.signal-tuner__state {
+  min-height: 18px;
+  font-family: var(--font-data);
+  font-size: var(--t-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fog);
+}
+
+/* Beacon watch */
+.signal-beacons {
+  display: grid;
+  gap: var(--s4);
+}
+.signal-beacons__axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--s1);
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  color: var(--ash);
+}
+.signal-beacons__meter {
+  display: grid;
+  gap: var(--s2);
+}
+.signal-beacons__meter-row,
+.signal-beacons__log-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  font-size: var(--t-small);
+}
+.signal-beacons__peak {
+  font-size: var(--t-small);
+}
+.signal-beacons__log {
+  display: grid;
+  gap: var(--s2);
+}
+.signal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-data);
+  font-size: var(--t-small);
+  font-variant-numeric: tabular-nums;
+}
+.signal-table th {
+  padding: 0 0 var(--s2);
+  text-align: left;
+  font-size: var(--t-micro);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fog);
+}
+.signal-table td {
+  padding: 6px 0;
+  box-shadow: inset 0 1px 0 var(--line);
+}
+.signal-table tr[data-ongoing="true"] td {
+  color: var(--alarm);
+}
+
+@media (max-width: 1180px) {
+  .signal-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .signal-grid__wide {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 720px) {
+  .signal-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .signal-note-name {
+    font-size: 80px;
+  }
+}
+
+/* Touch: a finger-sized thumb (the UI kit makes the slider 40 px tall). */
+@media (max-width: 720px), (pointer: coarse) {
+  .signal-range::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    margin-top: -8.5px;
+  }
+  .signal-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,146 @@
+.hazards-tile {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--s5);
+  align-items: start;
+}
+.hazards-list {
+  display: grid;
+  gap: var(--s2);
+  min-width: 0;
+}
+.hazards-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--s2);
+  row-gap: 2px;
+  padding: 6px 8px;
+  margin: -6px -8px;
+  border-radius: var(--radius);
+  text-align: left;
+  transition: background-color var(--fast);
+}
+.hazards-row:hover {
+  background: rgba(226, 234, 240, 0.04);
+}
+.hazards-row .v-eyebrow {
+  grid-column: 1 / -1;
+}
+.hazards-mag {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 72;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--alarm);
+}
+.hazards-place {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  align-self: center;
+}
+.hazards-row .v-stat__hint {
+  grid-column: 1 / -1;
+}
+
+.hazards-live {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: var(--s2);
+  padding-top: var(--s4);
+  border-top: 1px solid var(--line);
+}
+.hazards-live__head {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+.hazards-seismo {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--deep);
+}
+
+.hazards-trace {
+  display: grid;
+  gap: var(--s2);
+}
+.hazards-trace__note {
+  color: var(--fog);
+  font-size: var(--t-small);
+  line-height: 1.5;
+}
+
+.hazards-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.hazards-live__head {
+  flex-wrap: wrap;
+}
+.hazards-live__head .v-seg {
+  margin-left: auto;
+}
+.hazards-live__head .v-seg__label,
+.hazards-trace__head .v-seg__label {
+  white-space: nowrap;
+}
+.hazards-trace__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s2);
+  flex-wrap: wrap;
+}
+
+.hazards-volcanoes {
+  display: grid;
+  gap: var(--s4);
+}
+.hazards-volcanoes__lead {
+  margin: 0;
+  color: var(--fog);
+  font-size: var(--t-small);
+  line-height: 1.5;
+}
+.hazards-volcano {
+  display: grid;
+  gap: var(--s2);
+}
+.hazards-volcano__head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--s1) var(--s2);
+}
+.hazards-volcano__name {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 72;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--bone);
+}
+.hazards-volcano__where {
+  margin-left: auto;
+}
+
+@media (max-width: 720px) {
+  .hazards-tile {
+    grid-template-columns: 1fr;
+  }
+}
+
+@container tile (max-width: 460px) {
+  .hazards-tile {
+    grid-template-columns: 1fr;
+  }
+}

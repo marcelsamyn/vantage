@@ -1,0 +1,5 @@
+.outages-meta { color: var(--fog); margin-bottom: var(--s4); }
+.outages-list { display: grid; gap: var(--s2); }
+.outages-event { display: grid; gap: var(--s2); padding: var(--s4); text-align: left; color: var(--bone); background: var(--raise); border: 1px solid var(--line); cursor: pointer; overflow-wrap: anywhere; }
+.outages-event small { color: var(--fog); }
+.outages-event:hover, .outages-event:focus-visible { border-color: var(--alarm); }

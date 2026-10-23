@@ -1,0 +1,297 @@
+/* ── Traffic light profile ───────────────────────────────────────── */
+
+.pulse-signal {
+  display: grid;
+  gap: var(--s4);
+}
+.pulse-signal__hero {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--s3);
+}
+.pulse-signal__lamp {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--void);
+  outline: 1px solid var(--line-strong);
+  transition: background-color 90ms linear, box-shadow 160ms ease-out;
+}
+.pulse-signal__state {
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.pulse-signal__held {
+  margin-top: 4px;
+  font-size: var(--t-small);
+  color: var(--fog);
+}
+
+.pulse-strip {
+  margin: 0;
+}
+.pulse-strip__bar {
+  position: relative;
+  height: 14px;
+  overflow: hidden;
+  background: rgba(226, 234, 240, 0.05);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.pulse-strip__seg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0.9;
+}
+.pulse-strip__axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: var(--t-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+
+.pulse-note {
+  margin: 0;
+  font-size: var(--t-small);
+  color: var(--fog);
+}
+
+.pulse-sensors {
+  display: grid;
+  gap: var(--s2);
+}
+.pulse-sensors__list {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pulse-sensor {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px var(--s3);
+  padding: var(--s2) 0;
+  border-top: 1px solid var(--line);
+}
+.pulse-sensor__title {
+  font-size: var(--t-small);
+  color: var(--bone);
+}
+.pulse-sensor__value {
+  font-size: var(--t-small);
+  color: var(--fog);
+  text-align: right;
+}
+.pulse-sensor[data-active="true"] .pulse-sensor__value {
+  color: var(--sodium);
+}
+.pulse-sensor__note {
+  grid-column: 1 / -1;
+  font-size: var(--t-micro);
+  line-height: 1.5;
+  color: var(--ash);
+}
+
+/* ── Bridges ─────────────────────────────────────────────────────── */
+
+.pulse-schedule {
+  display: grid;
+  gap: var(--s2);
+}
+.pulse-schedule__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pulse-schedule__row {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: var(--s3);
+  padding: 6px 0;
+  border-top: 1px solid var(--line);
+  font-size: var(--t-small);
+}
+.pulse-schedule__when {
+  color: var(--sodium);
+}
+
+/* ── Motorway signs ──────────────────────────────────────────────── */
+
+.pulse-lanes {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pulse-lane {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 2px var(--s3);
+  align-items: center;
+  padding: var(--s2) 0;
+  border-top: 1px solid var(--line);
+}
+.pulse-lane:first-child {
+  border-top: 0;
+}
+.pulse-lane__mark {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid;
+  border-radius: 50%;
+  font-size: var(--t-small);
+  font-weight: 600;
+}
+.pulse-lane__title {
+  font-size: var(--t-small);
+  color: var(--bone);
+}
+.pulse-lane__since {
+  font-size: var(--t-micro);
+  color: var(--ash);
+}
+.pulse-lane__note {
+  grid-column: 2 / -1;
+  font-size: var(--t-micro);
+  line-height: 1.5;
+  color: var(--ash);
+}
+
+/* ── Car parks ───────────────────────────────────────────────────── */
+
+.pulse-park {
+  display: grid;
+  gap: var(--s3);
+}
+
+/* ── Counters ────────────────────────────────────────────────────── */
+
+.pulse-counter {
+  display: grid;
+  gap: var(--s4);
+}
+.pulse-counter__stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--s6);
+}
+.pulse-counter__chart {
+  display: grid;
+  gap: var(--s2);
+  margin: 0;
+}
+.pulse-counter__caption {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s2);
+  font-size: var(--t-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+
+/* ── Rivers ──────────────────────────────────────────────────────── */
+
+.pulse-river {
+  display: grid;
+  gap: var(--s3);
+}
+.pulse-river__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s3);
+}
+.pulse-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.pulse-chart__tick {
+  font-family: var(--font-data);
+  font-size: 8.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  fill: var(--ash);
+}
+.pulse-chart__label {
+  font-family: var(--font-data);
+  font-size: 8.5px;
+  letter-spacing: 0.04em;
+}
+
+/* ── Tile ────────────────────────────────────────────────────────── */
+
+.pulse-tile {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pulse-tile__row {
+  display: grid;
+  grid-template-columns: 8px 1fr auto;
+  align-items: center;
+  gap: var(--s3);
+  width: 100%;
+  min-height: 44px;
+  padding: 6px var(--s2);
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 120ms ease-out;
+}
+.pulse-tile__row:first-child {
+  border-top: 0;
+}
+.pulse-tile__row:hover,
+.pulse-tile__row:focus-visible {
+  background: rgba(226, 234, 240, 0.045);
+}
+.pulse-tile__row:disabled {
+  cursor: default;
+}
+.pulse-tile__title {
+  font-size: var(--t-body);
+  color: var(--bone);
+}
+.pulse-tile__detail {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--t-small);
+  color: var(--fog);
+}
+.pulse-tile__distance {
+  font-size: var(--t-small);
+  color: var(--fog);
+  white-space: nowrap;
+}
+.pulse-tile__pip {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.pulse-tile__foot {
+  margin: var(--s3) 0 0;
+  font-size: var(--t-micro);
+  letter-spacing: 0.06em;
+  color: var(--ash);
+}

@@ -1,0 +1,14 @@
+# ipptool request for the Printers panel: state, queue and supply levels only. Read-only.
+{
+	NAME "VANTAGE printer status"
+	OPERATION Get-Printer-Attributes
+	VERSION 1.1
+	GROUP operation-attributes-tag
+	ATTR charset attributes-charset utf-8
+	ATTR naturalLanguage attributes-natural-language en
+	ATTR uri printer-uri $uri
+	ATTR keyword requested-attributes printer-info,printer-make-and-model,printer-location,printer-state,printer-state-reasons,printer-state-message,queued-job-count,marker-names,marker-types,marker-levels,marker-colors,printer-alert-description
+	STATUS successful-ok
+	# Printers that lack one of the attributes answer with this status, and still send the rest.
+	STATUS successful-ok-ignored-or-substituted-attributes
+}

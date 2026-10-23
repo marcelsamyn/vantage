@@ -1,0 +1,486 @@
+/* Every class here is "timemachine" or starts with "timemachine-" (enforced by bun run check). */
+
+/* The wrapper is wider than the pill it holds; only the parts you can see take clicks, so the rest still pans the map. */
+.timemachine {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--s2);
+  width: min(640px, 100%);
+  pointer-events: none;
+}
+.timemachine-pill,
+.timemachine-shell,
+.timemachine-credit {
+  pointer-events: auto;
+}
+
+/* ── Collapsed pill ───────────────────────────────────────────── */
+.timemachine-pill {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  height: 36px;
+  max-width: 100%;
+  padding: 0 var(--s3);
+  color: var(--fog);
+  background: rgba(7, 10, 14, 0.86);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+  transition-property: color, box-shadow;
+  transition-duration: var(--fast);
+}
+.timemachine-pill:hover {
+  color: var(--bone);
+  box-shadow: inset 0 0 0 1px var(--line-bright);
+}
+.timemachine-pill .v-eyebrow {
+  color: var(--bone);
+  white-space: nowrap;
+}
+
+.timemachine-status {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--t-micro);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--ash);
+}
+.timemachine-pill .timemachine-status {
+  color: var(--ice);
+}
+.v-panel__head .timemachine-status {
+  margin-left: var(--s2);
+}
+
+/* ── Open panel ───────────────────────────────────────────────── */
+.timemachine-shell .v-panel {
+  background: rgba(7, 10, 14, 0.9);
+  box-shadow: var(--shadow-pop);
+}
+.timemachine-shell .v-panel__body {
+  padding: var(--s3) var(--s4) var(--s4);
+  max-height: min(56dvh, 460px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.timemachine-body {
+  display: grid;
+  gap: var(--s3);
+}
+
+.timemachine-credit {
+  margin: 0;
+  align-self: center;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 10px;
+  color: var(--fog);
+  text-shadow: 0 0 6px var(--void), 0 0 2px var(--void);
+}
+
+/* ── The ruler: the dial of the time machine ──────────────────── */
+.timemachine-ruler {
+  position: relative;
+  height: 64px;
+  margin-inline: 28px;
+  cursor: ew-resize;
+  touch-action: none;
+  user-select: none;
+  border-radius: var(--radius);
+}
+.timemachine-ruler:focus-visible {
+  outline: 1px solid var(--ice);
+  outline-offset: 4px;
+}
+.timemachine-ruler__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 38px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-bright) 8%, var(--line-bright) 100%);
+}
+.timemachine-ruler__tick {
+  position: absolute;
+  top: 46px;
+  translate: -50% 0;
+  font-size: var(--t-micro);
+  color: var(--ash);
+  pointer-events: none;
+}
+.timemachine-ruler__tick::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  width: 1px;
+  height: 5px;
+  background: var(--line-bright);
+}
+
+.timemachine-dot {
+  position: absolute;
+  top: 38px;
+  width: 7px;
+  height: 7px;
+  translate: -50% -50%;
+  background: var(--fog);
+  pointer-events: none;
+  transition-property: background-color, box-shadow;
+  transition-duration: var(--med);
+  transition-timing-function: var(--ease-out);
+}
+.timemachine-dot--map {
+  rotate: 45deg;
+  border-radius: 1px;
+}
+.timemachine-dot--aerial {
+  border-radius: 50%;
+}
+.timemachine-dot--orbit {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--fog);
+}
+.timemachine-dot--today {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--bone);
+}
+.timemachine-dot[data-active] {
+  background: var(--ice);
+  box-shadow:
+    0 0 0 3px var(--ice-dim),
+    0 0 14px 1px rgba(130, 228, 255, 0.7);
+}
+.timemachine-dot--orbit[data-active],
+.timemachine-dot--today[data-active] {
+  background: var(--ice);
+  box-shadow:
+    inset 0 0 0 1.5px var(--ice),
+    0 0 0 3px var(--ice-dim),
+    0 0 14px 1px rgba(130, 228, 255, 0.7);
+}
+
+.timemachine-needle {
+  position: absolute;
+  top: 18px;
+  height: 20px;
+  width: 1px;
+  translate: -50% 0;
+  background: var(--ice);
+  pointer-events: none;
+}
+.timemachine-needle__flag {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  translate: -50% 0;
+  margin-bottom: 3px;
+  padding: 1px 6px;
+  border-radius: 2px;
+  background: var(--ice);
+  color: var(--void);
+  font-size: var(--t-micro);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* ── Era list: the same eras, as buttons ──────────────────────── */
+.timemachine-chips {
+  display: flex;
+  gap: 6px;
+  margin-inline: calc(var(--s4) * -1);
+  padding: 2px var(--s4) 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  mask-image: linear-gradient(90deg, transparent, #000 var(--s4), #000 calc(100% - var(--s4)), transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--s4), #000 calc(100% - var(--s4)), transparent);
+}
+.timemachine-chips::-webkit-scrollbar {
+  display: none;
+}
+.timemachine-chip {
+  flex: none;
+  height: 32px;
+  padding: 0 var(--s3);
+  border-radius: var(--radius);
+  font-family: var(--font-data);
+  font-size: var(--t-small);
+  color: var(--fog);
+  white-space: nowrap;
+  background: rgba(226, 234, 240, 0.04);
+  box-shadow: inset 0 0 0 1px var(--line);
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--fast);
+}
+.timemachine-chip:hover {
+  color: var(--bone);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+.timemachine-chip[data-active] {
+  color: var(--ice);
+  background: var(--ice-dim);
+  box-shadow: inset 0 0 0 1px var(--ice);
+}
+
+/* ── Card for the era on the map ──────────────────────────────── */
+.timemachine-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--s4);
+  align-items: start;
+  padding-top: var(--s3);
+  box-shadow: inset 0 1px 0 var(--line);
+}
+.timemachine-card__year {
+  min-width: 2.4ch;
+  font-weight: 600;
+  font-size: clamp(40px, 11vw, 64px);
+  line-height: 0.9;
+  font-variant-numeric: tabular-nums;
+  color: var(--bone);
+  white-space: nowrap;
+}
+.timemachine-card__text {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+.timemachine-card__text p {
+  margin: 0;
+  font-size: var(--t-body);
+  line-height: 1.45;
+  color: var(--fog);
+}
+.timemachine-card__name {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  font-size: var(--t-lead);
+  font-weight: 500;
+  color: var(--bone);
+}
+.timemachine-card__text .timemachine-card__aside {
+  font-size: var(--t-small);
+  color: var(--ash);
+}
+
+/* ── Compare controls ─────────────────────────────────────────── */
+.timemachine-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s3) var(--s4);
+  transition-property: opacity;
+  transition-duration: var(--med);
+}
+.timemachine-controls[inert] {
+  opacity: 0.35;
+}
+.timemachine-strength {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s3);
+  flex: 1 1 180px;
+  min-width: 0;
+  min-height: 32px;
+}
+.timemachine-strength-value {
+  width: 4ch;
+  text-align: right;
+  font-size: var(--t-small);
+  color: var(--fog);
+}
+.timemachine-strength input[type="range"] {
+  flex: 1;
+  min-width: 80px;
+  height: 32px;
+  margin: 0;
+  background: transparent;
+  accent-color: var(--ice);
+  cursor: pointer;
+}
+
+.timemachine-note {
+  margin: 0;
+  font-size: var(--t-small);
+  color: var(--ash);
+}
+
+/* ── Swipe: the past on a second map, clipped at the divider ───── */
+/* Doubled class: maplibre-gl.css sets .maplibregl-map { position: relative }, which must not win. */
+.timemachine-sheet.timemachine-sheet {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: var(--slow);
+  transition-timing-function: var(--ease-out);
+}
+.timemachine-sheet[data-ready] {
+  opacity: 1;
+}
+
+.timemachine-split {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+.timemachine-split::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -0.5px;
+  width: 1px;
+  background: var(--ice);
+  box-shadow: 0 0 12px rgba(130, 228, 255, 0.55);
+}
+.timemachine-split__grip {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -22px;
+  width: 44px;
+  display: grid;
+  place-items: center;
+  pointer-events: auto;
+  cursor: ew-resize;
+  touch-action: none;
+  outline: none;
+}
+.timemachine-split__handle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 36px;
+  border-radius: 18px;
+  color: var(--void);
+  background: var(--ice);
+  box-shadow:
+    0 0 0 4px rgba(5, 7, 10, 0.55),
+    0 0 18px rgba(130, 228, 255, 0.5);
+  transition-property: scale, box-shadow;
+  transition-duration: var(--fast);
+  transition-timing-function: var(--ease-out);
+}
+.timemachine-split[data-held] .timemachine-split__handle,
+.timemachine-split__grip:focus-visible .timemachine-split__handle {
+  scale: 1.1;
+  box-shadow:
+    0 0 0 4px rgba(5, 7, 10, 0.55),
+    0 0 26px rgba(130, 228, 255, 0.75);
+}
+.timemachine-split__tag {
+  position: absolute;
+  top: var(--s4);
+  padding: 3px 8px;
+  border-radius: 2px;
+  background: rgba(5, 7, 10, 0.82);
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.timemachine-split__tag--then {
+  right: 16px;
+  color: var(--bone);
+}
+.timemachine-split__tag--now {
+  left: 16px;
+  color: var(--ice);
+}
+
+/* Touch: the pill is a full-size button. */
+@media (max-width: 720px), (pointer: coarse) {
+  .timemachine-pill {
+    height: 44px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* The collapsed pill shares a row with the map controls at the right edge: it starts left, drops its chevron, and
+     names only the era on the map, not how many there are. */
+  .timemachine-pill {
+    align-self: flex-start;
+  }
+  .timemachine-pill__chev,
+  .timemachine-pill:not([data-era]) .timemachine-status {
+    display: none;
+  }
+  /* The open panel fits between City's top row and its controls, which "Around me" lifts above its drawer
+     (--city-peek): 230 px covers the row, the panel's head and credit, and the controls. */
+  .timemachine-shell .v-panel__body {
+    max-height: min(56dvh, 460px, calc(100dvh - var(--bar) - var(--ticker) - var(--tabbar) - var(--city-peek, 0px) - 230px));
+  }
+  .timemachine-ruler {
+    margin-inline: 24px;
+  }
+  .timemachine-card {
+    gap: var(--s3);
+  }
+  .timemachine-split__tag {
+    top: 72px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timemachine-sheet.timemachine-sheet,
+  .timemachine-split__handle {
+    transition-duration: 0ms;
+  }
+}
+
+/* ── "Then and now" tile ──────────────────────────────────────── */
+.timemachine-mini {
+  display: grid;
+  gap: var(--s2);
+}
+.timemachine-mini-frame {
+  position: relative;
+  height: clamp(180px, 24vw, 230px);
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--void);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+/* Doubled class: maplibre-gl.css sets .maplibregl-map { position: relative }, which must not win. */
+.timemachine-mini-map.timemachine-mini-map {
+  position: absolute;
+  inset: 0;
+}
+.timemachine-mini-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+}
+.timemachine-mini-credit {
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 10px;
+  color: var(--ash);
+}

@@ -1,0 +1,41 @@
+.sensors-tile {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s4);
+}
+.sensors-cell {
+  display: block;
+  min-width: 0;
+  padding: 6px 8px;
+  margin: -6px -8px;
+  border-radius: var(--radius);
+  text-align: left;
+  transition: background-color var(--fast);
+}
+button.sensors-cell:hover {
+  background: rgba(226, 234, 240, 0.05);
+}
+.sensors-cell--none .v-stat__value {
+  color: var(--ash);
+}
+
+.sensors-trend {
+  display: grid;
+  gap: var(--s2);
+}
+.sensors-trend__note {
+  color: var(--fog);
+  font-size: var(--t-small);
+  line-height: 1.5;
+}
+
+@container tile (max-width: 420px) {
+  .sensors-tile {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 720px) {
+  .sensors-tile {
+    grid-template-columns: 1fr;
+  }
+}

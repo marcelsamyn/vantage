@@ -1,0 +1,839 @@
+{
+ "bridges": [
+  {
+   "code": "NLAMS002122253000074",
+   "name": "Ringweg-Zuid",
+   "lat": 52.337193,
+   "lon": 4.847012,
+   "now": null,
+   "upcoming": [
+    {
+     "phase": "planned",
+     "from": 1791628080000,
+     "until": 1791628440000
+    },
+    {
+     "phase": "planned",
+     "from": 1791630900000,
+     "until": 1791631260000
+    },
+    {
+     "phase": "planned",
+     "from": 1791633480000,
+     "until": 1791633840000
+    },
+    {
+     "phase": "planned",
+     "from": 1791634680000,
+     "until": 1791635040000
+    },
+    {
+     "phase": "planned",
+     "from": 1791635220000,
+     "until": 1791635580000
+    },
+    {
+     "phase": "planned",
+     "from": 1791639720000,
+     "until": 1791640080000
+    },
+    {
+     "phase": "planned",
+     "from": 1791640080000,
+     "until": 1791640440000
+    },
+    {
+     "phase": "planned",
+     "from": 1791641940000,
+     "until": 1791642300000
+    },
+    {
+     "phase": "planned",
+     "from": 1791642720000,
+     "until": 1791643080000
+    },
+    {
+     "phase": "planned",
+     "from": 1791647160000,
+     "until": 1791647520000
+    },
+    {
+     "phase": "planned",
+     "from": 1791649560000,
+     "until": 1791649920000
+    },
+    {
+     "phase": "planned",
+     "from": 1791659580000,
+     "until": 1791659940000
+    },
+    {
+     "phase": "planned",
+     "from": 1791668760000,
+     "until": 1791669120000
+    },
+    {
+     "phase": "planned",
+     "from": 1791670260000,
+     "until": 1791670620000
+    },
+    {
+     "phase": "planned",
+     "from": 1791689700000,
+     "until": 1791690060000
+    },
+    {
+     "phase": "planned",
+     "from": 1791706740000,
+     "until": 1791707100000
+    },
+    {
+     "phase": "planned",
+     "from": 1791709680000,
+     "until": 1791710040000
+    },
+    {
+     "phase": "planned",
+     "from": 1791712320000,
+     "until": 1791712680000
+    }
+   ]
+  },
+  {
+   "code": "NLAMS002120532000058",
+   "name": null,
+   "lat": 52.350975,
+   "lon": 4.852376,
+   "now": {
+    "phase": "window",
+    "from": 1791627720000,
+    "until": 1791628080000
+   },
+   "upcoming": [
+    {
+     "phase": "planned",
+     "from": 1791628800000,
+     "until": 1791629160000
+    },
+    {
+     "phase": "planned",
+     "from": 1791630060000,
+     "until": 1791630420000
+    },
+    {
+     "phase": "planned",
+     "from": 1791631320000,
+     "until": 1791631680000
+    },
+    {
+     "phase": "planned",
+     "from": 1791635940000,
+     "until": 1791636300000
+    },
+    {
+     "phase": "planned",
+     "from": 1791636900000,
+     "until": 1791637260000
+    },
+    {
+     "phase": "planned",
+     "from": 1791639300000,
+     "until": 1791639660000
+    },
+    {
+     "phase": "planned",
+     "from": 1791640500000,
+     "until": 1791640860000
+    },
+    {
+     "phase": "planned",
+     "from": 1791642240000,
+     "until": 1791642600000
+    },
+    {
+     "phase": "planned",
+     "from": 1791644640000,
+     "until": 1791645000000
+    },
+    {
+     "phase": "planned",
+     "from": 1791645000000,
+     "until": 1791645360000
+    },
+    {
+     "phase": "planned",
+     "from": 1791647400000,
+     "until": 1791647760000
+    },
+    {
+     "phase": "planned",
+     "from": 1791662460000,
+     "until": 1791662820000
+    },
+    {
+     "phase": "planned",
+     "from": 1791666660000,
+     "until": 1791667020000
+    },
+    {
+     "phase": "planned",
+     "from": 1791672600000,
+     "until": 1791672960000
+    },
+    {
+     "phase": "planned",
+     "from": 1791687180000,
+     "until": 1791687540000
+    },
+    {
+     "phase": "planned",
+     "from": 1791708900000,
+     "until": 1791709260000
+    },
+    {
+     "phase": "planned",
+     "from": 1791709680000,
+     "until": 1791710040000
+    },
+    {
+     "phase": "planned",
+     "from": 1791711900000,
+     "until": 1791712260000
+    },
+    {
+     "phase": "planned",
+     "from": 1791712620000,
+     "until": 1791712980000
+    }
+   ]
+  },
+  {
+   "code": "NLAMS002120530800024",
+   "name": null,
+   "lat": 52.379047,
+   "lon": 4.872856,
+   "now": null,
+   "upcoming": [
+    {
+     "phase": "planned",
+     "from": 1791628920000,
+     "until": 1791629280000
+    },
+    {
+     "phase": "planned",
+     "from": 1791630060000,
+     "until": 1791630420000
+    },
+    {
+     "phase": "planned",
+     "from": 1791632400000,
+     "until": 1791632760000
+    },
+    {
+     "phase": "planned",
+     "from": 1791633540000,
+     "until": 1791633900000
+    },
+    {
+     "phase": "planned",
+     "from": 1791637920000,
+     "until": 1791638280000
+    },
+    {
+     "phase": "planned",
+     "from": 1791639300000,
+     "until": 1791639660000
+    },
+    {
+     "phase": "planned",
+     "from": 1791641640000,
+     "until": 1791642000000
+    },
+    {
+     "phase": "planned",
+     "from": 1791642540000,
+     "until": 1791642900000
+    },
+    {
+     "phase": "planned",
+     "from": 1791644700000,
+     "until": 1791645060000
+    },
+    {
+     "phase": "planned",
+     "from": 1791645060000,
+     "until": 1791645420000
+    },
+    {
+     "phase": "planned",
+     "from": 1791647040000,
+     "until": 1791647400000
+    },
+    {
+     "phase": "planned",
+     "from": 1791663960000,
+     "until": 1791664320000
+    },
+    {
+     "phase": "planned",
+     "from": 1791664800000,
+     "until": 1791665160000
+    },
+    {
+     "phase": "planned",
+     "from": 1791675000000,
+     "until": 1791675360000
+    },
+    {
+     "phase": "planned",
+     "from": 1791684780000,
+     "until": 1791685140000
+    },
+    {
+     "phase": "planned",
+     "from": 1791707160000,
+     "until": 1791707520000
+    },
+    {
+     "phase": "planned",
+     "from": 1791709920000,
+     "until": 1791710280000
+    },
+    {
+     "phase": "planned",
+     "from": 1791711600000,
+     "until": 1791711960000
+    }
+   ]
+  },
+  {
+   "code": "NLAMS002120531200035",
+   "name": null,
+   "lat": 52.370132,
+   "lon": 4.864995,
+   "now": {
+    "phase": "window",
+    "from": 1791627720000,
+    "until": 1791628080000
+   },
+   "upcoming": [
+    {
+     "phase": "planned",
+     "from": 1791629280000,
+     "until": 1791629640000
+    },
+    {
+     "phase": "planned",
+     "from": 1791629700000,
+     "until": 1791630060000
+    },
+    {
+     "phase": "planned",
+     "from": 1791631620000,
+     "until": 1791631980000
+    },
+    {
+     "phase": "planned",
+     "from": 1791634320000,
+     "until": 1791634680000
+    },
+    {
+     "phase": "planned",
+     "from": 1791638520000,
+     "until": 1791638880000
+    },
+    {
+     "phase": "planned",
+     "from": 1791638880000,
+     "until": 1791639240000
+    },
+    {
+     "phase": "planned",
+     "from": 1791640860000,
+     "until": 1791641220000
+    },
+    {
+     "phase": "planned",
+     "from": 1791643380000,
+     "until": 1791643740000
+    },
+    {
+     "phase": "planned",
+     "from": 1791643920000,
+     "until": 1791644280000
+    },
+    {
+     "phase": "planned",
+     "from": 1791645840000,
+     "until": 1791646200000
+    },
+    {
+     "phase": "planned",
+     "from": 1791646260000,
+     "until": 1791646620000
+    },
+    {
+     "phase": "planned",
+     "from": 1791664020000,
+     "until": 1791664380000
+    },
+    {
+     "phase": "planned",
+     "from": 1791665040000,
+     "until": 1791665400000
+    },
+    {
+     "phase": "planned",
+     "from": 1791674220000,
+     "until": 1791674580000
+    },
+    {
+     "phase": "planned",
+     "from": 1791685560000,
+     "until": 1791685920000
+    },
+    {
+     "phase": "planned",
+     "from": 1791707940000,
+     "until": 1791708300000
+    },
+    {
+     "phase": "planned",
+     "from": 1791710700000,
+     "until": 1791711060000
+    },
+    {
+     "phase": "planned",
+     "from": 1791710820000,
+     "until": 1791711180000
+    },
+    {
+     "phase": "planned",
+     "from": 1791713520000,
+     "until": 1791713880000
+    }
+   ]
+  },
+  {
+   "code": "NLAMS002120531600051",
+   "name": null,
+   "lat": 52.357864,
+   "lon": 4.854856,
+   "now": null,
+   "upcoming": [
+    {
+     "phase": "planned",
+     "from": 1791628200000,
+     "until": 1791628560000
+    },
+    {
+     "phase": "planned",
+     "from": 1791630540000,
+     "until": 1791630900000
+    },
+    {
+     "phase": "planned",
+     "from": 1791630720000,
+     "until": 1791631080000
+    },
+    {
+     "phase": "planned",
+     "from": 1791635340000,
+     "until": 1791635700000
+    },
+    {
+     "phase": "planned",
+     "from": 1791637500000,
+     "until": 1791637860000
+    },
+    {
+     "phase": "planned",
+     "from": 1791639840000,
+     "until": 1791640200000
+    },
+    {
+     "phase": "planned",
+     "from": 1791639900000,
+     "until": 1791640260000
+    },
+    {
+     "phase": "planned",
+     "from": 1791642840000,
+     "until": 1791643200000
+    },
+    {
+     "phase": "planned",
+     "from": 1791644340000,
+     "until": 1791644700000
+    },
+    {
+     "phase": "planned",
+     "from": 1791645180000,
+     "until": 1791645540000
+    },
+    {
+     "phase": "planned",
+     "from": 1791646860000,
+     "until": 1791647220000
+    },
+    {
+     "phase": "planned",
+     "from": 1791662940000,
+     "until": 1791663300000
+    },
+    {
+     "phase": "planned",
+     "from": 1791666060000,
+     "until": 1791666420000
+    },
+    {
+     "phase": "planned",
+     "from": 1791673200000,
+     "until": 1791673560000
+    },
+    {
+     "phase": "planned",
+     "from": 1791686580000,
+     "until": 1791686940000
+    },
+    {
+     "phase": "planned",
+     "from": 1791708900000,
+     "until": 1791709260000
+    },
+    {
+     "phase": "planned",
+     "from": 1791709440000,
+     "until": 1791709800000
+    },
+    {
+     "phase": "planned",
+     "from": 1791711720000,
+     "until": 1791712080000
+    },
+    {
+     "phase": "planned",
+     "from": 1791712500000,
+     "until": 1791712860000
+    }
+   ]
+  },
+  {
+   "code": "NLAMS002120530600018",
+   "name": "Nassaukade",
+   "lat": 52.381813,
+   "lon": 4.879037,
+   "now": null,
+   "upcoming": [
+    {
+     "phase": "planned",
+     "from": 1791628500000,
+     "until": 1791628860000
+    },
+    {
+     "phase": "planned",
+     "from": 1791630480000,
+     "until": 1791630840000
+    },
+    {
+     "phase": "planned",
+     "from": 1791632820000,
+     "until": 1791633180000
+    },
+    {
+     "phase": "planned",
+     "from": 1791633180000,
+     "until": 1791633540000
+    },
+    {
+     "phase": "planned",
+     "from": 1791637500000,
+     "until": 1791637860000
+    },
+    {
+     "phase": "planned",
+     "from": 1791639720000,
+     "until": 1791640080000
+    },
+    {
+     "phase": "planned",
+     "from": 1791642060000,
+     "until": 1791642420000
+    },
+    {
+     "phase": "planned",
+     "from": 1791642180000,
+     "until": 1791642540000
+    },
+    {
+     "phase": "planned",
+     "from": 1791644640000,
+     "until": 1791645000000
+    },
+    {
+     "phase": "planned",
+     "from": 1791645060000,
+     "until": 1791645420000
+    },
+    {
+     "phase": "planned",
+     "from": 1791647400000,
+     "until": 1791647760000
+    },
+    {
+     "phase": "planned",
+     "from": 1791663540000,
+     "until": 1791663900000
+    },
+    {
+     "phase": "planned",
+     "from": 1791665220000,
+     "until": 1791665580000
+    },
+    {
+     "phase": "planned",
+     "from": 1791675420000,
+     "until": 1791675780000
+    },
+    {
+     "phase": "planned",
+     "from": 1791684360000,
+     "until": 1791684720000
+    },
+    {
+     "phase": "planned",
+     "from": 1791706740000,
+     "until": 1791707100000
+    },
+    {
+     "phase": "planned",
+     "from": 1791709500000,
+     "until": 1791709860000
+    },
+    {
+     "phase": "planned",
+     "from": 1791712020000,
+     "until": 1791712380000
+    },
+    {
+     "phase": "planned",
+     "from": 1791713940000,
+     "until": 1791714300000
+    }
+   ]
+  },
+  {
+   "code": "NLAMS002120531400042",
+   "name": null,
+   "lat": 52.364616,
+   "lon": 4.860002,
+   "now": {
+    "phase": "window",
+    "from": 1791627720000,
+    "until": 1791628080000
+   },
+   "upcoming": [
+    {
+     "phase": "planned",
+     "from": 1791628800000,
+     "until": 1791629160000
+    },
+    {
+     "phase": "planned",
+     "from": 1791630180000,
+     "until": 1791630540000
+    },
+    {
+     "phase": "planned",
+     "from": 1791631140000,
+     "until": 1791631500000
+    },
+    {
+     "phase": "planned",
+     "from": 1791634800000,
+     "until": 1791635160000
+    },
+    {
+     "phase": "planned",
+     "from": 1791638040000,
+     "until": 1791638400000
+    },
+    {
+     "phase": "planned",
+     "from": 1791639360000,
+     "until": 1791639720000
+    },
+    {
+     "phase": "planned",
+     "from": 1791640380000,
+     "until": 1791640740000
+    },
+    {
+     "phase": "planned",
+     "from": 1791643440000,
+     "until": 1791643800000
+    },
+    {
+     "phase": "planned",
+     "from": 1791643860000,
+     "until": 1791644220000
+    },
+    {
+     "phase": "planned",
+     "from": 1791645780000,
+     "until": 1791646140000
+    },
+    {
+     "phase": "planned",
+     "from": 1791646320000,
+     "until": 1791646680000
+    },
+    {
+     "phase": "planned",
+     "from": 1791663540000,
+     "until": 1791663900000
+    },
+    {
+     "phase": "planned",
+     "from": 1791665520000,
+     "until": 1791665880000
+    },
+    {
+     "phase": "planned",
+     "from": 1791673740000,
+     "until": 1791674100000
+    },
+    {
+     "phase": "planned",
+     "from": 1791686040000,
+     "until": 1791686400000
+    },
+    {
+     "phase": "planned",
+     "from": 1791708420000,
+     "until": 1791708780000
+    },
+    {
+     "phase": "planned",
+     "from": 1791710040000,
+     "until": 1791710400000
+    },
+    {
+     "phase": "planned",
+     "from": 1791711180000,
+     "until": 1791711540000
+    },
+    {
+     "phase": "planned",
+     "from": 1791713040000,
+     "until": 1791713400000
+    }
+   ]
+  },
+  {
+   "code": "NLAMS002120531000028",
+   "name": null,
+   "lat": 52.375435,
+   "lon": 4.869832,
+   "now": null,
+   "upcoming": [
+    {
+     "phase": "planned",
+     "from": 1791629220000,
+     "until": 1791629580000
+    },
+    {
+     "phase": "planned",
+     "from": 1791629760000,
+     "until": 1791630120000
+    },
+    {
+     "phase": "planned",
+     "from": 1791632100000,
+     "until": 1791632460000
+    },
+    {
+     "phase": "planned",
+     "from": 1791633900000,
+     "until": 1791634260000
+    },
+    {
+     "phase": "planned",
+     "from": 1791638220000,
+     "until": 1791638580000
+    },
+    {
+     "phase": "planned",
+     "from": 1791639000000,
+     "until": 1791639360000
+    },
+    {
+     "phase": "planned",
+     "from": 1791641340000,
+     "until": 1791641700000
+    },
+    {
+     "phase": "planned",
+     "from": 1791642900000,
+     "until": 1791643260000
+    },
+    {
+     "phase": "planned",
+     "from": 1791644340000,
+     "until": 1791644700000
+    },
+    {
+     "phase": "planned",
+     "from": 1791645360000,
+     "until": 1791645720000
+    },
+    {
+     "phase": "planned",
+     "from": 1791646680000,
+     "until": 1791647040000
+    },
+    {
+     "phase": "planned",
+     "from": 1791664500000,
+     "until": 1791664860000
+    },
+    {
+     "phase": "planned",
+     "from": 1791664620000,
+     "until": 1791664980000
+    },
+    {
+     "phase": "planned",
+     "from": 1791674700000,
+     "until": 1791675060000
+    },
+    {
+     "phase": "planned",
+     "from": 1791685080000,
+     "until": 1791685440000
+    },
+    {
+     "phase": "planned",
+     "from": 1791707460000,
+     "until": 1791707820000
+    },
+    {
+     "phase": "planned",
+     "from": 1791710220000,
+     "until": 1791710580000
+    },
+    {
+     "phase": "planned",
+     "from": 1791711300000,
+     "until": 1791711660000
+    },
+    {
+     "phase": "planned",
+     "from": 1791714000000,
+     "until": 1791714360000
+    }
+   ]
+  }
+ ],
+ "publishedAt": 1791627780002
+}

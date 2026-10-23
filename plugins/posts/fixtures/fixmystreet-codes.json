@@ -1,0 +1,62 @@
+[
+ {
+  "value": 1002,
+  "label_fr": "Propreté publique",
+  "label_nl": "Openbare netheid"
+ },
+ {
+  "value": 4051,
+  "label_fr": "Propreté publique / Sacs poubelles / sac éventré / blanc",
+  "label_nl": "Openbare netheid / Vuilniszakken / gescheurde zak / wit"
+ },
+ {
+  "value": 4001,
+  "label_fr": "Propreté publique / Sacs poubelles / sac non collecté / blanc",
+  "label_nl": "Openbare netheid / Vuilniszakken / niet opgehaalde zak / wit"
+ },
+ {
+  "value": 4003,
+  "label_fr": "Propreté publique / Sacs poubelles / sac non collecté / fuchsia",
+  "label_nl": "Openbare netheid / Vuilniszakken / niet opgehaalde zak / roze"
+ },
+ {
+  "value": 4010,
+  "label_fr": "Propreté publique / Dépôt clandestin / encombrants / < 1 m³",
+  "label_nl": "Openbare netheid / Sluikstorten / grof huisvuil / < 1 m³"
+ },
+ {
+  "value": 4011,
+  "label_fr": "Propreté publique / Dépôt clandestin / encombrants / > 1 m³",
+  "label_nl": "Openbare netheid / Sluikstorten / grof huisvuil / > 1 m³"
+ },
+ {
+  "value": 3301,
+  "label_fr": "Propreté publique / Corbeille débordante",
+  "label_nl": "Openbare netheid / Overvolle vuilnisbak"
+ },
+ {
+  "value": 2504,
+  "label_fr": "Propreté publique / Tags / mobilier urbain",
+  "label_nl": "Openbare netheid / Graffiti / stadsmeubilair"
+ },
+ {
+  "value": 1005,
+  "label_fr": "Signalisation",
+  "label_nl": "Signalisatie"
+ },
+ {
+  "value": 5130,
+  "label_fr": "Signalisation / Poteau / manquant",
+  "label_nl": "Signalisatie / Paaltje / ontbreek"
+ },
+ {
+  "value": 1007,
+  "label_fr": "Mobilier urbain",
+  "label_nl": "Stadsmeubilair"
+ },
+ {
+  "value": 3045,
+  "label_fr": "Mobilier urbain / Potelet / accidenté",
+  "label_nl": "Stadsmeubilair / Paaltje / beschadigd"
+ }
+]

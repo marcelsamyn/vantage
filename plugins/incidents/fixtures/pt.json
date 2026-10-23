@@ -1,0 +1,103 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 49959278,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.132459,
+          39.913035
+        ]
+      },
+      "properties": {
+        "ID_oc": 49959278,
+        "Numero": "20260190881",
+        "CodEstadoOcorrencia": 5,
+        "EstadoOcorrencia": "Chegada ao TO",
+        "EstadoAgrupado": "Em Despacho",
+        "DataInicioOcorrencia": "05/02/2026 10:00",
+        "DataOcorrencia": 1770285600000,
+        "Data": "2026-02-05",
+        "Hora": "10:00",
+        "Ano": 2026,
+        "Duracao": "248/23:44",
+        "DuracaoMinutos": 357104,
+        "FaseIncendio": "---",
+        "CodNatureza": 3313,
+        "Natureza": "3313 - Movimento de massa",
+        "Regiao": "Centro",
+        "SubRegiao": "Beira Baixa",
+        "Concelho": "Sertã",
+        "Freguesia": "Pedrógão Pequeno",
+        "Localidade": "PEDROGÃO PEQUENO",
+        "Endereco": "EN 2 - Pedrogão Pequeno",
+        "OperacionaisTerrestres": 2,
+        "OPAereos": 0,
+        "Operacionais": 2,
+        "MeiosTerrestres": 1,
+        "MeiosAereos": 0,
+        "QuantEntidades": 1,
+        "Latitude": 39.913035,
+        "Longitude": -8.132459,
+        "DDD": "39.913035°N 8.132459°W",
+        "DDM": "39°54,7800'N 8°7,9500'W ",
+        "DMS": "39° 54' 46,80'' N 8° 7' 57,00'' W ",
+        "DataDosDados": 1791711840000,
+        "Simbol": "33 - Em Curso",
+        "RASI": "Intervenções em Infraestruturas e vias de comunicação",
+        "ID": "26712881"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49959279,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.802832,
+          39.749179
+        ]
+      },
+      "properties": {
+        "ID_oc": 49959279,
+        "Numero": "20260459614",
+        "CodEstadoOcorrencia": 6,
+        "EstadoOcorrencia": "Em Curso",
+        "EstadoAgrupado": "Em Curso",
+        "DataInicioOcorrencia": "30/03/2026 06:00",
+        "DataOcorrencia": 1774846800000,
+        "Data": "2026-03-30",
+        "Hora": "06:00",
+        "Ano": 2026,
+        "Duracao": "195/03:44",
+        "DuracaoMinutos": 281024,
+        "FaseIncendio": "---",
+        "CodNatureza": 9115,
+        "Natureza": "9115 - Operações Nacionais de Assistência",
+        "Regiao": "Centro",
+        "SubRegiao": "Região de Leiria",
+        "Concelho": "Leiria",
+        "Freguesia": "Leiria, Pousos, Barreira e Cortes",
+        "Localidade": "PCO Leiria - CIPO",
+        "Endereco": " --- ",
+        "OperacionaisTerrestres": 0,
+        "OPAereos": 0,
+        "Operacionais": 0,
+        "MeiosTerrestres": 0,
+        "MeiosAereos": 0,
+        "QuantEntidades": 0,
+        "Latitude": 39.749179,
+        "Longitude": -8.802832,
+        "DDD": "39.749179°N 8.802832°W",
+        "DDM": "39°44,9520'N 8°48,1680'W ",
+        "DMS": "39° 44' 57,12'' N 8° 48' 10,08'' W ",
+        "DataDosDados": 1791711840000,
+        "Simbol": "91 - Em Curso",
+        "RASI": "Outras ocorrências de proteção e socorro",
+        "ID": "26981630"
+      }
+    }
+  ]
+}

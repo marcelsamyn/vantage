@@ -1,0 +1,5 @@
+.aprs-raw { margin-top: var(--s3); font-size: 12px; }
+.aprs-raw summary { cursor: pointer; color: var(--fog); }
+.aprs-raw pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 11px; color: var(--bone); }
+
+.aprs-rows { font-variant-numeric: tabular-nums; }

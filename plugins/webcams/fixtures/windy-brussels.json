@@ -1,0 +1,145 @@
+{
+ "total": 4,
+ "webcams": [
+  {
+   "title": "City of Brussels › North: Place De Brouckère",
+   "webcamId": 1736585384,
+   "status": "active",
+   "lastUpdatedOn": "2026-10-10T06:34:01.000Z",
+   "categories": [
+    {
+     "id": "city",
+     "name": "City"
+    },
+    {
+     "id": "square",
+     "name": "Square"
+    }
+   ],
+   "images": {
+    "current": {
+     "icon": "https://imgproxy.windy.com/_/icon/plain/current/1736585384/original.jpg?v=2",
+     "thumbnail": "https://imgproxy.windy.com/_/thumbnail/plain/current/1736585384/original.jpg?v=2",
+     "preview": "https://imgproxy.windy.com/_/preview/plain/current/1736585384/original.jpg?v=2"
+    }
+   },
+   "location": {
+    "city": "City of Brussels",
+    "region": "Brussels-Capital",
+    "region_code": "BE.BRU",
+    "country": "Belgium",
+    "country_code": "BE",
+    "continent": "Europe",
+    "continent_code": "EU",
+    "latitude": 50.85166,
+    "longitude": 4.35284
+   },
+   "urls": {
+    "detail": "https://windy.com/webcams/1736585384"
+   }
+  },
+  {
+   "title": "City of Brussels: Grand Place",
+   "webcamId": 1761136786,
+   "status": "active",
+   "lastUpdatedOn": "2026-10-10T06:34:33.000Z",
+   "categories": [
+    {
+     "id": "city",
+     "name": "City"
+    },
+    {
+     "id": "square",
+     "name": "Square"
+    }
+   ],
+   "images": {
+    "current": {
+     "icon": "https://imgproxy.windy.com/_/icon/plain/current/1761136786/original.jpg?v=2",
+     "thumbnail": "https://imgproxy.windy.com/_/thumbnail/plain/current/1761136786/original.jpg?v=2",
+     "preview": "https://imgproxy.windy.com/_/preview/plain/current/1761136786/original.jpg?v=2"
+    }
+   },
+   "location": {
+    "city": "City of Brussels",
+    "region": "Brussels-Capital",
+    "region_code": "BE.BRU",
+    "country": "Belgium",
+    "country_code": "BE",
+    "continent": "Europe",
+    "continent_code": "EU",
+    "latitude": 50.84682,
+    "longitude": 4.35211
+   },
+   "urls": {
+    "detail": "https://windy.com/webcams/1761136786"
+   }
+  },
+  {
+   "title": "Beersel › West",
+   "webcamId": 1609417481,
+   "status": "active",
+   "lastUpdatedOn": "2026-10-10T06:34:22.000Z",
+   "categories": [
+    {
+     "id": "meteo",
+     "name": "Weather"
+    }
+   ],
+   "images": {
+    "current": {
+     "icon": "https://imgproxy.windy.com/_/icon/plain/current/1609417481/original.jpg?v=2",
+     "thumbnail": "https://imgproxy.windy.com/_/thumbnail/plain/current/1609417481/original.jpg?v=2",
+     "preview": "https://imgproxy.windy.com/_/preview/plain/current/1609417481/original.jpg?v=2"
+    }
+   },
+   "location": {
+    "city": "Beersel",
+    "region": "Flanders",
+    "region_code": "BE.VLG",
+    "country": "Belgium",
+    "country_code": "BE",
+    "continent": "Europe",
+    "continent_code": "EU",
+    "latitude": 50.76225,
+    "longitude": 4.30316
+   },
+   "urls": {
+    "detail": "https://windy.com/webcams/1609417481"
+   }
+  },
+  {
+   "title": "Ottignies-Louvain-la-Neuve: Ottignies: L.N.N. Météo ON4MBL - WebCam en Live",
+   "webcamId": 1317633173,
+   "status": "inactive",
+   "lastUpdatedOn": "2026-10-09T20:59:21.000Z",
+   "categories": [
+    {
+     "id": "meteo",
+     "name": "Weather"
+    }
+   ],
+   "images": {
+    "current": {
+     "icon": "https://imgproxy.windy.com/_/icon/plain/current/1317633173/original.jpg?v=2",
+     "thumbnail": "https://imgproxy.windy.com/_/thumbnail/plain/current/1317633173/original.jpg?v=2",
+     "preview": "https://imgproxy.windy.com/_/preview/plain/current/1317633173/original.jpg?v=2"
+    }
+   },
+   "location": {
+    "city": "Ottignies-Louvain-la-Neuve",
+    "region": "Wallonia",
+    "region_code": "BE.WAL",
+    "country": "Belgium",
+    "country_code": "BE",
+    "continent": "Europe",
+    "continent_code": "EU",
+    "latitude": 50.65797,
+    "longitude": 4.57452
+   },
+   "urls": {
+    "detail": "https://windy.com/webcams/1317633173"
+   }
+  }
+ ]
+}

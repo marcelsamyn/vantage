@@ -1,0 +1,143 @@
+.sondes-tile {
+  display: grid;
+  gap: var(--s4);
+}
+
+.sondes-tile__nearest {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  min-width: 0;
+  padding: 6px 8px;
+  margin: -6px -8px;
+  border-radius: var(--radius);
+  text-align: left;
+  transition: background-color var(--fast);
+}
+.sondes-tile__nearest:hover {
+  background: rgba(226, 234, 240, 0.05);
+}
+.sondes-tile__text {
+  display: grid;
+  gap: var(--s2);
+  min-width: 0;
+}
+
+.sondes-gauge {
+  flex: none;
+  overflow: visible;
+}
+.sondes-gauge__axis {
+  stroke: var(--line-strong);
+  stroke-width: 1;
+}
+.sondes-gauge__tick {
+  stroke: var(--ash);
+  stroke-width: 1;
+}
+.sondes-gauge__label {
+  fill: var(--ash);
+  font-family: var(--font-data);
+  font-size: 9px;
+}
+.sondes-gauge__burst {
+  stroke: var(--sodium);
+  stroke-width: 1.5;
+  stroke-dasharray: 2 2;
+}
+.sondes-gauge__dot {
+  fill: var(--sodium);
+  filter: drop-shadow(0 0 5px rgba(255, 181, 71, 0.7));
+}
+
+.sondes-tile__launch {
+  display: grid;
+  gap: 2px;
+  padding-top: var(--s3);
+  border-top: 1px solid var(--line);
+  min-width: 0;
+}
+.sondes-tile__site {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@container tile (min-width: 520px) {
+  .sondes-tile {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+  }
+  .sondes-tile__launch {
+    padding-top: 0;
+    padding-left: var(--s5);
+    border-top: 0;
+    border-left: 1px solid var(--line);
+  }
+}
+
+.sondes-flight {
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+.sondes-flight svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+.sondes-flight figcaption {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--t-micro);
+  letter-spacing: 0.06em;
+  color: var(--fog);
+}
+.sondes-flight__grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.sondes-flight__area {
+  fill: rgba(255, 181, 71, 0.1);
+}
+.sondes-flight__line {
+  fill: none;
+  stroke: var(--sodium);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+.sondes-flight__line--predicted {
+  stroke-dasharray: 3 3;
+  opacity: 0.7;
+}
+.sondes-balloon-chart__night {
+  fill: var(--ash);
+  opacity: 0.22;
+}
+.sondes-balloon-chart__line {
+  filter: drop-shadow(0 0 3px rgba(255, 181, 71, 0.55));
+}
+.sondes-flight__peak {
+  fill: none;
+  stroke: var(--sodium);
+  stroke-width: 1;
+}
+.sondes-flight__now {
+  fill: var(--sodium);
+  filter: drop-shadow(0 0 4px rgba(255, 181, 71, 0.7));
+}
+
+.sondes-tile__far {
+  display: grid;
+  gap: 2px;
+  text-align: left;
+  padding: 6px 8px;
+  margin: 0 -8px -6px;
+  border-radius: var(--radius);
+  transition: background-color var(--fast);
+}
+.sondes-tile__far:hover {
+  background: rgba(226, 234, 240, 0.05);
+}

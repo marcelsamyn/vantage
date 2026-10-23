@@ -1,0 +1,198 @@
+{
+ "gauges": [
+  {
+   "id": "waterinfo:IMO_332",
+   "source": "Waterinfo (Flanders)",
+   "name": "Evergem RWZI Ringvaart",
+   "river": null,
+   "lat": 51.1061167108622,
+   "lon": 3.71752210083692,
+   "level": -0.16,
+   "at": 1791622200000,
+   "thresholds": null,
+   "status": "unknown",
+   "trend3h": 0,
+   "url": "https://www.waterinfo.be/default.aspx?path=NL/Thema/Rivierwaterstanden&KL=nl"
+  },
+  {
+   "id": "waterinfo:L03_448",
+   "source": "Waterinfo (Flanders)",
+   "name": "Vinderhoute/Borisgracht",
+   "river": null,
+   "lat": 51.0758557364736,
+   "lon": 3.62139534104012,
+   "level": 5.08,
+   "at": 1791627300000,
+   "thresholds": null,
+   "status": "unknown",
+   "trend3h": 0.0019999999999997797,
+   "url": "https://www.waterinfo.be/default.aspx?path=NL/Thema/Rivierwaterstanden&KL=nl"
+  },
+  {
+   "id": "waterinfo:S03_309",
+   "source": "Waterinfo (Flanders)",
+   "name": "Oostakker/Wittewalle",
+   "river": null,
+   "lat": 51.109942003115,
+   "lon": 3.7693759596302,
+   "level": 5.704,
+   "at": 1791627300000,
+   "thresholds": {
+    "prewatch": 6.15,
+    "watch": null,
+    "prealarm": null,
+    "alarm": null
+   },
+   "status": "normal",
+   "trend3h": -0.03300000000000036,
+   "url": "https://www.waterinfo.be/default.aspx?path=NL/Thema/Rivierwaterstanden&KL=nl"
+  },
+  {
+   "id": "waterinfo:IMO_537",
+   "source": "Waterinfo (Flanders)",
+   "name": "Lochristi StationstraatBis Ledebeek",
+   "river": null,
+   "lat": 51.0817370431222,
+   "lon": 3.83394699833853,
+   "level": 0,
+   "at": 1791625200000,
+   "thresholds": null,
+   "status": "unknown",
+   "trend3h": 0,
+   "url": "https://www.waterinfo.be/default.aspx?path=NL/Thema/Rivierwaterstanden&KL=nl"
+  },
+  {
+   "id": "waterinfo:IMO_512",
+   "source": "Waterinfo (Flanders)",
+   "name": "Laarne Term Laresloot",
+   "river": null,
+   "lat": 51.0213042549775,
+   "lon": 3.8438676914243,
+   "level": 0,
+   "at": 1791622200000,
+   "thresholds": null,
+   "status": "unknown",
+   "trend3h": 0,
+   "url": "https://www.waterinfo.be/default.aspx?path=NL/Thema/Rivierwaterstanden&KL=nl"
+  },
+  {
+   "id": "waterinfo:IMO_538",
+   "source": "Waterinfo (Flanders)",
+   "name": "Beervelde Pensionaatstraatbis Ledebeek",
+   "river": null,
+   "lat": 51.0852639923318,
+   "lon": 3.85385999999951,
+   "level": 0,
+   "at": 1791625200000,
+   "thresholds": null,
+   "status": "unknown",
+   "trend3h": 0,
+   "url": "https://www.waterinfo.be/default.aspx?path=NL/Thema/Rivierwaterstanden&KL=nl"
+  },
+  {
+   "id": "waterinfo:S03_308",
+   "source": "Waterinfo (Flanders)",
+   "name": "Lochristi/Westlede",
+   "river": null,
+   "lat": 51.1106103138589,
+   "lon": 3.83763969317165,
+   "level": 0.399,
+   "at": 1791627300000,
+   "thresholds": {
+    "prewatch": 6.46,
+    "watch": null,
+    "prealarm": null,
+    "alarm": null
+   },
+   "status": "normal",
+   "trend3h": -0.0040000000000000036,
+   "url": "https://www.waterinfo.be/default.aspx?path=NL/Thema/Rivierwaterstanden&KL=nl"
+  },
+  {
+   "id": "waterinfo:L03_447",
+   "source": "Waterinfo (Flanders)",
+   "name": "Waarschoot/Brakeleijken",
+   "river": null,
+   "lat": 51.1460721005912,
+   "lon": 3.64622530820392,
+   "level": 4.677,
+   "at": 1791627300000,
+   "thresholds": null,
+   "status": "unknown",
+   "trend3h": -0.004000000000000448,
+   "url": "https://www.waterinfo.be/default.aspx?path=NL/Thema/Rivierwaterstanden&KL=nl"
+  },
+  {
+   "id": "waterinfo:L03_301",
+   "source": "Waterinfo (Flanders)",
+   "name": "Mendonk/Zuidlede",
+   "river": null,
+   "lat": 51.1468063102965,
+   "lon": 3.8311392348016,
+   "level": 4.667,
+   "at": 1791627300000,
+   "thresholds": {
+    "prewatch": 4.95,
+    "watch": null,
+    "prealarm": null,
+    "alarm": 5
+   },
+   "status": "normal",
+   "trend3h": 0.004999999999999893,
+   "url": "https://www.waterinfo.be/default.aspx?path=NL/Thema/Rivierwaterstanden&KL=nl"
+  },
+  {
+   "id": "waterinfo:S03_304",
+   "source": "Waterinfo (Flanders)",
+   "name": "Wachtebeke/Zwartebeek",
+   "river": null,
+   "lat": 51.156555452895,
+   "lon": 3.86287538740376,
+   "level": 2.833,
+   "at": 1791627300000,
+   "thresholds": {
+    "prewatch": 4.48,
+    "watch": null,
+    "prealarm": null,
+    "alarm": null
+   },
+   "status": "normal",
+   "trend3h": 0,
+   "url": "https://www.waterinfo.be/default.aspx?path=NL/Thema/Rivierwaterstanden&KL=nl"
+  },
+  {
+   "id": "waterinfo:S03_302",
+   "source": "Waterinfo (Flanders)",
+   "name": "Wachtebeke/Zuidlede",
+   "river": null,
+   "lat": 51.1482607642924,
+   "lon": 3.90272357445957,
+   "level": 4.713,
+   "at": 1791627300000,
+   "thresholds": {
+    "prewatch": 4.95,
+    "watch": null,
+    "prealarm": null,
+    "alarm": 5.1
+   },
+   "status": "normal",
+   "trend3h": 0.006000000000000227,
+   "url": "https://www.waterinfo.be/default.aspx?path=NL/Thema/Rivierwaterstanden&KL=nl"
+  },
+  {
+   "id": "waterinfo:L03_443",
+   "source": "Waterinfo (Flanders)",
+   "name": "Assenede/Vlietbeek",
+   "river": null,
+   "lat": 51.2041054457327,
+   "lon": 3.76324522687324,
+   "level": 0.337,
+   "at": 1791627300000,
+   "thresholds": null,
+   "status": "unknown",
+   "trend3h": 0.064,
+   "url": "https://www.waterinfo.be/default.aspx?path=NL/Thema/Rivierwaterstanden&KL=nl"
+  }
+ ],
+ "errors": []
+}

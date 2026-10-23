@@ -1,0 +1,219 @@
+{
+ "sources": [
+  "City of Brussels · Remarkable trees",
+  "Ville de Paris · Remarkable trees"
+ ],
+ "trees": [
+  {
+   "id": "bxl-r-850",
+   "name": "Acer pseudoplatanus f. aureovariegatum",
+   "lat": 50.84361151451346,
+   "lon": 4.371165916201205,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-6134",
+   "name": "Acer pseudoplatanus f. aureovariegatum",
+   "lat": 50.843063143423755,
+   "lon": 4.37153503414698,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-3406",
+   "name": "Acer saccharinum var. laciniatum",
+   "lat": 50.83265097371784,
+   "lon": 4.3446345645523365,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-3451",
+   "name": "Ailante glanduleux",
+   "lat": 50.85219638246614,
+   "lon": 4.362049443864282,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-7088",
+   "name": "Ailante glanduleux",
+   "lat": 50.84743102781281,
+   "lon": 4.383917369422427,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-3440",
+   "name": "Ailante glanduleux",
+   "lat": 50.84655038154366,
+   "lon": 4.354836926864733,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-3452",
+   "name": "Ailante glanduleux",
+   "lat": 50.85217840923951,
+   "lon": 4.362163054084539,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-5864",
+   "name": "Ailante glanduleux",
+   "lat": 50.839233092285966,
+   "lon": 4.356556831984729,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-3426",
+   "name": "Ailante glanduleux",
+   "lat": 50.8404735394873,
+   "lon": 4.3555059167581165,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-3450",
+   "name": "Ailante glanduleux",
+   "lat": 50.85195384084858,
+   "lon": 4.361953760676772,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-472",
+   "name": "Arbre aux quarante écus",
+   "lat": 50.84264065961821,
+   "lon": 4.36551500477424,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-637",
+   "name": "Arbre aux quarante écus",
+   "lat": 50.83826223808784,
+   "lon": 4.3567132342506305,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-5991",
+   "name": "Arbre aux quarante écus",
+   "lat": 50.8399348302004,
+   "lon": 4.369589774123884,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-787",
+   "name": "Arbre aux quarante écus",
+   "lat": 50.83915223147679,
+   "lon": 4.37910177590957,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-7712",
+   "name": "Catalpa commun",
+   "lat": 50.86060955913128,
+   "lon": 4.351722395254719,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-6140",
+   "name": "Catalpa commun",
+   "lat": 50.846865317660566,
+   "lon": 4.378251623987376,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-3446",
+   "name": "Cèdre bleu de l'Atlas",
+   "lat": 50.84995793382478,
+   "lon": 4.360927904998095,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-3445",
+   "name": "Cèdre bleu de l'Atlas",
+   "lat": 50.849948935597745,
+   "lon": 4.360785903199937,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-6831",
+   "name": "Cèdre de l'Himalaya",
+   "lat": 50.84321835127506,
+   "lon": 4.3429002312032186,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-629",
+   "name": "Cèdre du Liban",
+   "lat": 50.83712943983151,
+   "lon": 4.355563595691504,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-696",
+   "name": "Cèdre du Liban",
+   "lat": 50.847386391443564,
+   "lon": 4.381418234869886,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-6834",
+   "name": "Charme commun",
+   "lat": 50.83811831845898,
+   "lon": 4.380279862849531,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-7626",
+   "name": "Châtaignier",
+   "lat": 50.843052524229336,
+   "lon": 4.387919794699076,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-6846",
+   "name": "Châtaignier",
+   "lat": 50.83825330858182,
+   "lon": 4.378775038813042,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-648",
+   "name": "Chêne de Turner",
+   "lat": 50.83810950800617,
+   "lon": 4.357707042973701,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-649",
+   "name": "Chêne de Turner",
+   "lat": 50.83743513739579,
+   "lon": 4.356074589752984,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-3438",
+   "name": "Chêne pédonculé",
+   "lat": 50.844173316403484,
+   "lon": 4.3568759426132635,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-647",
+   "name": "Chêne rouge d'Amérique",
+   "lat": 50.838217268216766,
+   "lon": 4.356486096734322,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-7112",
+   "name": "Chicot du Canada",
+   "lat": 50.83789372081332,
+   "lon": 4.357281190239576,
+   "remarkable": true
+  },
+  {
+   "id": "bxl-r-803",
+   "name": "Cyprès chauve de Louisiane",
+   "lat": 50.8398443676206,
+   "lon": 4.379698223525441,
+   "remarkable": true
+  }
+ ],
+ "truncated": false
+}

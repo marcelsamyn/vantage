@@ -1,0 +1,43 @@
+{
+ "kind": "youtube#channelListResponse",
+ "etag": "qW1eR2tY3uI4oP5aS6dF7gH8jK9",
+ "pageInfo": {
+  "totalResults": 2,
+  "resultsPerPage": 50
+ },
+ "items": [
+  {
+   "kind": "youtube#channel",
+   "etag": "zX1cV2bN3mA4sD5fG6hJ7kL8qW9",
+   "id": "UCaB1cD2eF3gH4iJ5kL6mN7o",
+   "snippet": {
+    "title": "Example Channel Roma",
+    "customUrl": "@examplechannelroma",
+    "publishedAt": "2015-03-02T10:00:00Z",
+    "thumbnails": {
+     "default": {
+      "url": "https://yt3.ggpht.com/example-roma=s88-c-k-c0x00ffffff-no-rj",
+      "width": 88,
+      "height": 88
+     }
+    }
+   }
+  },
+  {
+   "kind": "youtube#channel",
+   "etag": "aS1dF2gH3jK4lQ5wE6rT7yU8iO9",
+   "id": "UCqQ1wW2eE3rR4tT5yY6uU7i",
+   "snippet": {
+    "title": "River Example",
+    "publishedAt": "2019-06-11T08:30:00Z",
+    "thumbnails": {
+     "default": {
+      "url": "https://yt3.ggpht.com/example-river=s88-c-k-c0x00ffffff-no-rj",
+      "width": 88,
+      "height": 88
+     }
+    }
+   }
+  }
+ ]
+}

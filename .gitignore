@@ -1,0 +1,12 @@
+node_modules
+dist
+.cache
+*.log
+.DS_Store
+.claude/worktrees
+.data
+plugins/registry.gen.ts
+app/manifest.gen.json
+app/icons/*.gen.png
+.env
+plugins/drones/orecchino/orecchino_http/wifi_secrets.h

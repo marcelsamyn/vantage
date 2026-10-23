@@ -1,0 +1,1162 @@
+.city {
+  --column: 300px;
+  position: absolute;
+  inset: 0;
+  background: var(--void);
+}
+.city[data-mode="around"] {
+  --column: 360px;
+}
+
+/* Doubled class: maplibre-gl.css sets .maplibregl-map { position: relative }, which must not win. */
+.city-map.city-map {
+  position: absolute;
+  inset: 0;
+  /* A long press drops a pin; the browser must not select text or show its own callout. */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Survey frame: a vignette and corner ticks over the map. */
+.city-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 85% 75% at 50% 45%, transparent 55%, rgba(3, 5, 7, 0.75) 100%),
+    linear-gradient(to bottom, rgba(5, 7, 10, 0.55), transparent 14%, transparent 86%, rgba(5, 7, 10, 0.6));
+}
+
+.city-center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+/* ── Left column: search, mode, then layers or the Around list ─── */
+.city-left {
+  position: absolute;
+  z-index: 4;
+  top: var(--s4);
+  left: var(--s4);
+  bottom: 60px;
+  width: var(--column);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  pointer-events: none;
+}
+.city-left > * {
+  pointer-events: auto;
+}
+
+.city-mode .v-seg {
+  display: flex;
+  background: rgba(7, 10, 14, 0.86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.city-mode .v-seg__item {
+  flex: 1;
+  white-space: nowrap;
+}
+
+.city-search {
+  position: relative;
+}
+.city-search .v-input {
+  background: rgba(7, 10, 14, 0.86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.city-search__results {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: 340px;
+  overflow: auto;
+  background: rgba(7, 10, 14, 0.95);
+}
+.city-search__cancel {
+  flex: none;
+  align-self: stretch;
+  padding: 0 var(--s3);
+  font-size: var(--t-small);
+  color: var(--ice);
+}
+.city-search__msg {
+  padding: var(--s3) var(--s4);
+  color: var(--fog);
+  font-size: var(--t-small);
+}
+
+.city-layers {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+.city-layers__head {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  width: 100%;
+  height: 40px;
+  padding: 0 var(--s3) 0 var(--s4);
+  text-align: left;
+}
+.city-layers__head .v-eyebrow:first-child {
+  flex: 1;
+  color: var(--bone);
+}
+.city-layers__count {
+  color: var(--ash);
+}
+.city-layers__chev {
+  color: var(--fog);
+  transition: rotate var(--med) var(--ease-out);
+}
+.city-layers__body {
+  overflow: auto;
+  overscroll-behavior: contain;
+  box-shadow: inset 0 1px 0 var(--line);
+}
+.city-layers__group {
+  padding: var(--s2) var(--s2) var(--s1);
+}
+.city-layers__group + .city-layers__group {
+  box-shadow: inset 0 1px 0 var(--line);
+}
+.city-layers__groupname {
+  padding: 6px var(--s2) 4px;
+  color: var(--ash);
+}
+@media (max-width: 720px), (pointer: coarse) {
+  .city-layers__groupname {
+    padding: 10px var(--s2) 6px;
+    font-size: var(--t-small);
+    color: var(--fog);
+  }
+}
+.city-layers__err .v-toggle__count {
+  color: var(--alarm);
+}
+/* A kind of thing and the sources that feed it: the switch, a fold with the source count, then the sources. */
+.city-layers__type {
+  display: flex;
+  align-items: center;
+  gap: var(--s1);
+}
+.city-layers__type > .v-toggle {
+  flex: 1;
+  min-width: 0;
+}
+.city-layers__fold {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 5px;
+  border-radius: var(--radius);
+  color: var(--ash);
+  white-space: nowrap;
+  transition: color var(--fast);
+}
+.city-layers__fold:hover,
+.city-layers__fold[aria-expanded="true"] {
+  color: var(--ice);
+}
+.city-layers__fold .v-eyebrow {
+  color: inherit;
+}
+.city-layers__sources {
+  margin: 0 0 var(--s1) var(--s3);
+  padding-left: var(--s2);
+  box-shadow: inset 1px 0 0 var(--line);
+}
+.city-layers__sources .v-toggle {
+  min-height: 26px;
+  font-size: var(--t-small);
+}
+.city-layers__sources .v-toggle__label {
+  font-size: var(--t-small);
+}
+.city-layers__empty {
+  padding: var(--s4);
+  color: var(--fog);
+  font-size: var(--t-small);
+}
+
+/* ── Bottom: Time machine dock, readout and map controls ───────── */
+.city-bottom {
+  position: absolute;
+  z-index: 3;
+  left: var(--s4);
+  right: var(--s4);
+  bottom: var(--s3);
+  display: grid;
+  grid-template-columns: var(--column) minmax(0, 1fr) auto;
+  grid-template-areas:
+    ". dock controls"
+    "hud hud hud";
+  column-gap: var(--s4);
+  row-gap: var(--s3);
+  align-items: end;
+  pointer-events: none;
+}
+
+/* Locate: plain while you are on screen, lit while the map follows you, solid while you are lost. */
+.city-locate[data-lost] {
+  color: var(--void);
+  background: var(--ice);
+  box-shadow: 0 0 16px -2px rgba(130, 228, 255, 0.55);
+}
+.city-locate[data-lost]:hover {
+  color: var(--void);
+  background: var(--ice);
+}
+
+.city-controls {
+  grid-area: controls;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 4px;
+  pointer-events: auto;
+}
+.city-controls__rule {
+  height: 1px;
+  margin: 4px 6px;
+  background: var(--line-strong);
+}
+
+/* Floating controls contributed by other plugins. Only their own panels take clicks. */
+.city-dock {
+  grid-area: dock;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s2);
+  min-width: 0;
+  pointer-events: none;
+}
+.city-dock > * {
+  pointer-events: auto;
+}
+
+.city-hud {
+  grid-area: hud;
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  pointer-events: none;
+  font-family: var(--font-data);
+}
+.city-hud__row {
+  display: flex;
+  gap: var(--s4);
+  font-size: var(--t-micro);
+  letter-spacing: 0.08em;
+  color: var(--fog);
+}
+/* One line until tapped: the credits stay on the map without taking a band of it. */
+.city-hud__credits {
+  position: relative;
+  max-width: 100%;
+  padding: 0;
+  font-family: inherit;
+  font-size: 10px;
+  text-align: left;
+  color: var(--ash);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: auto;
+}
+/* Small to look at, taller to touch. */
+.city-hud__credits::after {
+  content: "";
+  position: absolute;
+  inset: -6px 0;
+}
+.city-hud__credits[aria-expanded="true"] {
+  white-space: normal;
+  color: var(--fog);
+}
+
+/* ── Route chip ────────────────────────────────────────────────── */
+.city-route {
+  position: absolute;
+  z-index: 3;
+  top: var(--s4);
+  left: 50%;
+  translate: -50% 0;
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  height: 40px;
+  padding: 0 var(--s2) 0 var(--s3);
+  border-radius: var(--radius);
+  background: rgba(7, 10, 14, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-pop);
+  font-size: var(--t-small);
+  white-space: nowrap;
+}
+
+/* ── Context menu ──────────────────────────────────────────────── */
+.city-menu {
+  position: absolute;
+  z-index: 10;
+  min-width: 200px;
+  padding: 4px;
+  border-radius: var(--radius);
+  background: rgba(7, 10, 14, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-pop);
+  transform-origin: top left;
+  /* Clear of the reticle on the spot, just past its lower right corner. */
+  margin: 18px 0 0 18px;
+}
+.city-menu__head {
+  padding: 6px 10px 8px;
+  font-size: var(--t-micro);
+  color: var(--ash);
+  box-shadow: inset 0 -1px 0 var(--line);
+  margin-bottom: 4px;
+}
+.city-menu__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 2px;
+  font-size: var(--t-body);
+  color: var(--fog);
+  text-align: left;
+}
+.city-menu__item:hover {
+  background: var(--ice-dim);
+  color: var(--bone);
+}
+
+/* ── DOM markers fading in and out (see useDomMarkers) ─────────── */
+/* MapLibre places the marker element with transform and sets its opacity inline; an animation overrides that opacity
+   while it runs, and leaves transform alone. 320 ms matches FADE_MS in the kit. */
+.city-marker-in {
+  animation: city-marker-in 320ms var(--ease-out) both;
+}
+.city-marker-out {
+  animation: city-marker-out 320ms var(--ease-out) forwards;
+}
+@keyframes city-marker-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes city-marker-out {
+  to {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .city-marker-in,
+  .city-marker-out {
+    animation: none;
+  }
+}
+
+/* ── You ───────────────────────────────────────────────────────── */
+.city-you {
+  position: relative;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+}
+/* Which way you face: a wedge that fades with distance, lying on the map. Its beam turns by `rotate` alone. */
+.city-cone {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.city-cone__beam {
+  position: absolute;
+  top: -56px;
+  left: -56px;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: conic-gradient(from -32deg, rgba(130, 228, 255, 0.55), rgba(130, 228, 255, 0.3) 32deg, rgba(130, 228, 255, 0.55) 64deg, transparent 64deg);
+  -webkit-mask: radial-gradient(closest-side, #000 14%, rgba(0, 0, 0, 0.6) 55%, transparent 100%);
+  mask: radial-gradient(closest-side, #000 14%, rgba(0, 0, 0, 0.6) 55%, transparent 100%);
+  transition: rotate 220ms linear;
+}
+.city-you__dot {
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: var(--ice);
+  box-shadow:
+    0 0 0 2px var(--void),
+    0 0 16px 2px rgba(130, 228, 255, 0.8);
+}
+.city-you__ring {
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  border: 1px solid var(--ice);
+  animation: city-you-ping 2.4s var(--ease-out) infinite var(--v-loop);
+}
+.city-you__ring--late {
+  animation-delay: 1.2s;
+}
+.city-you[data-source="ip"] .city-you__dot {
+  background: var(--fog);
+  box-shadow: 0 0 0 2px var(--void);
+}
+.city-you[data-source="ip"] .city-you__ring {
+  border-color: var(--fog);
+}
+@keyframes city-you-ping {
+  from {
+    scale: 0.4;
+    opacity: 0.9;
+  }
+  to {
+    scale: 2.2;
+    opacity: 0;
+  }
+}
+
+/* ── Lock-on: the spot a profile or the context menu is about ──── */
+/* Four corners close in on the spot once, then hold still. Clicks pass through to the map beneath. */
+.city-lock {
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.city-lock__frame {
+  position: absolute;
+  top: -22px;
+  left: -22px;
+  width: 44px;
+  /* The base styles cap an svg at its parent's width, and this anchor has none. */
+  max-width: none;
+  height: 44px;
+  fill: none;
+  stroke: var(--ice);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 5px rgba(130, 228, 255, 0.6));
+  animation: city-lock-in 460ms var(--ease-out) both;
+}
+.city-lock__dot {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ice);
+  box-shadow:
+    0 0 0 2px var(--void),
+    0 0 12px 2px rgba(130, 228, 255, 0.7);
+}
+@keyframes city-lock-in {
+  from {
+    opacity: 0;
+    scale: 1.9;
+    rotate: -45deg;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .city-lock__frame {
+    animation: none;
+  }
+}
+
+/* ── Around me: tones ──────────────────────────────────────────── */
+.city [data-tone="mint"] {
+  --tone: var(--mint);
+  --tone-dim: var(--mint-dim);
+  --tone-line: rgba(111, 242, 180, 0.5);
+}
+.city [data-tone="sodium"] {
+  --tone: var(--sodium);
+  --tone-dim: var(--sodium-dim);
+  --tone-line: rgba(255, 181, 71, 0.5);
+}
+.city [data-tone="alarm"] {
+  --tone: var(--alarm);
+  --tone-dim: var(--alarm-dim);
+  --tone-line: rgba(255, 79, 94, 0.55);
+}
+.city [data-tone="fog"] {
+  --tone: var(--bone);
+  --tone-dim: rgba(226, 234, 240, 0.08);
+  --tone-line: rgba(226, 234, 240, 0.32);
+}
+
+/* ── Around me: markers and edge pips over the map ─────────────── */
+.city-around {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.city-mark,
+.city-pip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: auto;
+}
+.city-mark {
+  width: 0;
+  height: 0;
+}
+.city-mark__chip {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: var(--tone);
+  background: rgba(5, 7, 10, 0.88);
+  box-shadow:
+    0 0 0 1px var(--tone-line),
+    0 4px 12px rgba(0, 0, 0, 0.5);
+  transition-property: scale, box-shadow, color;
+  transition-duration: var(--fast);
+  transition-timing-function: var(--ease-out);
+}
+/* A 36 px target around the 30 px chip. */
+.city-mark__chip::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+}
+.city-mark:hover .city-mark__chip,
+.city-mark:focus-visible .city-mark__chip {
+  scale: 1.12;
+}
+.city-mark[data-chosen] {
+  z-index: 2;
+}
+.city-mark[data-chosen] .city-mark__chip {
+  scale: 1.15;
+  color: var(--ice);
+  box-shadow:
+    0 0 0 2px var(--ice),
+    0 0 18px rgba(130, 228, 255, 0.45);
+}
+.city-mark[data-live] .city-mark__chip::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  border: 1px solid var(--tone);
+  animation: city-mark-ping 2.6s var(--ease-out) infinite var(--v-loop);
+}
+.city-mark__label {
+  position: absolute;
+  top: -12px;
+  left: 22px;
+  max-width: 220px;
+  padding: 4px 8px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--t-small);
+  color: var(--bone);
+  background: rgba(5, 7, 10, 0.92);
+  box-shadow: inset 0 0 0 1px rgba(130, 228, 255, 0.45);
+  pointer-events: none;
+}
+/* A chip or pip that comes into view fades in; one that just arrived in the data also grows in. */
+.city-mark .city-mark__chip,
+.city-pip {
+  animation: city-mark-show 200ms var(--ease-out) both;
+}
+@keyframes city-mark-show {
+  from {
+    opacity: 0;
+  }
+}
+.city-mark[data-fresh] .city-mark__chip {
+  animation: city-mark-in 420ms var(--ease-out) both;
+}
+@keyframes city-mark-ping {
+  from {
+    scale: 1;
+    opacity: 0.8;
+  }
+  to {
+    scale: 1.9;
+    opacity: 0;
+  }
+}
+@keyframes city-mark-in {
+  from {
+    scale: 0.4;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.city-pip {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: 84px;
+  height: 26px;
+  margin: -13px 0 0 -42px;
+  padding: 0 9px 0 4px;
+  border-radius: 13px;
+  white-space: nowrap;
+  color: var(--tone);
+  background: rgba(5, 7, 10, 0.9);
+  box-shadow:
+    inset 0 0 0 1px var(--tone-line),
+    0 4px 14px rgba(0, 0, 0, 0.55);
+  transition-property: box-shadow, color;
+  transition-duration: var(--fast);
+}
+.city-pip::after {
+  content: "";
+  position: absolute;
+  inset: -4px 0;
+}
+.city-pip:hover,
+.city-pip:focus-visible {
+  box-shadow:
+    inset 0 0 0 1px var(--tone),
+    0 4px 14px rgba(0, 0, 0, 0.55);
+}
+.city-pip[data-chosen] {
+  color: var(--ice);
+  box-shadow:
+    inset 0 0 0 1.5px var(--ice),
+    0 0 16px rgba(130, 228, 255, 0.35);
+}
+.city-pip[data-fresh] {
+  animation: city-mark-in 420ms var(--ease-out) both;
+}
+.city-svg-icon {
+  display: inline-block;
+  flex: none;
+  background: currentColor;
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.city-pip__glyphs {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  flex: none;
+}
+.city-pip__arrow {
+  flex: none;
+}
+.city-pip__dist {
+  margin-left: auto;
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  color: var(--bone);
+}
+/* On the left and right edges a pip is a narrow tag: glyphs over the distance. */
+.city-pip[data-side="left"],
+.city-pip[data-side="right"] {
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  width: 46px;
+  height: 40px;
+  margin: -20px 0 0 -23px;
+  padding: 0;
+  border-radius: 8px;
+}
+.city-pip[data-side="left"] .city-pip__dist,
+.city-pip[data-side="right"] .city-pip__dist {
+  margin: 0;
+  font-size: 10px;
+}
+.city-pip__more {
+  position: absolute;
+  top: -7px;
+  right: -5px;
+  display: grid;
+  place-items: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  font-family: var(--font-data);
+  font-size: 9.5px;
+  font-weight: 600;
+  color: var(--void);
+  background: var(--tone);
+}
+
+/* ── Around me: the list ───────────────────────────────────────── */
+.city-around-panel {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.city-near {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* In the desktop column the body scrolls under the header; in the phone's drawer the drawer scrolls it. */
+.city-near > .city-near__body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.city-near__head {
+  flex: none;
+}
+.city-near__tabs {
+  padding: var(--s2) var(--s3);
+}
+.city-near__tabs .v-seg {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.city-near__tabs .v-seg__item {
+  padding: 0 var(--s2);
+}
+.city-near__filters {
+  border-bottom: 1px solid var(--line);
+}
+.city-near__filters[hidden] {
+  display: none;
+}
+.city-near__sub {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  min-height: 44px;
+  padding: var(--s1) var(--s3) var(--s1) var(--s4);
+}
+.city-near__sub > :first-child {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.city-near__filter-button {
+  flex: none;
+  color: var(--fog);
+}
+
+.city-near__note {
+  margin: 0;
+  padding: 0 var(--s4) var(--s2);
+  font-size: var(--t-small);
+  color: var(--fog);
+}
+.city-near__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.city-near__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) auto;
+  grid-template-areas:
+    "icon text where"
+    "icon text act"
+    "more more more";
+  column-gap: var(--s3);
+  row-gap: 4px;
+  align-items: center;
+  padding: var(--s2) var(--s3) var(--s2) var(--s4);
+  box-shadow: inset 0 -1px 0 var(--line);
+  transition-property: background-color;
+  transition-duration: var(--fast);
+}
+.city-near__item:hover {
+  background: rgba(226, 234, 240, 0.04);
+}
+.city-near__item[data-chosen] {
+  background: var(--ice-dim);
+  box-shadow:
+    inset 2px 0 0 var(--ice),
+    inset 0 -1px 0 var(--line);
+}
+/* The whole row is the button; the action sits above it and keeps its own clicks. */
+.city-near__hit {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.city-near__hit:focus-visible {
+  outline: 1px solid var(--ice);
+  outline-offset: -2px;
+}
+.city-near__icon,
+.city-near__text,
+.city-near__where {
+  position: relative;
+  pointer-events: none;
+}
+.city-near__icon {
+  grid-area: icon;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
+  color: var(--tone);
+  background: var(--tone-dim);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+/* A fixed size: a percentage of the auto-sized grid cell would let a tall photo grow the row. */
+.city-near__icon img {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+.city-near__badge {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: var(--tone);
+  background: var(--void);
+  box-shadow: 0 0 0 1px var(--tone-line);
+}
+.city-near__text {
+  grid-area: text;
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+.city-near__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--t-body);
+  color: var(--bone);
+}
+.city-near__item[data-chosen] .city-near__title {
+  color: var(--ice);
+}
+.city-near__detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  color: var(--fog);
+}
+.city-near__detail .v-dot {
+  color: var(--tone);
+}
+.city-near__when {
+  flex: none;
+  color: var(--bone);
+}
+.city-near__when--now {
+  color: var(--tone);
+}
+.city-near__when--soon {
+  color: var(--sodium);
+}
+.city-near__what {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.city-near__where {
+  grid-area: where;
+  display: grid;
+  justify-items: end;
+  font-size: var(--t-small);
+  color: var(--bone);
+}
+.city-near__where small {
+  font-size: var(--t-micro);
+  color: var(--ash);
+}
+.city-near__bearing {
+  display: flex;
+  align-items: center;
+  gap: var(--s1);
+}
+.city-near__act {
+  grid-area: act;
+  position: relative;
+  z-index: 1;
+  justify-self: end;
+}
+.city-near__more {
+  grid-area: more;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1) var(--s2);
+  padding-left: calc(36px + var(--s3));
+}
+.city-near__state {
+  display: grid;
+  place-items: center;
+  padding: var(--s6) var(--s4);
+}
+.city-near .v-empty {
+  padding: var(--s5) var(--s4);
+}
+.city-near__fails {
+  display: grid;
+  justify-items: start;
+  gap: var(--s1);
+  padding: var(--s2) var(--s4) var(--s3);
+  box-shadow: inset 0 1px 0 var(--line);
+  font-size: var(--t-micro);
+  color: var(--ash);
+}
+.city-near__fails p {
+  margin: 0;
+}
+.city-near__fails span {
+  color: var(--fog);
+}
+.city-near__sources {
+  padding: var(--s1) var(--s2) var(--s3);
+  box-shadow: inset 0 1px 0 var(--line);
+}
+.city-near__fold {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  width: 100%;
+  height: 36px;
+  padding: 0 var(--s1) 0 var(--s2);
+  color: var(--ash);
+  text-align: left;
+  transition: color var(--fast);
+}
+.city-near__fold:hover,
+.city-near__fold[aria-expanded="true"] {
+  color: var(--ice);
+}
+.city-near__fold .v-eyebrow {
+  color: inherit;
+}
+.city-near__fold .v-eyebrow:first-child {
+  flex: 1;
+}
+.city-near__fold svg {
+  transition: rotate var(--med) var(--ease-out);
+}
+
+/* ── Phone sheets ──────────────────────────────────────────────── */
+/* The "Around me" drawer lives in the map, under the top row, so the mode switch stays in reach at full height. */
+.city-drawer.v-sheet {
+  position: absolute;
+  z-index: 2;
+  top: calc(var(--s3) + 44px + var(--s2));
+  bottom: 0;
+}
+.city-drawer .city-near__tabs {
+  padding: 0 var(--s3);
+}
+.city-drawer .city-near__body {
+  min-height: 100%;
+}
+
+.city-layersheet {
+  z-index: 46;
+}
+.city-layersheet__head {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  min-height: 48px;
+  padding: 0 var(--s1) 0 var(--s4);
+  box-shadow: inset 0 -1px 0 var(--line);
+}
+.city-layersheet__head .v-eyebrow {
+  font-size: var(--t-small);
+}
+.city-layersheet__head .v-eyebrow:first-child {
+  flex: 1;
+  color: var(--bone);
+}
+.city-layersheet__head .v-iconbtn {
+  width: 44px;
+  height: 44px;
+}
+.city-layersheet__body {
+  padding-bottom: var(--s3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .city-mark .city-mark__chip,
+  .city-mark[data-fresh] .city-mark__chip,
+  .city-pip,
+  .city-pip[data-fresh] {
+    animation: none;
+  }
+  .city-cone__beam,
+  .city-bottom {
+    transition-duration: 0ms;
+  }
+}
+
+/* ── Phones: one row on top, controls and the drawer at the bottom, in thumb reach ── */
+@media (max-width: 720px) {
+  .city {
+    --edge-l: max(var(--s3), env(safe-area-inset-left, 0px));
+    --edge-r: max(var(--s3), env(safe-area-inset-right, 0px));
+  }
+  .city-left {
+    top: var(--s3);
+    left: var(--edge-l);
+    right: var(--edge-r);
+    bottom: auto;
+    width: auto;
+  }
+  .city-bar {
+    position: relative;
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: var(--s2);
+    height: 44px;
+  }
+  .city-bar .city-mode {
+    grid-column: 2;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .city-bar .city-mode .v-seg {
+    display: inline-flex;
+  }
+  .city-bar__btn.city-bar__btn {
+    width: 44px;
+    height: 44px;
+    color: var(--bone);
+    background: rgba(7, 10, 14, 0.86);
+    box-shadow: inset 0 0 0 1px var(--line-strong);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  /* The open search lies over the row; what it covers steps aside for screen readers and taps too. */
+  .city-bar[data-searching] > :not(.city-bar__search) {
+    visibility: hidden;
+  }
+  .city-bar__search {
+    position: absolute;
+    inset: 0;
+  }
+  .city-bar__search .city-search .v-input {
+    height: 44px;
+    padding-right: 0;
+  }
+  /* One row: the dock's closed controls beside the map controls, the credits in a line below. Wide dock content,
+     such as an open Time machine or a legend, wraps onto a row of its own above the controls. */
+  .city-bottom {
+    left: var(--edge-l);
+    right: var(--edge-r);
+    bottom: var(--s2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--s2);
+  }
+  /* Above the drawer: at its peek by position, higher by transform as it rises, gone while it covers the map. */
+  .city[data-drawer] .city-bottom {
+    bottom: calc(var(--city-peek, 0px) + var(--s2));
+    transform: translateY(calc(-1 * var(--city-lift, 0px)));
+    transition:
+      transform 420ms var(--ease-out),
+      opacity 200ms var(--ease-out);
+  }
+  .city[data-drawer="full"] .city-bottom {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .city[data-drawer="full"] .city-bottom * {
+    pointer-events: none;
+  }
+  .city-dock {
+    flex: 1 1 auto;
+    align-items: stretch;
+  }
+  .city-controls {
+    flex: none;
+    flex-direction: row;
+    margin-left: auto;
+  }
+  .city-controls .v-iconbtn {
+    width: 44px;
+    height: 44px;
+  }
+  .city-controls__wide {
+    display: none;
+  }
+  .city-hud {
+    flex: 1 0 100%;
+  }
+  .city-hud__row {
+    display: none;
+  }
+  /* Below the top row, in the free part of the map. */
+  .city-route {
+    top: calc(var(--s3) + 44px + var(--s3));
+  }
+}
+
+/* ── A thing's profile: what each source says about it ─────────── */
+.city-thing__sources {
+  display: grid;
+  gap: var(--s3);
+}
+.city-thing__source > .v-eyebrow {
+  margin-bottom: var(--s1);
+  color: var(--ice);
+}
+.city-thing__quiet {
+  color: var(--fog);
+  font-size: var(--t-small);
+}

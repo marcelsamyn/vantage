@@ -1,0 +1,27 @@
+diff --git a/firmware/common/rx_core.h b/firmware/common/rx_core.h
+index 1e33ced..b4ea39e 100644
+--- a/firmware/common/rx_core.h
++++ b/firmware/common/rx_core.h
+@@ -160,6 +160,14 @@ bool rx_hook_host_line(const char* cmd, char* line, uint32_t now, HostSrc src);
+ /// A track was updated. `tfr_entered` fires once per incursion.
+ void rx_hook_track(Track* t, bool created, bool tfr_entered);
+ 
++/// Every decoded frame with its contact, under the table lock (decode task
++/// context: copy what you need and return). A sketch that defines it
++/// defines RX_HOOK_DECODED before including this header.
++void rx_hook_decoded(const RidEvt* e, const OdidUas* u, const Track* t, uint32_t now);
++#ifndef RX_HOOK_DECODED
++void rx_hook_decoded(const RidEvt*, const OdidUas*, const Track*, uint32_t) {}
++#endif
++
+ #ifndef ORECCHINO_BOARD_HOOKS
+ void rx_hook_wifi_frame(uint8_t, int8_t) {}
+ bool rx_hook_paused() { return false; }
+@@ -1404,6 +1412,7 @@ static void rx_process(const RidEvt* e, uint32_t now) {
+   s_cnt_rid += 1;
+   RX_LOCK();
+   Track* t = tracker_ingest(e, &u, now);
++  rx_hook_decoded(e, &u, t, now);
+   s_live_gen += 1;
+   // FNV-1a over the frame, plus what the track adds to the line.
+   uint32_t h = 2166136261u;

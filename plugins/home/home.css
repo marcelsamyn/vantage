@@ -1,0 +1,90 @@
+/* The grid is a size container, so a wide tile spans two columns only where two fit. */
+.home-grid {
+  container: home-grid / inline-size;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  grid-auto-flow: dense;
+  gap: var(--s4);
+}
+
+.home-wide {
+  grid-column: span 2;
+}
+@container home-grid (max-width: 615px) {
+  .home-wide {
+    grid-column: auto;
+  }
+}
+
+.home-tile {
+  height: 100%;
+  min-height: 200px;
+}
+
+/* Tile bodies are size containers named "tile", so tiles can adapt with @container tile (…). */
+.home-tile .v-panel__body {
+  container: tile / inline-size;
+}
+
+/* Customize mode: the tray of hidden tiles opens above the grid. It clips while it grows, so it carries a
+   1px margin of room for the panel's corner marks, which sit 1px outside the panel. */
+.home-tray {
+  overflow: hidden;
+  margin: -1px;
+  padding: 1px;
+}
+.home-tray > .v-panel {
+  margin-bottom: var(--s4);
+}
+.home-tray__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+.home-tray__empty {
+  color: var(--fog);
+  font-size: var(--t-small);
+}
+
+.home-here {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--s6);
+  align-items: end;
+}
+.home-here__details {
+  display: grid;
+  gap: 14px;
+}
+@container tile (max-width: 520px) {
+  .home-here {
+    grid-template-columns: 1fr;
+    gap: var(--s4);
+  }
+}
+
+.home-links__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 4px var(--s4);
+  margin-top: var(--s3);
+}
+.home-links__item {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  min-width: 0;
+  font-size: var(--t-small);
+}
+.home-links__name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--fog);
+}
+.home-links__ms {
+  font-size: var(--t-micro);
+  color: var(--ash);
+}

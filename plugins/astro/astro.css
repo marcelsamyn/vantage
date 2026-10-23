@@ -1,0 +1,87 @@
+.astro-tile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--s5);
+  align-items: center;
+}
+
+.astro-tile__sun,
+.astro-tile__moon {
+  border-radius: var(--radius);
+  padding: 6px;
+  margin: -6px;
+  text-align: left;
+  transition: background-color var(--fast);
+}
+.astro-tile__sun:hover,
+.astro-tile__moon:hover {
+  background: rgba(226, 234, 240, 0.04);
+}
+
+.astro-tile__moon {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  text-align: center;
+}
+.astro-moon__name {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 72;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.astro-horizon {
+  stroke: var(--line-strong);
+  stroke-dasharray: 2 3;
+}
+.astro-path {
+  fill: none;
+  stroke: var(--sodium);
+  stroke-opacity: 0.5;
+  stroke-width: 1.2;
+}
+.astro-day {
+  fill: var(--sodium);
+  fill-opacity: 0.1;
+}
+.astro-now {
+  stroke: var(--line-bright);
+  stroke-dasharray: 1 3;
+}
+.astro-sun {
+  fill: var(--sodium);
+  filter: drop-shadow(0 0 6px rgba(255, 181, 71, 0.8));
+}
+.astro-sun--down {
+  fill: var(--ash);
+  filter: none;
+}
+
+.astro-times {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s3);
+  margin-top: var(--s2);
+  font-size: var(--t-small);
+}
+
+@container tile (max-width: 460px) {
+  .astro-tile {
+    grid-template-columns: 1fr;
+  }
+  .astro-tile__moon {
+    grid-template-columns: auto 1fr;
+    justify-items: start;
+    text-align: left;
+    align-items: center;
+  }
+  .astro-tile__moon svg {
+    grid-row: span 2;
+  }
+  .astro-tile__moon .v-stat__hint {
+    grid-column: 2;
+  }
+}

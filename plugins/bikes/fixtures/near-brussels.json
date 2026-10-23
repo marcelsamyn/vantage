@@ -1,0 +1,186 @@
+{
+  "networks": [
+    {
+      "id": "villo",
+      "name": "villo",
+      "city": "Bruxelles",
+      "company": "JCDecaux"
+    },
+    {
+      "id": "nextbike-vlaamse-rand",
+      "name": "Nextbike",
+      "city": "Vlaamse Rand",
+      "company": "Nextbike GmbH"
+    }
+  ],
+  "stations": [
+    {
+      "id": "2dc417a595331207b8400c96dec9e1d0",
+      "network": "villo",
+      "name": "PLACE SAINT-JEAN / SINT-JANSPLEIN",
+      "lat": 50.845224,
+      "lon": 4.351484,
+      "bikes": 17,
+      "ebikes": 10,
+      "docks": 18,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.931615+00:00Z"
+    },
+    {
+      "id": "0a802fcc03d57de5fb01ddd28693a76d",
+      "network": "villo",
+      "name": "AGORA",
+      "lat": 50.846331,
+      "lon": 4.355193,
+      "bikes": 12,
+      "ebikes": 6,
+      "docks": 7,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.934573+00:00Z"
+    },
+    {
+      "id": "bcc9470595b1f91c6d4fdc940366ade9",
+      "network": "villo",
+      "name": "GARE CENTRALE / CENTRAAL STATION",
+      "lat": 50.845333,
+      "lon": 4.356475,
+      "bikes": 25,
+      "ebikes": 9,
+      "docks": 11,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.931483+00:00Z"
+    },
+    {
+      "id": "6346e89b86e4153a928e26e64a6ff18c",
+      "network": "villo",
+      "name": "MORT SUBITE",
+      "lat": 50.848701,
+      "lon": 4.356055,
+      "bikes": 14,
+      "ebikes": 4,
+      "docks": 11,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.933494+00:00Z"
+    },
+    {
+      "id": "e76db7ef1fff461de4b29e0e2afd2211",
+      "network": "villo",
+      "name": "ALBERTINE / ALBERTINA",
+      "lat": 50.843892,
+      "lon": 4.355012,
+      "bikes": 22,
+      "ebikes": 9,
+      "docks": 2,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.931589+00:00Z"
+    },
+    {
+      "id": "39d434ce24f0949230e04bbc57436a37",
+      "network": "villo",
+      "name": "FONTAINAS",
+      "lat": 50.84563,
+      "lon": 4.346942,
+      "bikes": 0,
+      "ebikes": 0,
+      "docks": 0,
+      "renting": false,
+      "updated": "2026-10-09T10:59:16.933937+00:00Z"
+    },
+    {
+      "id": "112279965fc8473c61c92b9cb7be927f",
+      "network": "villo",
+      "name": "DANSAERT",
+      "lat": 50.850224,
+      "lon": 4.346137,
+      "bikes": 20,
+      "ebikes": 9,
+      "docks": 14,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.931334+00:00Z"
+    },
+    {
+      "id": "fb0a8eeb3792329699778b0211d9797c",
+      "network": "villo",
+      "name": "CHAPELLE / KAPELLEKERK",
+      "lat": 50.841345,
+      "lon": 4.351729,
+      "bikes": 20,
+      "ebikes": 9,
+      "docks": 0,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.932278+00:00Z"
+    },
+    {
+      "id": "9fa22f40c7e2dbc63014fc934bc26b6c",
+      "network": "villo",
+      "name": "ANNEESSENS",
+      "lat": 50.844045,
+      "lon": 4.345048,
+      "bikes": 20,
+      "ebikes": 7,
+      "docks": 13,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.931501+00:00Z"
+    },
+    {
+      "id": "b59b2d78f6ecbcbc7285922a13527b12",
+      "network": "villo",
+      "name": "DE BROUCKERE",
+      "lat": 50.85223,
+      "lon": 4.35316,
+      "bikes": 14,
+      "ebikes": 6,
+      "docks": 22,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.933383+00:00Z"
+    },
+    {
+      "id": "ffc1ad877a6a649a57135900ec410468",
+      "network": "villo",
+      "name": "JARDIN AUX FLEURS / BLOEMENHOF",
+      "lat": 50.847865,
+      "lon": 4.343521,
+      "bikes": 10,
+      "ebikes": 6,
+      "docks": 10,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.932256+00:00Z"
+    },
+    {
+      "id": "ced1f788f2b25c75de9eb3ec4bdf3400",
+      "network": "villo",
+      "name": "PALAIS ROYAL / KONINKLIJK PALEIS",
+      "lat": 50.843613,
+      "lon": 4.360628,
+      "bikes": 10,
+      "ebikes": 7,
+      "docks": 10,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.934105+00:00Z"
+    },
+    {
+      "id": "03202b677536d3c03f854abad79c603a",
+      "network": "villo",
+      "name": "PARC / PARK",
+      "lat": 50.846319,
+      "lon": 4.362244,
+      "bikes": 11,
+      "ebikes": 7,
+      "docks": 11,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.933680+00:00Z"
+    },
+    {
+      "id": "4941e14fd52c1ece88f763f1b172ce15",
+      "network": "villo",
+      "name": "MUSEE DE LA BD / STRIPMUSEUM",
+      "lat": 50.850303,
+      "lon": 4.360706,
+      "bikes": 21,
+      "ebikes": 13,
+      "docks": 4,
+      "renting": true,
+      "updated": "2026-10-09T10:59:16.933407+00:00Z"
+    }
+  ]
+}

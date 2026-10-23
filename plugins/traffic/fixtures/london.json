@@ -1,0 +1,231 @@
+[
+  {
+    "$type": "Tfl.Api.Presentation.Entities.RoadDisruption, Tfl.Api.Presentation.Entities",
+    "id": "TIMS-235739",
+    "url": "/Road/All/Disruption/TIMS-235739",
+    "point": "[-0.073169,51.56544]",
+    "severity": "Moderate",
+    "ordinal": 1,
+    "category": "Works",
+    "subCategory": "Utility works",
+    "comments": "[A10] Stamford Hill (Both directions) at the junction of [B105] Manor Road - Temporary signals in place for Thames Water works.\r\n",
+    "currentUpdate": "Delays are possible.",
+    "currentUpdateDateTime": "2026-10-11T02:47:30Z",
+    "corridorIds": [
+      "a10"
+    ],
+    "startDateTime": "2026-10-01T10:30:00Z",
+    "endDateTime": "2026-10-14T16:00:00Z",
+    "lastModifiedTime": "2026-10-11T02:47:30Z",
+    "levelOfInterest": "High",
+    "location": "[A10] STAMFORD HILL (N16 ) (Hackney)",
+    "status": "Active Long Term",
+    "geography": {
+      "type": "Point",
+      "coordinates": [
+        -0.073169,
+        51.56544
+      ],
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "EPSG:4326"
+        }
+      }
+    },
+    "isProvisional": false,
+    "hasClosures": false,
+    "roadDisruptionLines": [],
+    "roadDisruptionImpactAreas": [],
+    "recurringSchedules": []
+  },
+  {
+    "$type": "Tfl.Api.Presentation.Entities.RoadDisruption, Tfl.Api.Presentation.Entities",
+    "id": "TIMS-235412",
+    "url": "/Road/All/Disruption/TIMS-235412",
+    "point": "[-0.117126,51.371285]",
+    "severity": "Moderate",
+    "ordinal": 2,
+    "category": "Works",
+    "subCategory": "Utility works",
+    "comments": "[A23] Purley Way (All approaches) at the junction of Waddon Road - Three-way temporary traffic signals in place to facilitate SGN works. Waddon Road is also closed. ",
+    "currentUpdate": "There are no reported delays.",
+    "currentUpdateDateTime": "2026-10-11T08:08:06Z",
+    "corridorIds": [
+      "a23"
+    ],
+    "startDateTime": "2026-10-05T07:00:00Z",
+    "endDateTime": "2026-11-07T18:00:00Z",
+    "lastModifiedTime": "2026-10-11T08:10:30Z",
+    "levelOfInterest": "High",
+    "location": "[A23] PURLEY WAY (CR0 ) (Croydon)",
+    "status": "Active",
+    "geography": {
+      "type": "Point",
+      "coordinates": [
+        -0.117126,
+        51.371285
+      ],
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "EPSG:4326"
+        }
+      }
+    },
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -0.1179519241,
+            51.3712689705
+          ],
+          [
+            -0.1178798149,
+            51.371082815
+          ],
+          [
+            -0.1177194955,
+            51.3709481891
+          ],
+          [
+            -0.1174550779,
+            51.3708517504
+          ],
+          [
+            -0.1171505155,
+            51.3708329891
+          ],
+          [
+            -0.1158584617,
+            51.3709689728
+          ],
+          [
+            -0.1156371393,
+            51.3710167296
+          ],
+          [
+            -0.1154755305,
+            51.371091429
+          ],
+          [
+            -0.1153374953,
+            51.3712097759
+          ],
+          [
+            -0.1152638695,
+            51.3714544905
+          ],
+          [
+            -0.1153381514,
+            51.3716151284
+          ],
+          [
+            -0.1155267259,
+            51.3717612592
+          ],
+          [
+            -0.1157942602,
+            51.3718463822
+          ],
+          [
+            -0.1160799464,
+            51.3718583872
+          ],
+          [
+            -0.1175381578,
+            51.3716864798
+          ],
+          [
+            -0.117745739,
+            51.3715946587
+          ],
+          [
+            -0.1178604911,
+            51.3714990285
+          ],
+          [
+            -0.1179519241,
+            51.3712689705
+          ]
+        ]
+      ],
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "EPSG:4326"
+        }
+      }
+    },
+    "streets": [
+      {
+        "$type": "Tfl.Api.Presentation.Entities.Street, Tfl.Api.Presentation.Entities",
+        "name": "WADDON ROAD (CR0)",
+        "closure": "Closed",
+        "directions": "Both directions",
+        "segments": [
+          {
+            "$type": "Tfl.Api.Presentation.Entities.StreetSegment, Tfl.Api.Presentation.Entities",
+            "toid": "0",
+            "lineString": "[[-0.117234,51.371279],[-0.116735,51.371333]]",
+            "sourceSystemId": 0
+          },
+          {
+            "$type": "Tfl.Api.Presentation.Entities.StreetSegment, Tfl.Api.Presentation.Entities",
+            "toid": "0",
+            "lineString": "[[-0.116735,51.371333],[-0.115979,51.371412]]",
+            "sourceSystemId": 0
+          }
+        ],
+        "sourceSystemId": 235412,
+        "sourceSystemKey": "TIMS"
+      }
+    ],
+    "isProvisional": false,
+    "hasClosures": false,
+    "roadDisruptionLines": [],
+    "roadDisruptionImpactAreas": [],
+    "recurringSchedules": []
+  },
+  {
+    "$type": "Tfl.Api.Presentation.Entities.RoadDisruption, Tfl.Api.Presentation.Entities",
+    "id": "TIMS-230857",
+    "url": "/Road/All/Disruption/TIMS-230857",
+    "point": "[-0.174278,51.520091]",
+    "severity": "Moderate",
+    "ordinal": 3,
+    "category": "Works",
+    "subCategory": "TfL works",
+    "comments": "[A40] Westway (Westbound) between [A5] Edgware Road and [A3220] Northern Roundabout  - [A40] Westway (Westbound) between [A5] Edgware Road and [A3220] Northern Roundabout is reduced to two lanes for infrastructure inspection works. ",
+    "currentUpdate": "Delays are possible. ",
+    "currentUpdateDateTime": "2026-10-10T20:04:05Z",
+    "corridorIds": [
+      "a40"
+    ],
+    "startDateTime": "2026-06-24T23:04:00Z",
+    "endDateTime": "2026-12-05T23:59:00Z",
+    "lastModifiedTime": "2026-10-10T20:04:05Z",
+    "levelOfInterest": "High",
+    "location": "[A40] WESTWAY (W2 ) (Westminster)",
+    "status": "Active Long Term",
+    "geography": {
+      "type": "Point",
+      "coordinates": [
+        -0.174278,
+        51.520091
+      ],
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "EPSG:4326"
+        }
+      }
+    },
+    "isProvisional": false,
+    "hasClosures": false,
+    "roadDisruptionLines": [],
+    "roadDisruptionImpactAreas": [],
+    "recurringSchedules": []
+  }
+]

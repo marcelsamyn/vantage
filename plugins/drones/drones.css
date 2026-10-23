@@ -1,0 +1,11 @@
+.drones-summary { margin-bottom: var(--s4); color: var(--fog); font-size: 12px; }
+.drones-list { display: grid; gap: var(--s2); }
+.drones-row { display: flex; justify-content: space-between; gap: var(--s4); width: 100%; padding: var(--s4); border: 1px solid var(--line); border-radius: var(--radius); background: var(--raise); color: var(--bone); text-align: left; cursor: pointer; }
+.drones-row:hover, .drones-row:focus-visible { border-color: var(--ice); }
+.drones-identity, .drones-reading { display: grid; min-width: 0; gap: var(--s2); overflow-wrap: anywhere; }
+.drones-identity strong { color: var(--sodium); }
+.drones-identity span, .drones-reading span { font-size: 12px; color: var(--fog); }
+.drones-reading { text-align: right; font-size: 13px; }
+.drones-source { margin-top: var(--s4); color: var(--fog); font-size: 12px; line-height: 1.6; }
+.drones-source a { color: var(--ice); }
+@media (max-width: 600px) { .drones-row { flex-direction: column; } .drones-reading { text-align: left; } }

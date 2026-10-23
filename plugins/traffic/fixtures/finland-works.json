@@ -1,0 +1,501 @@
+{
+  "type": "FeatureCollection",
+  "dataUpdatedTime": "2026-10-10T11:09:41.011Z",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.146356,
+          65.032597
+        ]
+      },
+      "properties": {
+        "situationId": "GUID50472131",
+        "situationType": "road work",
+        "trafficAnnouncementType": null,
+        "version": 1,
+        "releaseTime": "2026-10-10T11:09:34.505Z",
+        "versionTime": "2026-10-10T11:09:34.504Z",
+        "announcements": [
+          {
+            "language": "fi",
+            "title": "Tie 8341, Oulu. Tietyö. ",
+            "location": {
+              "countryCode": 6,
+              "locationTableNumber": 17,
+              "locationTableVersion": "1.11.45",
+              "description": "Tie 8341 välillä Ylikiiminki - Kaarela, Oulu.\nTarkempi paikka: Paikasta Harjutie 100 m, suuntaan Kääriänputaan silta."
+            },
+            "locationDetails": {
+              "roadAddressLocation": {
+                "primaryPoint": {
+                  "municipality": "Oulu",
+                  "province": "Pohjois-Pohjanmaa",
+                  "country": "Suomi",
+                  "roadAddress": {
+                    "road": 8341,
+                    "roadSection": 1,
+                    "distance": 452
+                  },
+                  "alertCLocation": {
+                    "locationCode": 22788,
+                    "name": "Harjutie",
+                    "distance": 120
+                  }
+                },
+                "secondaryPoint": {
+                  "municipality": "Oulu",
+                  "province": "Pohjois-Pohjanmaa",
+                  "country": "Suomi",
+                  "roadAddress": {
+                    "road": 8341,
+                    "roadSection": 1,
+                    "distance": 452
+                  },
+                  "alertCLocation": {
+                    "locationCode": 22789,
+                    "name": "Kääriänputaan silta",
+                    "distance": 3592
+                  }
+                },
+                "direction": "both"
+              }
+            },
+            "locationOpenLr": {
+              "binary": "IxKXzS4+0w=="
+            },
+            "features": [],
+            "roadWorkPhases": [
+              {
+                "id": "GUID50474955",
+                "location": {
+                  "countryCode": 6,
+                  "locationTableNumber": 17,
+                  "locationTableVersion": "1.11.45",
+                  "description": "Tie 8341 välillä Ylikiiminki - Kaarela, Oulu.\nTarkempi paikka: Paikasta Harjutie 100 m, suuntaan Kääriänputaan silta."
+                },
+                "locationDetails": {
+                  "roadAddressLocation": {
+                    "primaryPoint": {
+                      "municipality": "Oulu",
+                      "province": "Pohjois-Pohjanmaa",
+                      "country": "Suomi",
+                      "roadAddress": {
+                        "road": 8341,
+                        "roadSection": 1,
+                        "distance": 452
+                      },
+                      "alertCLocation": {
+                        "locationCode": 22788,
+                        "name": "Harjutie",
+                        "distance": 120
+                      }
+                    },
+                    "secondaryPoint": {
+                      "municipality": "Oulu",
+                      "province": "Pohjois-Pohjanmaa",
+                      "country": "Suomi",
+                      "roadAddress": {
+                        "road": 8341,
+                        "roadSection": 1,
+                        "distance": 452
+                      },
+                      "alertCLocation": {
+                        "locationCode": 22789,
+                        "name": "Kääriänputaan silta",
+                        "distance": 3592
+                      }
+                    },
+                    "direction": "both"
+                  }
+                },
+                "locationOpenLr": {
+                  "binary": "IxKXzS4+0w=="
+                },
+                "workingHours": [
+                  {
+                    "weekday": "Saturday",
+                    "startTime": "08:00",
+                    "endTime": "18:00"
+                  },
+                  {
+                    "weekday": "Friday",
+                    "startTime": "08:00",
+                    "endTime": "18:00"
+                  },
+                  {
+                    "weekday": "Thursday",
+                    "startTime": "08:00",
+                    "endTime": "18:00"
+                  }
+                ],
+                "timeAndDuration": {
+                  "startTime": "2026-10-14T21:00:00.000Z",
+                  "endTime": "2026-10-17T20:59:59.999Z"
+                },
+                "workTypes": [
+                  {
+                    "type": "measurement",
+                    "description": "Tutkimus/mittaus"
+                  },
+                  {
+                    "type": "other",
+                    "description": ""
+                  }
+                ],
+                "restrictions": [],
+                "restrictionsLiftable": false,
+                "severity": "low",
+                "slowTrafficTimes": [],
+                "queuingTrafficTimes": []
+              }
+            ],
+            "timeAndDuration": {
+              "startTime": "2026-10-14T21:00:00.000Z",
+              "endTime": "2026-10-17T20:59:59.999Z"
+            },
+            "additionalInformation": "Liikenne- ja kelitiedot verkossa: https://liikennetilanne.fintraffic.fi/",
+            "sender": "Fintraffic Tieliikennekeskus"
+          }
+        ],
+        "contact": {
+          "phone": "02002100",
+          "email": "tampere.liikennekeskus@fintraffic.fi"
+        },
+        "dataUpdatedTime": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.306973,
+          65.069006
+        ]
+      },
+      "properties": {
+        "situationId": "GUID50472130",
+        "situationType": "road work",
+        "trafficAnnouncementType": null,
+        "version": 1,
+        "releaseTime": "2026-10-10T11:09:10.775Z",
+        "versionTime": "2026-10-10T11:09:10.774Z",
+        "announcements": [
+          {
+            "language": "fi",
+            "title": "Tie 8361, Oulu. Tietyö. ",
+            "location": {
+              "countryCode": 6,
+              "locationTableNumber": 17,
+              "locationTableVersion": "1.11.45",
+              "description": "Tie 8361 välillä Marttilanharju - Kaitaoja, Oulu.\nTarkempi paikka: Paikasta Kiiminkijoen silta, suuntaan kunnanraja Oulu-Pudasjärvi."
+            },
+            "locationDetails": {
+              "roadAddressLocation": {
+                "primaryPoint": {
+                  "municipality": "Oulu",
+                  "province": "Pohjois-Pohjanmaa",
+                  "country": "Suomi",
+                  "roadAddress": {
+                    "road": 8361,
+                    "roadSection": 3,
+                    "distance": 42
+                  },
+                  "alertCLocation": {
+                    "locationCode": 22797,
+                    "name": "Kiiminkijoen silta",
+                    "distance": 31
+                  }
+                },
+                "secondaryPoint": {
+                  "municipality": "Oulu",
+                  "province": "Pohjois-Pohjanmaa",
+                  "country": "Suomi",
+                  "roadAddress": {
+                    "road": 8361,
+                    "roadSection": 3,
+                    "distance": 42
+                  },
+                  "alertCLocation": {
+                    "locationCode": 22798,
+                    "name": "kunnanraja Oulu-Pudasjärvi",
+                    "distance": 15426
+                  }
+                },
+                "direction": "both"
+              }
+            },
+            "locationOpenLr": {
+              "binary": "IxK1Ci5FdA=="
+            },
+            "features": [],
+            "roadWorkPhases": [
+              {
+                "id": "GUID50474954",
+                "location": {
+                  "countryCode": 6,
+                  "locationTableNumber": 17,
+                  "locationTableVersion": "1.11.45",
+                  "description": "Tie 8361 välillä Marttilanharju - Kaitaoja, Oulu.\nTarkempi paikka: Paikasta Kiiminkijoen silta, suuntaan kunnanraja Oulu-Pudasjärvi."
+                },
+                "locationDetails": {
+                  "roadAddressLocation": {
+                    "primaryPoint": {
+                      "municipality": "Oulu",
+                      "province": "Pohjois-Pohjanmaa",
+                      "country": "Suomi",
+                      "roadAddress": {
+                        "road": 8361,
+                        "roadSection": 3,
+                        "distance": 42
+                      },
+                      "alertCLocation": {
+                        "locationCode": 22797,
+                        "name": "Kiiminkijoen silta",
+                        "distance": 31
+                      }
+                    },
+                    "secondaryPoint": {
+                      "municipality": "Oulu",
+                      "province": "Pohjois-Pohjanmaa",
+                      "country": "Suomi",
+                      "roadAddress": {
+                        "road": 8361,
+                        "roadSection": 3,
+                        "distance": 42
+                      },
+                      "alertCLocation": {
+                        "locationCode": 22798,
+                        "name": "kunnanraja Oulu-Pudasjärvi",
+                        "distance": 15426
+                      }
+                    },
+                    "direction": "both"
+                  }
+                },
+                "locationOpenLr": {
+                  "binary": "IxK1Ci5FdA=="
+                },
+                "workingHours": [
+                  {
+                    "weekday": "Saturday",
+                    "startTime": "08:00",
+                    "endTime": "18:00"
+                  },
+                  {
+                    "weekday": "Friday",
+                    "startTime": "08:00",
+                    "endTime": "18:00"
+                  },
+                  {
+                    "weekday": "Thursday",
+                    "startTime": "08:00",
+                    "endTime": "18:00"
+                  }
+                ],
+                "timeAndDuration": {
+                  "startTime": "2026-10-14T21:00:00.000Z",
+                  "endTime": "2026-10-17T20:59:59.999Z"
+                },
+                "workTypes": [
+                  {
+                    "type": "measurement",
+                    "description": "Tutkimus/mittaus"
+                  },
+                  {
+                    "type": "other",
+                    "description": ""
+                  }
+                ],
+                "restrictions": [],
+                "restrictionsLiftable": false,
+                "severity": "low",
+                "slowTrafficTimes": [],
+                "queuingTrafficTimes": []
+              }
+            ],
+            "timeAndDuration": {
+              "startTime": "2026-10-14T21:00:00.000Z",
+              "endTime": "2026-10-17T20:59:59.999Z"
+            },
+            "additionalInformation": "Liikenne- ja kelitiedot verkossa: https://liikennetilanne.fintraffic.fi/",
+            "sender": "Fintraffic Tieliikennekeskus"
+          }
+        ],
+        "contact": {
+          "phone": "02002100",
+          "email": "tampere.liikennekeskus@fintraffic.fi"
+        },
+        "dataUpdatedTime": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.032067,
+          65.039888
+        ]
+      },
+      "properties": {
+        "situationId": "GUID50472129",
+        "situationType": "road work",
+        "trafficAnnouncementType": null,
+        "version": 1,
+        "releaseTime": "2026-10-10T10:35:33.167Z",
+        "versionTime": "2026-10-10T10:35:33.166Z",
+        "announcements": [
+          {
+            "language": "fi",
+            "title": "Tie 18717, Oulu. Tietyö. ",
+            "location": {
+              "countryCode": 6,
+              "locationTableNumber": 17,
+              "locationTableVersion": "1.11.45",
+              "description": "Tie 18717 välillä Kiiminki - Vesala, Oulu.\nTarkempi paikka: Paikasta Palavasuonojan silta 3,9 km, suuntaan Vesala."
+            },
+            "locationDetails": {
+              "roadAddressLocation": {
+                "primaryPoint": {
+                  "municipality": "Oulu",
+                  "province": "Pohjois-Pohjanmaa",
+                  "country": "Suomi",
+                  "roadAddress": {
+                    "road": 18717,
+                    "roadSection": 2,
+                    "distance": 9372
+                  },
+                  "alertCLocation": {
+                    "locationCode": 34877,
+                    "name": "Palavasuonojan silta",
+                    "distance": 3914
+                  }
+                },
+                "secondaryPoint": {
+                  "municipality": "Oulu",
+                  "province": "Pohjois-Pohjanmaa",
+                  "country": "Suomi",
+                  "roadAddress": {
+                    "road": 18717,
+                    "roadSection": 2,
+                    "distance": 9372
+                  },
+                  "alertCLocation": {
+                    "locationCode": 34879,
+                    "name": "Vesala",
+                    "distance": 625
+                  }
+                },
+                "direction": "both"
+              }
+            },
+            "locationOpenLr": {
+              "binary": "IxKC/y5AJw=="
+            },
+            "features": [],
+            "roadWorkPhases": [
+              {
+                "id": "GUID50474953",
+                "location": {
+                  "countryCode": 6,
+                  "locationTableNumber": 17,
+                  "locationTableVersion": "1.11.45",
+                  "description": "Tie 18717 välillä Kiiminki - Vesala, Oulu.\nTarkempi paikka: Paikasta Palavasuonojan silta 3,9 km, suuntaan Vesala."
+                },
+                "locationDetails": {
+                  "roadAddressLocation": {
+                    "primaryPoint": {
+                      "municipality": "Oulu",
+                      "province": "Pohjois-Pohjanmaa",
+                      "country": "Suomi",
+                      "roadAddress": {
+                        "road": 18717,
+                        "roadSection": 2,
+                        "distance": 9372
+                      },
+                      "alertCLocation": {
+                        "locationCode": 34877,
+                        "name": "Palavasuonojan silta",
+                        "distance": 3914
+                      }
+                    },
+                    "secondaryPoint": {
+                      "municipality": "Oulu",
+                      "province": "Pohjois-Pohjanmaa",
+                      "country": "Suomi",
+                      "roadAddress": {
+                        "road": 18717,
+                        "roadSection": 2,
+                        "distance": 9372
+                      },
+                      "alertCLocation": {
+                        "locationCode": 34879,
+                        "name": "Vesala",
+                        "distance": 625
+                      }
+                    },
+                    "direction": "both"
+                  }
+                },
+                "locationOpenLr": {
+                  "binary": "IxKC/y5AJw=="
+                },
+                "workingHours": [
+                  {
+                    "weekday": "Friday",
+                    "startTime": "08:00",
+                    "endTime": "18:00"
+                  },
+                  {
+                    "weekday": "Saturday",
+                    "startTime": "08:00",
+                    "endTime": "18:00"
+                  },
+                  {
+                    "weekday": "Thursday",
+                    "startTime": "08:00",
+                    "endTime": "18:00"
+                  }
+                ],
+                "timeAndDuration": {
+                  "startTime": "2026-10-14T21:00:00.000Z",
+                  "endTime": "2026-10-17T20:59:59.999Z"
+                },
+                "workTypes": [
+                  {
+                    "type": "measurement",
+                    "description": "Tutkimus/mittaus"
+                  },
+                  {
+                    "type": "other",
+                    "description": ""
+                  }
+                ],
+                "restrictions": [],
+                "restrictionsLiftable": false,
+                "severity": "low",
+                "slowTrafficTimes": [],
+                "queuingTrafficTimes": []
+              }
+            ],
+            "timeAndDuration": {
+              "startTime": "2026-10-14T21:00:00.000Z",
+              "endTime": "2026-10-17T20:59:59.999Z"
+            },
+            "additionalInformation": "Liikenne- ja kelitiedot verkossa: https://liikennetilanne.fintraffic.fi/",
+            "sender": "Fintraffic Tieliikennekeskus"
+          }
+        ],
+        "contact": {
+          "phone": "02002100",
+          "email": "tampere.liikennekeskus@fintraffic.fi"
+        },
+        "dataUpdatedTime": null
+      }
+    }
+  ]
+}

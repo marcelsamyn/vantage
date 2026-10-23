@@ -1,0 +1,606 @@
+{
+ "type": "FeatureCollection",
+ "totalFeatures": "unknown",
+ "numberReturned": 2623,
+ "timeStamp": "2026-10-09T05:26:15.906Z",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "urn:ogc:def:crs:EPSG::4326"
+  }
+ },
+ "bbox": [
+  4.2592,
+  50.7749,
+  4.4738,
+  50.9087
+ ],
+ "features": [
+  {
+   "type": "Feature",
+   "id": "fims.625230",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3792,
+     50.8341
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 625230,
+    "fims_id": 1221732,
+    "createddate": "2026-10-08",
+    "closeddate": null,
+    "updateddate": "2026-10-08",
+    "category": 4010,
+    "road_fr": "Rue Gray",
+    "road_nl": "Graystraat",
+    "housenr": "118",
+    "pccp": 1050,
+    "status": "PROCESSING",
+    "responsible_org": "26",
+    "responsible_dep": "153",
+    "comment": "En raison de l'occupation illégale du Jardin des Moineaux, on retrouve à nouveau des sacs poubelle non réglementaires jetés sur place.",
+    "comment_reporter": "citizen",
+    "pic_list": "{4991754}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3792,
+    50.8341,
+    4.3792,
+    50.8341
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.625229",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3139,
+     50.8705
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 625229,
+    "fims_id": 1221735,
+    "createddate": "2026-10-08",
+    "closeddate": null,
+    "updateddate": "2026-10-08",
+    "category": 4001,
+    "road_fr": "Rue du Cens",
+    "road_nl": "Cijnsstraat",
+    "housenr": "27",
+    "pccp": 1083,
+    "status": "PROCESSING",
+    "responsible_org": "26",
+    "responsible_dep": "153",
+    "comment": "dans le parc le long des escaliers",
+    "comment_reporter": "citizen",
+    "pic_list": "{4991764}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3139,
+    50.8705,
+    4.3139,
+    50.8705
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.624739",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3183,
+     50.8587
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 624739,
+    "fims_id": 1221390,
+    "createddate": "2026-10-07",
+    "closeddate": null,
+    "updateddate": "2026-10-08",
+    "category": 4011,
+    "road_fr": "Avenue du Karreveld",
+    "road_nl": "Karreveldlaan",
+    "housenr": "20",
+    "pccp": 1080,
+    "status": "PROCESSING",
+    "responsible_org": "6",
+    "responsible_dep": "94",
+    "comment": "des grosses mzrdee ont laissé ça la sans aucun scrupule",
+    "comment_reporter": "citizen",
+    "pic_list": "{4990620,4990619}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3183,
+    50.8587,
+    4.3183,
+    50.8587
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.624871",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3433,
+     50.8644
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 624871,
+    "fims_id": 1220813,
+    "createddate": "2026-10-07",
+    "closeddate": null,
+    "updateddate": "2026-10-08",
+    "category": 4010,
+    "road_fr": "Rue Picard",
+    "road_nl": "Picardstraat",
+    "housenr": "130",
+    "pccp": 1080,
+    "status": "PROCESSING",
+    "responsible_org": "6",
+    "responsible_dep": "94",
+    "comment": "Achtergelaten voeding te Picardstraat. Dit ligt er al enkele weken",
+    "comment_reporter": "citizen",
+    "pic_list": "{4988414}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3433,
+    50.8644,
+    4.3433,
+    50.8644
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.624541",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3773,
+     50.8151
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 624541,
+    "fims_id": 1220038,
+    "createddate": "2026-10-06",
+    "closeddate": null,
+    "updateddate": "2026-10-06",
+    "category": 2504,
+    "road_fr": "Avenue Franklin Roosevelt",
+    "road_nl": "Franklin Rooseveltlaan",
+    "housenr": "14",
+    "pccp": 1050,
+    "status": "PROCESSING",
+    "responsible_org": "2",
+    "responsible_dep": "226",
+    "comment": "énormes tags rose sur mobilier en bois a l entrée du Bois de la Cambre au début de l avenue Ceres",
+    "comment_reporter": "citizen",
+    "pic_list": "{4985595}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3773,
+    50.8151,
+    4.3773,
+    50.8151
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.624542",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3772,
+     50.8338
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 624542,
+    "fims_id": 1220464,
+    "createddate": "2026-10-06",
+    "closeddate": null,
+    "updateddate": "2026-10-06",
+    "category": 4003,
+    "road_fr": "Rue du Sceptre",
+    "road_nl": "Scepterstraat",
+    "housenr": "39",
+    "pccp": 1050,
+    "status": "PROCESSING",
+    "responsible_org": "26",
+    "responsible_dep": "153",
+    "comment": "Bonjour, notre sac n'était pas ramassé hier.",
+    "comment_reporter": "citizen",
+    "pic_list": "{4987072}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3772,
+    50.8338,
+    4.3772,
+    50.8338
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.624001",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3635,
+     50.8282
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 624001,
+    "fims_id": 1219206,
+    "createddate": "2026-10-05",
+    "closeddate": "2026-10-06",
+    "updateddate": "2026-10-06",
+    "category": 4051,
+    "road_fr": "Avenue Louise",
+    "road_nl": "Louizalaan",
+    "housenr": "174",
+    "pccp": 1050,
+    "status": "CLOSED",
+    "responsible_org": "8",
+    "responsible_dep": "13",
+    "comment": "dépose en dehors des heures et jours d ‘enlèvement",
+    "comment_reporter": "citizen",
+    "pic_list": "{4982629}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3635,
+    50.8282,
+    4.3635,
+    50.8282
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.624004",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3763,
+     50.8321
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 624004,
+    "fims_id": 1219703,
+    "createddate": "2026-10-05",
+    "closeddate": "2026-10-06",
+    "updateddate": "2026-10-06",
+    "category": 4001,
+    "road_fr": "Avenue de la Couronne",
+    "road_nl": "Kroonlaan",
+    "housenr": "26",
+    "pccp": 1050,
+    "status": "CLOSED",
+    "responsible_org": "8",
+    "responsible_dep": "13",
+    "comment": "sacs non ramassés",
+    "comment_reporter": "citizen",
+    "pic_list": "{4984441,4984439}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3763,
+    50.8321,
+    4.3763,
+    50.8321
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.623672",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3358,
+     50.8248
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 623672,
+    "fims_id": 1218585,
+    "createddate": "2026-10-04",
+    "closeddate": null,
+    "updateddate": "2026-10-05",
+    "category": 4010,
+    "road_fr": "Rue du Canada",
+    "road_nl": "Canadastraat",
+    "housenr": "81",
+    "pccp": 1190,
+    "status": "PROCESSING",
+    "responsible_org": "10",
+    "responsible_dep": "82",
+    "comment": "altijd op opnieuw is er sluikstort bij deze vuilbak en de glasblak.",
+    "comment_reporter": "citizen",
+    "pic_list": "{4980619}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3358,
+    50.8248,
+    4.3358,
+    50.8248
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.623554",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3105,
+     50.8709
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 623554,
+    "fims_id": 1218808,
+    "createddate": "2026-10-04",
+    "closeddate": null,
+    "updateddate": "2026-10-04",
+    "category": 3301,
+    "road_fr": "Rue des Clématites",
+    "road_nl": "Clématisstraat",
+    "housenr": "31",
+    "pccp": 1083,
+    "status": "CREATED",
+    "responsible_org": "9",
+    "responsible_dep": "314",
+    "comment": "",
+    "comment_reporter": "",
+    "pic_list": "{}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3105,
+    50.8709,
+    4.3105,
+    50.8709
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.623249",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3952,
+     50.8758
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 623249,
+    "fims_id": 1218157,
+    "createddate": "2026-10-03",
+    "closeddate": null,
+    "updateddate": "2026-10-05",
+    "category": 3301,
+    "road_fr": "Rue Edouard Stuckens",
+    "road_nl": "Edward Stuckensstraat",
+    "housenr": "45",
+    "pccp": 1140,
+    "status": "PROCESSING",
+    "responsible_org": "26",
+    "responsible_dep": "153",
+    "comment": "sac blanc orange bleu",
+    "comment_reporter": "citizen",
+    "pic_list": "{4979517}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3952,
+    50.8758,
+    4.3952,
+    50.8758
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.623127",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3746,
+     50.8303
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 623127,
+    "fims_id": 1218368,
+    "createddate": "2026-10-03",
+    "closeddate": "2026-10-05",
+    "updateddate": "2026-10-05",
+    "category": 4010,
+    "road_fr": "Rue Kerckx",
+    "road_nl": "Kerckxstraat",
+    "housenr": "29",
+    "pccp": 1050,
+    "status": "CLOSED",
+    "responsible_org": "8",
+    "responsible_dep": "13",
+    "comment": "systematique ici...",
+    "comment_reporter": "citizen",
+    "pic_list": "{4980031}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3746,
+    50.8303,
+    4.3746,
+    50.8303
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.622999",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3828,
+     50.8333
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 622999,
+    "fims_id": 1217829,
+    "createddate": "2026-10-02",
+    "closeddate": null,
+    "updateddate": "2026-10-07",
+    "category": 5130,
+    "road_fr": "Rue de Theux",
+    "road_nl": "de Theuxstraat",
+    "housenr": "40",
+    "pccp": 1040,
+    "status": "PROCESSING",
+    "responsible_org": "12",
+    "responsible_dep": "135",
+    "comment": "poteau de chantier abandonné",
+    "comment_reporter": "citizen",
+    "pic_list": "{4978345}",
+    "head_category": 1005
+   },
+   "bbox": [
+    4.3828,
+    50.8333,
+    4.3828,
+    50.8333
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.623030",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.3137,
+     50.838
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 623030,
+    "fims_id": 1217735,
+    "createddate": "2026-10-02",
+    "closeddate": null,
+    "updateddate": "2026-10-07",
+    "category": 4010,
+    "road_fr": "Avenue Raymond Vander Bruggen",
+    "road_nl": "Raymond Vander Bruggenlaan",
+    "housenr": "72",
+    "pccp": 1070,
+    "status": "PROCESSING",
+    "responsible_org": "14",
+    "responsible_dep": "46",
+    "comment": "bonjour à tous, il ya des déchets jeté sauvagement sous l'arbre devant le numéro 70 (2 grand sac transparent avec déchets ménager +chaise et planche) probablement par un des habitants de cette immeuble...?  merci de faire le nécessaire pour les retirer..merci beaucoup à vous tous.",
+    "comment_reporter": "citizen",
+    "pic_list": "{4978097}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3137,
+    50.838,
+    4.3137,
+    50.838
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.8361",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.4329,
+     50.8394
+    ]
+   },
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 8361,
+    "fims_id": 77271,
+    "createddate": "2017-05-28",
+    "closeddate": "2018-06-06",
+    "updateddate": "2018-06-06",
+    "category": 3045,
+    "road_fr": "Rue Jean Deraeck",
+    "road_nl": "Rue Jean Deraeck",
+    "housenr": "50",
+    "pccp": 1150,
+    "status": "CLOSED",
+    "responsible_org": "19",
+    "responsible_dep": "96",
+    "comment": "Ce potelet avait ete installé pour la propriétaire précédente de cette maison. Il lui permettait d'y verouiller son rolator. Cette dame est partie, de nouveaux propriétaires se sont installés. Le potelet n'a plus de raison d'être et il réduit considérablement l'espace de parking déjà très rare dans cette rue. Pouvez  vous venir l'oter? Les voisins sont du même avis! Merci.",
+    "comment_reporter": "citizen",
+    "pic_list": "{297357}",
+    "head_category": 1007
+   },
+   "bbox": [
+    4.4329,
+    50.8394,
+    4.4329,
+    50.8394
+   ]
+  },
+  {
+   "type": "Feature",
+   "id": "fims.9999999",
+   "geometry": null,
+   "geometry_name": "geom",
+   "properties": {
+    "gid": 625230,
+    "fims_id": 9999999,
+    "createddate": "2026-10-08",
+    "closeddate": null,
+    "updateddate": "2026-10-08",
+    "category": 4010,
+    "road_fr": "Rue Gray",
+    "road_nl": "Graystraat",
+    "housenr": "118",
+    "pccp": 1050,
+    "status": "PROCESSING",
+    "responsible_org": "26",
+    "responsible_dep": "153",
+    "comment": "En raison de l'occupation illégale du Jardin des Moineaux, on retrouve à nouveau des sacs poubelle non réglementaires jetés sur place.",
+    "comment_reporter": "citizen",
+    "pic_list": "{4991754}",
+    "head_category": 1002
+   },
+   "bbox": [
+    4.3792,
+    50.8341,
+    4.3792,
+    50.8341
+   ]
+  }
+ ]
+}

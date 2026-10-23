@@ -1,0 +1,1261 @@
+{
+ "total_results": 211,
+ "page": 1,
+ "per_page": 200,
+ "results": [
+  {
+   "quality_grade": "needs_id",
+   "time_observed_at": "2024-06-26T10:11:01+02:00",
+   "taxon_geoprivacy": "open",
+   "uuid": "98601c7b-ec81-4aa1-85c8-b599fbe38510",
+   "observed_on_details": {
+    "date": "2024-06-26",
+    "day": 26,
+    "month": 6,
+    "year": 2024,
+    "hour": 10,
+    "week": 26
+   },
+   "id": 406941240,
+   "cached_votes_total": 0,
+   "identifications_most_agree": false,
+   "created_at_details": {
+    "date": "2026-10-09",
+    "day": 9,
+    "month": 10,
+    "year": 2026,
+    "hour": 6,
+    "week": 41
+   },
+   "species_guess": null,
+   "identifications_most_disagree": false,
+   "positional_accuracy": 1,
+   "comments_count": 0,
+   "site_id": 1,
+   "created_time_zone": "Europe/Rome",
+   "license_code": "cc-by-nc",
+   "observed_time_zone": "Europe/Rome",
+   "public_positional_accuracy": 1,
+   "oauth_application_id": 843,
+   "created_at": "2026-10-09T06:37:27+02:00",
+   "description": null,
+   "time_zone_offset": "+01:00",
+   "observed_on": "2024-06-26",
+   "observed_on_string": "2024-06-26 10:11:01",
+   "updated_at": "2026-10-09T06:37:28+02:00",
+   "captive": false,
+   "taxon": {
+    "id": 59202,
+    "name": "Larus michahellis",
+    "rank": "species",
+    "rank_level": 10,
+    "iconic_taxon_id": 3,
+    "iconic_taxon_name": "Aves",
+    "preferred_common_name": "Yellow-legged Gull",
+    "is_active": true,
+    "default_photo": {
+     "id": 12831,
+     "license_code": "cc-by-sa",
+     "attribution": "(c) Photographer 14, some rights reserved (CC-BY-SA)",
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/12831/square.jpg",
+     "attribution_name": "Photographer 14"
+    }
+   },
+   "faves_count": 0,
+   "num_identification_agreements": 0,
+   "identification_disagreements_count": 0,
+   "map_scale": null,
+   "uri": "https://www.inaturalist.org/observations/406941240",
+   "community_taxon_id": null,
+   "geojson": {
+    "type": "Point",
+    "coordinates": [
+     12.4923116667,
+     41.89018
+    ]
+   },
+   "owners_identification_from_vision": true,
+   "identifications_count": 0,
+   "obscured": false,
+   "num_identification_disagreements": 0,
+   "geoprivacy": null,
+   "location": "41.89018,12.4923116667",
+   "spam": false,
+   "user": {
+    "id": 900001,
+    "login": "observer_01",
+    "name": "Observer 01",
+    "icon": "https://static.inaturalist.org/attachments/users/icons/900001/medium.jpg",
+    "icon_url": "https://static.inaturalist.org/attachments/users/icons/900001/medium.jpg",
+    "observations_count": 124,
+    "orcid": null,
+    "created_at": "2026-08-14T13:14:03+00:00"
+   },
+   "mappable": true,
+   "identifications_some_agree": false,
+   "place_guess": "Piazza del Colosseo, Rome, Lazio, IT",
+   "identifications": [
+    {
+     "id": 903351922,
+     "uuid": "e03a1d93-7b18-4388-a2ce-236191444b18",
+     "created_at": "2026-10-09T04:37:27+00:00",
+     "body": null,
+     "category": "leading",
+     "current": true,
+     "user": {
+      "id": 900001,
+      "login": "observer_01",
+      "name": "Observer 01",
+      "icon": "https://static.inaturalist.org/attachments/users/icons/900001/medium.jpg",
+      "icon_url": "https://static.inaturalist.org/attachments/users/icons/900001/medium.jpg",
+      "observations_count": 124,
+      "orcid": null,
+      "created_at": "2026-08-14T13:14:03+00:00"
+     },
+     "taxon": {
+      "id": 59202,
+      "name": "Larus michahellis",
+      "rank": "species",
+      "rank_level": 10,
+      "iconic_taxon_id": 3,
+      "iconic_taxon_name": "Aves",
+      "preferred_common_name": "Yellow-legged Gull",
+      "is_active": true,
+      "default_photo": {
+       "id": 12831,
+       "license_code": "cc-by-sa",
+       "attribution": "(c) Photographer 14, some rights reserved (CC-BY-SA)",
+       "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/12831/square.jpg",
+       "attribution_name": "Photographer 14"
+      }
+     }
+    }
+   ],
+   "photos": [
+    {
+     "id": 747743176,
+     "license_code": "cc-by-nc",
+     "original_dimensions": {
+      "width": 1536,
+      "height": 2048
+     },
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/747743176/square.jpg",
+     "attribution": "(c) Observer 01, some rights reserved (CC BY-NC)"
+    }
+   ]
+  },
+  {
+   "quality_grade": "needs_id",
+   "time_observed_at": "2026-05-20T14:23:15+02:00",
+   "taxon_geoprivacy": null,
+   "uuid": "2634fc2a-7f6c-4ba5-adf7-19c2a34cd6ad",
+   "observed_on_details": {
+    "date": "2026-05-20",
+    "day": 20,
+    "month": 5,
+    "year": 2026,
+    "hour": 14,
+    "week": 21
+   },
+   "id": 406918150,
+   "cached_votes_total": 0,
+   "identifications_most_agree": false,
+   "created_at_details": {
+    "date": "2026-10-09",
+    "day": 9,
+    "month": 10,
+    "year": 2026,
+    "hour": 3,
+    "week": 41
+   },
+   "species_guess": null,
+   "identifications_most_disagree": false,
+   "positional_accuracy": 19,
+   "comments_count": 0,
+   "site_id": 1,
+   "created_time_zone": "Europe/Rome",
+   "license_code": "cc-by-nc",
+   "observed_time_zone": "Europe/Rome",
+   "public_positional_accuracy": 19,
+   "oauth_application_id": 843,
+   "created_at": "2026-10-09T03:43:32+02:00",
+   "description": null,
+   "time_zone_offset": "+01:00",
+   "observed_on": "2026-05-20",
+   "observed_on_string": "2026-05-20 14:23:15",
+   "updated_at": "2026-10-09T03:43:33+02:00",
+   "captive": false,
+   "taxon": {
+    "id": 70045,
+    "name": "Acanthus mollis",
+    "rank": "species",
+    "rank_level": 10,
+    "iconic_taxon_id": 47126,
+    "iconic_taxon_name": "Plantae",
+    "preferred_common_name": "Bear's breeches",
+    "is_active": true,
+    "default_photo": {
+     "id": 30038,
+     "license_code": "cc-by-nd",
+     "attribution": "(c) Photographer 15, some rights reserved (CC-BY-ND)",
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/30038/square.jpg",
+     "attribution_name": "Photographer 15"
+    }
+   },
+   "faves_count": 0,
+   "num_identification_agreements": 0,
+   "identification_disagreements_count": 0,
+   "map_scale": null,
+   "uri": "https://www.inaturalist.org/observations/406918150",
+   "community_taxon_id": null,
+   "geojson": {
+    "type": "Point",
+    "coordinates": [
+     12.4654083333,
+     41.8811716667
+    ]
+   },
+   "owners_identification_from_vision": true,
+   "identifications_count": 0,
+   "obscured": false,
+   "num_identification_disagreements": 0,
+   "geoprivacy": null,
+   "location": "41.8811716667,12.4654083333",
+   "spam": false,
+   "user": {
+    "id": 900003,
+    "login": "observer_03",
+    "name": "Observer 03",
+    "icon": null,
+    "icon_url": null,
+    "observations_count": 112,
+    "orcid": null,
+    "created_at": "2025-05-23T17:13:56+00:00"
+   },
+   "mappable": true,
+   "identifications_some_agree": false,
+   "place_guess": "Via Francesco dall'Ongaro, Rome, Lazio, IT",
+   "identifications": [
+    {
+     "id": 903300678,
+     "uuid": "287f3819-01e4-42ac-94f5-4ec1eb3eddc3",
+     "created_at": "2026-10-09T01:43:32+00:00",
+     "body": null,
+     "category": "leading",
+     "current": true,
+     "user": {
+      "id": 900003,
+      "login": "observer_03",
+      "name": "Observer 03",
+      "icon": null,
+      "icon_url": null,
+      "observations_count": 112,
+      "orcid": null,
+      "created_at": "2025-05-23T17:13:56+00:00"
+     },
+     "taxon": {
+      "id": 70045,
+      "name": "Acanthus mollis",
+      "rank": "species",
+      "rank_level": 10,
+      "iconic_taxon_id": 47126,
+      "iconic_taxon_name": "Plantae",
+      "preferred_common_name": "Bear's breeches",
+      "is_active": true,
+      "default_photo": {
+       "id": 30038,
+       "license_code": "cc-by-nd",
+       "attribution": "(c) Photographer 15, some rights reserved (CC-BY-ND)",
+       "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/30038/square.jpg",
+       "attribution_name": "Photographer 15"
+      }
+     }
+    }
+   ],
+   "photos": [
+    {
+     "id": 747695360,
+     "license_code": "cc-by-nc",
+     "original_dimensions": {
+      "width": 1536,
+      "height": 2048
+     },
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/747695360/square.jpg",
+     "attribution": "(c) Observer 03, some rights reserved (CC BY-NC)"
+    }
+   ]
+  },
+  {
+   "quality_grade": "needs_id",
+   "time_observed_at": null,
+   "taxon_geoprivacy": "open",
+   "uuid": "d2e142fd-eb41-4235-8980-26e021478f8b",
+   "observed_on_details": {
+    "date": "2026-04-14",
+    "day": 14,
+    "month": 4,
+    "year": 2026,
+    "hour": 0,
+    "week": 16
+   },
+   "id": 406879614,
+   "cached_votes_total": 0,
+   "identifications_most_agree": false,
+   "created_at_details": {
+    "date": "2026-10-08",
+    "day": 8,
+    "month": 10,
+    "year": 2026,
+    "hour": 23,
+    "week": 41
+   },
+   "species_guess": "European Water Vole",
+   "identifications_most_disagree": false,
+   "positional_accuracy": 800,
+   "comments_count": 0,
+   "site_id": 1,
+   "created_time_zone": "Europe/Rome",
+   "license_code": "cc-by-nc",
+   "observed_time_zone": "Europe/Rome",
+   "public_positional_accuracy": 800,
+   "oauth_application_id": 2,
+   "created_at": "2026-10-08T23:51:04+02:00",
+   "description": null,
+   "time_zone_offset": "+01:00",
+   "observed_on": "2026-04-14",
+   "observed_on_string": "2026-04-14",
+   "updated_at": "2026-10-08T23:51:56+02:00",
+   "captive": false,
+   "taxon": {
+    "id": 67819,
+    "name": "Arvicola amphibius",
+    "rank": "species",
+    "rank_level": 10,
+    "iconic_taxon_id": 40151,
+    "iconic_taxon_name": "Mammalia",
+    "preferred_common_name": "European Water Vole",
+    "is_active": true,
+    "default_photo": {
+     "id": 73321594,
+     "license_code": "cc-by-nc",
+     "attribution": "(c) Photographer 16, some rights reserved (CC-BY-NC)",
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/73321594/square.jpg",
+     "attribution_name": "Photographer 16"
+    }
+   },
+   "faves_count": 0,
+   "num_identification_agreements": 0,
+   "identification_disagreements_count": 0,
+   "map_scale": null,
+   "uri": "https://www.inaturalist.org/observations/406879614",
+   "community_taxon_id": null,
+   "geojson": {
+    "type": "Point",
+    "coordinates": [
+     12.4704289064,
+     41.9155180597
+    ]
+   },
+   "owners_identification_from_vision": false,
+   "identifications_count": 0,
+   "obscured": false,
+   "num_identification_disagreements": 0,
+   "geoprivacy": null,
+   "location": "41.9155180597,12.4704289064",
+   "spam": false,
+   "user": {
+    "id": 900005,
+    "login": "observer_05",
+    "name": null,
+    "icon": null,
+    "icon_url": null,
+    "observations_count": 125,
+    "orcid": null,
+    "created_at": "2026-09-14T11:00:38+00:00"
+   },
+   "mappable": true,
+   "identifications_some_agree": false,
+   "place_guess": "Ferrari/Ricciotti, 00195 Roma RM, Italy",
+   "identifications": [
+    {
+     "id": 903222047,
+     "uuid": "cf112893-e764-427a-920a-1fa9d3423f41",
+     "created_at": "2026-10-08T21:51:04+00:00",
+     "body": null,
+     "category": "leading",
+     "current": true,
+     "user": {
+      "id": 900005,
+      "login": "observer_05",
+      "name": null,
+      "icon": null,
+      "icon_url": null,
+      "observations_count": 125,
+      "orcid": null,
+      "created_at": "2026-09-14T11:00:38+00:00"
+     },
+     "taxon": {
+      "id": 67819,
+      "name": "Arvicola amphibius",
+      "rank": "species",
+      "rank_level": 10,
+      "iconic_taxon_id": 40151,
+      "iconic_taxon_name": "Mammalia",
+      "preferred_common_name": "European Water Vole",
+      "is_active": true,
+      "default_photo": {
+       "id": 73321594,
+       "license_code": "cc-by-nc",
+       "attribution": "(c) Photographer 16, some rights reserved (CC-BY-NC)",
+       "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/73321594/square.jpg",
+       "attribution_name": "Photographer 16"
+      }
+     }
+    }
+   ],
+   "photos": [
+    {
+     "id": 747615457,
+     "license_code": "cc-by-nc",
+     "original_dimensions": {
+      "width": 1152,
+      "height": 2048
+     },
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/747615457/square.jpg",
+     "attribution": "(c) Observer 05, some rights reserved (CC BY-NC)"
+    }
+   ]
+  },
+  {
+   "quality_grade": "needs_id",
+   "time_observed_at": "2026-10-08T21:17:49+02:00",
+   "taxon_geoprivacy": null,
+   "uuid": "f96d6a72-ac55-476a-8273-aa3f5da26197",
+   "observed_on_details": {
+    "date": "2026-10-08",
+    "day": 8,
+    "month": 10,
+    "year": 2026,
+    "hour": 21,
+    "week": 41
+   },
+   "id": 406876360,
+   "cached_votes_total": 0,
+   "identifications_most_agree": false,
+   "created_at_details": {
+    "date": "2026-10-08",
+    "day": 8,
+    "month": 10,
+    "year": 2026,
+    "hour": 23,
+    "week": 41
+   },
+   "species_guess": "Grillo nero del deserto",
+   "identifications_most_disagree": false,
+   "positional_accuracy": 16,
+   "comments_count": 0,
+   "site_id": 1,
+   "created_time_zone": "Europe/Rome",
+   "license_code": "cc-by-nc",
+   "observed_time_zone": "Europe/Rome",
+   "public_positional_accuracy": 16,
+   "oauth_application_id": 2,
+   "created_at": "2026-10-08T23:34:55+02:00",
+   "description": null,
+   "time_zone_offset": "+01:00",
+   "observed_on": "2026-10-08",
+   "observed_on_string": "2026-10-08 21:17:49",
+   "updated_at": "2026-10-08T23:36:55+02:00",
+   "captive": false,
+   "taxon": {
+    "id": 507377,
+    "name": "Melanogryllus desertus",
+    "rank": "species",
+    "rank_level": 10,
+    "iconic_taxon_id": 47158,
+    "iconic_taxon_name": "Insecta",
+    "preferred_common_name": "Desert Cricket",
+    "is_active": true,
+    "default_photo": {
+     "id": 36380080,
+     "license_code": "cc-by-sa",
+     "attribution": "(c) Photographer 17, some rights reserved (CC-BY-SA)",
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/36380080/square.jpeg",
+     "attribution_name": "Photographer 17"
+    }
+   },
+   "faves_count": 0,
+   "num_identification_agreements": 0,
+   "identification_disagreements_count": 0,
+   "map_scale": null,
+   "uri": "https://www.inaturalist.org/observations/406876360",
+   "community_taxon_id": null,
+   "geojson": {
+    "type": "Point",
+    "coordinates": [
+     12.4218725413,
+     41.9392465603
+    ]
+   },
+   "owners_identification_from_vision": false,
+   "identifications_count": 0,
+   "obscured": false,
+   "num_identification_disagreements": 0,
+   "geoprivacy": null,
+   "location": "41.9392465603,12.4218725413",
+   "spam": false,
+   "user": {
+    "id": 900006,
+    "login": "observer_06",
+    "name": "Observer 06",
+    "icon": null,
+    "icon_url": null,
+    "observations_count": 11,
+    "orcid": null,
+    "created_at": "2025-12-11T22:18:44+00:00"
+   },
+   "mappable": true,
+   "identifications_some_agree": false,
+   "place_guess": "Roma Monte Mario, 00168 Roma RM, Italia",
+   "identifications": [
+    {
+     "id": 903215584,
+     "uuid": "144e4155-456d-4628-83a8-790406168b87",
+     "created_at": "2026-10-08T23:34:55+02:00",
+     "body": null,
+     "category": "leading",
+     "current": true,
+     "user": {
+      "id": 900006,
+      "login": "observer_06",
+      "name": "Observer 06",
+      "icon": null,
+      "icon_url": null,
+      "observations_count": 11,
+      "orcid": null,
+      "created_at": "2025-12-11T22:18:44+00:00"
+     },
+     "taxon": {
+      "id": 507377,
+      "name": "Melanogryllus desertus",
+      "rank": "species",
+      "rank_level": 10,
+      "iconic_taxon_id": 47158,
+      "iconic_taxon_name": "Insecta",
+      "preferred_common_name": "Desert Cricket",
+      "is_active": true,
+      "default_photo": {
+       "id": 36380080,
+       "license_code": "cc-by-sa",
+       "attribution": "(c) Photographer 17, some rights reserved (CC-BY-SA)",
+       "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/36380080/square.jpeg",
+       "attribution_name": "Photographer 17"
+      }
+     }
+    }
+   ],
+   "photos": [
+    {
+     "id": 747608666,
+     "license_code": "cc-by-nc",
+     "original_dimensions": {
+      "width": 1536,
+      "height": 2048
+     },
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/747608666/square.jpg",
+     "attribution": "(c) Observer 06, some rights reserved (CC BY-NC)"
+    },
+    {
+     "id": 747608720,
+     "license_code": "cc-by-nc",
+     "original_dimensions": {
+      "width": 1536,
+      "height": 2048
+     },
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/747608720/square.jpg",
+     "attribution": "(c) Observer 06, some rights reserved (CC BY-NC)"
+    }
+   ]
+  },
+  {
+   "quality_grade": "casual",
+   "time_observed_at": "2026-10-08T17:46:27+02:00",
+   "taxon_geoprivacy": "open",
+   "uuid": "64e4a2cf-42ba-4e18-a5d9-d2a129e391da",
+   "observed_on_details": {
+    "date": "2026-10-08",
+    "day": 8,
+    "month": 10,
+    "year": 2026,
+    "hour": 17,
+    "week": 41
+   },
+   "id": 406866610,
+   "cached_votes_total": 0,
+   "identifications_most_agree": false,
+   "created_at_details": {
+    "date": "2026-10-08",
+    "day": 8,
+    "month": 10,
+    "year": 2026,
+    "hour": 22,
+    "week": 41
+   },
+   "species_guess": null,
+   "identifications_most_disagree": false,
+   "positional_accuracy": 42,
+   "comments_count": 0,
+   "site_id": 1,
+   "created_time_zone": "Europe/Rome",
+   "license_code": null,
+   "observed_time_zone": "Europe/Rome",
+   "public_positional_accuracy": 42,
+   "oauth_application_id": 843,
+   "created_at": "2026-10-08T22:45:23+02:00",
+   "description": null,
+   "time_zone_offset": "+01:00",
+   "observed_on": "2026-10-08",
+   "observed_on_string": "2026-10-08 17:46:27",
+   "updated_at": "2026-10-08T22:45:25+02:00",
+   "captive": true,
+   "taxon": {
+    "id": 159346,
+    "name": "Bougainvillea glabra",
+    "rank": "species",
+    "rank_level": 10,
+    "iconic_taxon_id": 47126,
+    "iconic_taxon_name": "Plantae",
+    "preferred_common_name": "lesser bougainvillea",
+    "is_active": true,
+    "default_photo": {
+     "id": 282403493,
+     "license_code": "cc-by-nc",
+     "attribution": "(c) Photographer 18, some rights reserved (CC-BY-NC)",
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/282403493/square.jpg",
+     "attribution_name": "Photographer 18"
+    }
+   },
+   "faves_count": 0,
+   "num_identification_agreements": 0,
+   "identification_disagreements_count": 0,
+   "map_scale": null,
+   "uri": "https://www.inaturalist.org/observations/406866610",
+   "community_taxon_id": null,
+   "geojson": {
+    "type": "Point",
+    "coordinates": [
+     12.4930389042,
+     41.9293667787
+    ]
+   },
+   "owners_identification_from_vision": true,
+   "identifications_count": 0,
+   "obscured": false,
+   "num_identification_disagreements": 0,
+   "geoprivacy": null,
+   "location": "41.9293667787,12.4930389042",
+   "spam": false,
+   "user": {
+    "id": 900008,
+    "login": "observer_08",
+    "name": "Observer 08",
+    "icon": "https://static.inaturalist.org/attachments/users/icons/900008/medium.jpg",
+    "icon_url": "https://static.inaturalist.org/attachments/users/icons/900008/medium.jpg",
+    "observations_count": 165,
+    "orcid": null,
+    "created_at": "2020-07-05T23:05:33+00:00"
+   },
+   "mappable": true,
+   "identifications_some_agree": false,
+   "place_guess": "Via Tommaso Salvini, Rome, Lazio, IT",
+   "identifications": [
+    {
+     "id": 903194980,
+     "uuid": "cdfdcdaa-d62c-4fc2-9c79-11e4b1a2d1c1",
+     "created_at": "2026-10-08T20:45:23+00:00",
+     "body": null,
+     "category": "leading",
+     "current": true,
+     "user": {
+      "id": 900008,
+      "login": "observer_08",
+      "name": "Observer 08",
+      "icon": "https://static.inaturalist.org/attachments/users/icons/900008/medium.jpg",
+      "icon_url": "https://static.inaturalist.org/attachments/users/icons/900008/medium.jpg",
+      "observations_count": 165,
+      "orcid": null,
+      "created_at": "2020-07-05T23:05:33+00:00"
+     },
+     "taxon": {
+      "id": 159346,
+      "name": "Bougainvillea glabra",
+      "rank": "species",
+      "rank_level": 10,
+      "iconic_taxon_id": 47126,
+      "iconic_taxon_name": "Plantae",
+      "preferred_common_name": "lesser bougainvillea",
+      "is_active": true,
+      "default_photo": {
+       "id": 282403493,
+       "license_code": "cc-by-nc",
+       "attribution": "(c) Photographer 18, some rights reserved (CC-BY-NC)",
+       "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/282403493/square.jpg",
+       "attribution_name": "Photographer 18"
+      }
+     }
+    }
+   ],
+   "photos": [
+    {
+     "id": 747588600,
+     "license_code": null,
+     "original_dimensions": {
+      "width": 1536,
+      "height": 2048
+     },
+     "url": "https://static.inaturalist.org/photos/747588600/square.jpg",
+     "attribution": "(c) Observer 08, all rights reserved"
+    }
+   ]
+  },
+  {
+   "quality_grade": "needs_id",
+   "time_observed_at": "2026-10-06T12:00:30+02:00",
+   "taxon_geoprivacy": null,
+   "uuid": "7e1e7dd6-bc28-4182-a8bc-917523ef4608",
+   "observed_on_details": {
+    "date": "2026-10-06",
+    "day": 6,
+    "month": 10,
+    "year": 2026,
+    "hour": 12,
+    "week": 41
+   },
+   "id": 406860386,
+   "cached_votes_total": 0,
+   "identifications_most_agree": false,
+   "created_at_details": {
+    "date": "2026-10-08",
+    "day": 8,
+    "month": 10,
+    "year": 2026,
+    "hour": 22,
+    "week": 41
+   },
+   "species_guess": null,
+   "identifications_most_disagree": false,
+   "positional_accuracy": 14,
+   "comments_count": 0,
+   "site_id": 1,
+   "created_time_zone": "Europe/Rome",
+   "license_code": "",
+   "observed_time_zone": "Europe/Rome",
+   "public_positional_accuracy": 14,
+   "oauth_application_id": 2,
+   "created_at": "2026-10-08T22:14:27+02:00",
+   "description": null,
+   "time_zone_offset": "+01:00",
+   "observed_on": "2026-10-06",
+   "observed_on_string": "2026-10-06 12:00:30",
+   "updated_at": "2026-10-08T22:14:34+02:00",
+   "captive": false,
+   "taxon": null,
+   "faves_count": 0,
+   "num_identification_agreements": 0,
+   "identification_disagreements_count": 0,
+   "map_scale": null,
+   "uri": "https://www.inaturalist.org/observations/406860386",
+   "community_taxon_id": null,
+   "geojson": {
+    "type": "Point",
+    "coordinates": [
+     12.50330619,
+     41.89507345
+    ]
+   },
+   "owners_identification_from_vision": null,
+   "identifications_count": 0,
+   "obscured": false,
+   "num_identification_disagreements": 0,
+   "geoprivacy": null,
+   "location": "41.89507345,12.50330619",
+   "spam": false,
+   "user": {
+    "id": 900010,
+    "login": "observer_10",
+    "name": "Observer 10",
+    "icon": null,
+    "icon_url": null,
+    "observations_count": 61,
+    "orcid": null,
+    "created_at": "2023-08-06T03:05:34+00:00"
+   },
+   "mappable": true,
+   "identifications_some_agree": false,
+   "place_guess": "Roma, Lazio, IT",
+   "identifications": [],
+   "photos": [
+    {
+     "id": 747576165,
+     "license_code": null,
+     "original_dimensions": {
+      "width": 1536,
+      "height": 2048
+     },
+     "url": "https://static.inaturalist.org/photos/747576165/square.jpg",
+     "attribution": "(c) Observer 10, all rights reserved"
+    }
+   ]
+  },
+  {
+   "quality_grade": "casual",
+   "time_observed_at": "2026-10-08T21:24:56+02:00",
+   "taxon_geoprivacy": "open",
+   "uuid": "abe6e0c0-7c0f-45cd-a295-e07808ca8997",
+   "observed_on_details": {
+    "date": "2026-10-08",
+    "day": 8,
+    "month": 10,
+    "year": 2026,
+    "hour": 21,
+    "week": 41
+   },
+   "id": 406850629,
+   "cached_votes_total": 0,
+   "identifications_most_agree": false,
+   "created_at_details": {
+    "date": "2026-10-08",
+    "day": 8,
+    "month": 10,
+    "year": 2026,
+    "hour": 21,
+    "week": 41
+   },
+   "species_guess": "Serpente del grano",
+   "identifications_most_disagree": false,
+   "positional_accuracy": 2853,
+   "comments_count": 0,
+   "site_id": 1,
+   "created_time_zone": "Europe/Rome",
+   "license_code": "cc-by-nc",
+   "observed_time_zone": "Europe/Rome",
+   "public_positional_accuracy": 2853,
+   "oauth_application_id": 2,
+   "created_at": "2026-10-08T21:27:01+02:00",
+   "description": "Artemide ",
+   "time_zone_offset": "+01:00",
+   "observed_on": "2026-10-08",
+   "observed_on_string": "2026-10-08 21:24:56",
+   "updated_at": "2026-10-08T22:30:08+02:00",
+   "captive": true,
+   "taxon": {
+    "id": 73887,
+    "name": "Pantherophis guttatus",
+    "rank": "species",
+    "rank_level": 10,
+    "iconic_taxon_id": 26036,
+    "iconic_taxon_name": "Reptilia",
+    "preferred_common_name": "Red Cornsnake",
+    "is_active": true,
+    "default_photo": {
+     "id": 457255500,
+     "license_code": null,
+     "attribution": "(c) Photographer 19, some rights reserved ()",
+     "url": "https://static.inaturalist.org/photos/457255500/square.jpg",
+     "attribution_name": "Photographer 19"
+    }
+   },
+   "faves_count": 0,
+   "num_identification_agreements": 0,
+   "identification_disagreements_count": 0,
+   "map_scale": null,
+   "uri": "https://www.inaturalist.org/observations/406850629",
+   "community_taxon_id": null,
+   "geojson": {
+    "type": "Point",
+    "coordinates": [
+     12.6021387801,
+     41.8024223737
+    ]
+   },
+   "owners_identification_from_vision": false,
+   "identifications_count": 0,
+   "obscured": false,
+   "num_identification_disagreements": 0,
+   "geoprivacy": null,
+   "location": "41.8024223737,12.6021387801",
+   "spam": false,
+   "user": {
+    "id": 900012,
+    "login": "observer_12",
+    "name": "Observer 12",
+    "icon": null,
+    "icon_url": null,
+    "observations_count": 2,
+    "orcid": null,
+    "created_at": "2026-10-08T13:34:45+00:00"
+   },
+   "mappable": true,
+   "identifications_some_agree": false,
+   "place_guess": "CIAMPINO | Viale Lavoro (Stazione FS) # f12757, 00043 Ciampino RM, Italia",
+   "identifications": [
+    {
+     "id": 903161801,
+     "uuid": "2b2e0f43-c947-4ab2-8d54-6e2933e584eb",
+     "created_at": "2026-10-08T19:27:01+00:00",
+     "body": null,
+     "category": "leading",
+     "current": true,
+     "user": {
+      "id": 900012,
+      "login": "observer_12",
+      "name": "Observer 12",
+      "icon": null,
+      "icon_url": null,
+      "observations_count": 2,
+      "orcid": null,
+      "created_at": "2026-10-08T13:34:45+00:00"
+     },
+     "taxon": {
+      "id": 73887,
+      "name": "Pantherophis guttatus",
+      "rank": "species",
+      "rank_level": 10,
+      "iconic_taxon_id": 26036,
+      "iconic_taxon_name": "Reptilia",
+      "preferred_common_name": "Red Cornsnake",
+      "is_active": true,
+      "default_photo": {
+       "id": 457255500,
+       "license_code": null,
+       "attribution": "(c) Photographer 19, some rights reserved ()",
+       "url": "https://static.inaturalist.org/photos/457255500/square.jpg",
+       "attribution_name": "Photographer 19"
+      }
+     }
+    }
+   ],
+   "photos": [
+    {
+     "id": 747557614,
+     "license_code": "cc-by-nc",
+     "original_dimensions": {
+      "width": 921,
+      "height": 2048
+     },
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/747557614/square.jpg",
+     "attribution": "(c) Observer 12, some rights reserved (CC BY-NC)"
+    }
+   ]
+  },
+  {
+   "uuid": "8f8849f7-c61b-48ff-a236-232e4993c68f",
+   "id": 406933008,
+   "created_at": "2026-10-09T05:31:15+02:00",
+   "observed_on": "2018-09-26",
+   "time_observed_at": "2018-09-26T05:27:00+02:00",
+   "location": "50.4325101111,3.8548194101",
+   "obscured": true,
+   "geoprivacy": null,
+   "taxon_geoprivacy": "obscured",
+   "positional_accuracy": 911,
+   "public_positional_accuracy": 26357,
+   "quality_grade": "casual",
+   "taxon": {
+    "id": 514339,
+    "name": "Rhyticeros undulatus",
+    "preferred_common_name": "Wreathed Hornbill",
+    "iconic_taxon_name": "Aves",
+    "rank": "species"
+   },
+   "photos": [
+    {
+     "id": 747725908,
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/747725908/square.jpg",
+     "license_code": "cc-by-nc"
+    },
+    {
+     "id": 747725909,
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/747725909/square.jpg",
+     "license_code": "cc-by-nc"
+    }
+   ]
+  },
+  {
+   "quality_grade": "casual",
+   "time_observed_at": "2026-10-08T17:46:27+02:00",
+   "taxon_geoprivacy": "open",
+   "uuid": "00000000-0000-4000-8000-000000000001",
+   "observed_on_details": {
+    "date": "2026-10-08",
+    "day": 8,
+    "month": 10,
+    "year": 2026,
+    "hour": 17,
+    "week": 41
+   },
+   "id": 990000001,
+   "cached_votes_total": 0,
+   "identifications_most_agree": false,
+   "created_at_details": {
+    "date": "2026-10-08",
+    "day": 8,
+    "month": 10,
+    "year": 2026,
+    "hour": 22,
+    "week": 41
+   },
+   "species_guess": null,
+   "identifications_most_disagree": false,
+   "positional_accuracy": 42,
+   "comments_count": 0,
+   "site_id": 1,
+   "created_time_zone": "Europe/Rome",
+   "license_code": null,
+   "observed_time_zone": "Europe/Rome",
+   "public_positional_accuracy": 42,
+   "oauth_application_id": 843,
+   "created_at": "2026-10-08T22:45:23+02:00",
+   "description": null,
+   "time_zone_offset": "+01:00",
+   "observed_on": "2026-10-08",
+   "observed_on_string": "2026-10-08 17:46:27",
+   "updated_at": "2026-10-08T22:45:25+02:00",
+   "captive": true,
+   "taxon": {
+    "id": 159346,
+    "name": "Bougainvillea glabra",
+    "rank": "species",
+    "rank_level": 10,
+    "iconic_taxon_id": 47126,
+    "iconic_taxon_name": "Plantae",
+    "preferred_common_name": "lesser bougainvillea",
+    "is_active": true,
+    "default_photo": {
+     "id": 282403493,
+     "license_code": "cc-by-nc",
+     "attribution": "(c) Photographer 18, some rights reserved (CC-BY-NC)",
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/282403493/square.jpg",
+     "attribution_name": "Photographer 18"
+    }
+   },
+   "faves_count": 0,
+   "num_identification_agreements": 0,
+   "identification_disagreements_count": 0,
+   "map_scale": null,
+   "uri": "https://www.inaturalist.org/observations/406866610",
+   "community_taxon_id": null,
+   "geojson": null,
+   "owners_identification_from_vision": true,
+   "identifications_count": 0,
+   "obscured": false,
+   "num_identification_disagreements": 0,
+   "geoprivacy": "private",
+   "location": null,
+   "spam": false,
+   "user": {
+    "id": 900008,
+    "login": "observer_08",
+    "name": "Observer 08",
+    "icon": "https://static.inaturalist.org/attachments/users/icons/900008/medium.jpg",
+    "icon_url": "https://static.inaturalist.org/attachments/users/icons/900008/medium.jpg",
+    "observations_count": 165,
+    "orcid": null,
+    "created_at": "2020-07-05T23:05:33+00:00"
+   },
+   "mappable": true,
+   "identifications_some_agree": false,
+   "place_guess": "Via Tommaso Salvini, Rome, Lazio, IT",
+   "identifications": [
+    {
+     "id": 903194980,
+     "uuid": "cdfdcdaa-d62c-4fc2-9c79-11e4b1a2d1c1",
+     "created_at": "2026-10-08T20:45:23+00:00",
+     "body": null,
+     "category": "leading",
+     "current": true,
+     "user": {
+      "id": 900008,
+      "login": "observer_08",
+      "name": "Observer 08",
+      "icon": "https://static.inaturalist.org/attachments/users/icons/900008/medium.jpg",
+      "icon_url": "https://static.inaturalist.org/attachments/users/icons/900008/medium.jpg",
+      "observations_count": 165,
+      "orcid": null,
+      "created_at": "2020-07-05T23:05:33+00:00"
+     },
+     "taxon": {
+      "id": 159346,
+      "name": "Bougainvillea glabra",
+      "rank": "species",
+      "rank_level": 10,
+      "iconic_taxon_id": 47126,
+      "iconic_taxon_name": "Plantae",
+      "preferred_common_name": "lesser bougainvillea",
+      "is_active": true,
+      "default_photo": {
+       "id": 282403493,
+       "license_code": "cc-by-nc",
+       "attribution": "(c) Photographer 18, some rights reserved (CC-BY-NC)",
+       "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/282403493/square.jpg",
+       "attribution_name": "Photographer 18"
+      }
+     }
+    }
+   ],
+   "photos": [
+    {
+     "id": 747588600,
+     "license_code": null,
+     "original_dimensions": {
+      "width": 1536,
+      "height": 2048
+     },
+     "url": "https://static.inaturalist.org/photos/747588600/square.jpg",
+     "attribution": "(c) Observer 08, all rights reserved"
+    }
+   ]
+  },
+  {
+   "quality_grade": "needs_id",
+   "time_observed_at": "2026-05-20T14:23:15+02:00",
+   "taxon_geoprivacy": null,
+   "uuid": "00000000-0000-4000-8000-000000000002",
+   "observed_on_details": {
+    "date": "2026-05-20",
+    "day": 20,
+    "month": 5,
+    "year": 2026,
+    "hour": 14,
+    "week": 21
+   },
+   "id": 990000002,
+   "cached_votes_total": 0,
+   "identifications_most_agree": false,
+   "created_at_details": {
+    "date": "2026-10-09",
+    "day": 9,
+    "month": 10,
+    "year": 2026,
+    "hour": 3,
+    "week": 41
+   },
+   "species_guess": null,
+   "identifications_most_disagree": false,
+   "positional_accuracy": 19,
+   "comments_count": 0,
+   "site_id": 1,
+   "created_time_zone": "Europe/Rome",
+   "license_code": "cc-by-nc",
+   "observed_time_zone": "Europe/Rome",
+   "public_positional_accuracy": 19,
+   "oauth_application_id": 843,
+   "created_at": "2026-10-07T23:00:00+02:00",
+   "description": null,
+   "time_zone_offset": "+01:00",
+   "observed_on": "2026-05-20",
+   "observed_on_string": "2026-05-20 14:23:15",
+   "updated_at": "2026-10-09T03:43:33+02:00",
+   "captive": false,
+   "taxon": {
+    "id": 70045,
+    "name": "Acanthus mollis",
+    "rank": "species",
+    "rank_level": 10,
+    "iconic_taxon_id": 47126,
+    "iconic_taxon_name": "Plantae",
+    "preferred_common_name": "Bear's breeches",
+    "is_active": true,
+    "default_photo": {
+     "id": 30038,
+     "license_code": "cc-by-nd",
+     "attribution": "(c) Photographer 15, some rights reserved (CC-BY-ND)",
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/30038/square.jpg",
+     "attribution_name": "Photographer 15"
+    }
+   },
+   "faves_count": 0,
+   "num_identification_agreements": 0,
+   "identification_disagreements_count": 0,
+   "map_scale": null,
+   "uri": "https://www.inaturalist.org/observations/406918150",
+   "community_taxon_id": null,
+   "geojson": {
+    "type": "Point",
+    "coordinates": [
+     12.4654083333,
+     41.8811716667
+    ]
+   },
+   "owners_identification_from_vision": true,
+   "identifications_count": 0,
+   "obscured": false,
+   "num_identification_disagreements": 0,
+   "geoprivacy": null,
+   "location": "41.8811716667,12.4654083333",
+   "spam": false,
+   "user": {
+    "id": 900003,
+    "login": "observer_03",
+    "name": "Observer 03",
+    "icon": null,
+    "icon_url": null,
+    "observations_count": 112,
+    "orcid": null,
+    "created_at": "2025-05-23T17:13:56+00:00"
+   },
+   "mappable": true,
+   "identifications_some_agree": false,
+   "place_guess": "Via Francesco dall'Ongaro, Rome, Lazio, IT",
+   "identifications": [
+    {
+     "id": 903300678,
+     "uuid": "287f3819-01e4-42ac-94f5-4ec1eb3eddc3",
+     "created_at": "2026-10-09T01:43:32+00:00",
+     "body": null,
+     "category": "leading",
+     "current": true,
+     "user": {
+      "id": 900003,
+      "login": "observer_03",
+      "name": "Observer 03",
+      "icon": null,
+      "icon_url": null,
+      "observations_count": 112,
+      "orcid": null,
+      "created_at": "2025-05-23T17:13:56+00:00"
+     },
+     "taxon": {
+      "id": 70045,
+      "name": "Acanthus mollis",
+      "rank": "species",
+      "rank_level": 10,
+      "iconic_taxon_id": 47126,
+      "iconic_taxon_name": "Plantae",
+      "preferred_common_name": "Bear's breeches",
+      "is_active": true,
+      "default_photo": {
+       "id": 30038,
+       "license_code": "cc-by-nd",
+       "attribution": "(c) Photographer 15, some rights reserved (CC-BY-ND)",
+       "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/30038/square.jpg",
+       "attribution_name": "Photographer 15"
+      }
+     }
+    }
+   ],
+   "photos": [
+    {
+     "id": 747695360,
+     "license_code": "cc-by-nc",
+     "original_dimensions": {
+      "width": 1536,
+      "height": 2048
+     },
+     "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/747695360/square.jpg",
+     "attribution": "(c) Observer 03, some rights reserved (CC BY-NC)"
+    }
+   ]
+  }
+ ]
+}

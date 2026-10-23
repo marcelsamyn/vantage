@@ -1,0 +1,281 @@
+.sky {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+}
+
+.sky-stage {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+.sky-radar {
+  position: absolute;
+  inset: 24px;
+  display: grid;
+  place-items: center;
+}
+.sky-radar__frame {
+  position: relative;
+  /* The turning sweep is a square; its corners would otherwise widen the page as it rotates. */
+  overflow: clip;
+}
+.sky-radar__layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+/* The sweep: a wedge that brightens toward its leading edge, turned by the compositor. */
+.sky-radar__sweep {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: conic-gradient(from -60deg, rgba(130, 228, 255, 0) 0deg, rgba(130, 228, 255, 0.13) 60deg, rgba(130, 228, 255, 0) 60deg);
+  /* The period comes from SWEEP_MS in Radar.tsx, set on the element. */
+  animation: sky-sweep linear infinite var(--v-loop);
+}
+.sky-radar__sweep::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 0.5px);
+  top: 0;
+  width: 1px;
+  height: 50%;
+  background: rgba(130, 228, 255, 0.55);
+}
+@keyframes sky-sweep {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.sky-corner {
+  position: absolute;
+  pointer-events: none;
+}
+.sky-corner--tl {
+  top: var(--s5);
+  left: var(--s5);
+}
+.sky-corner--bl {
+  left: var(--s5);
+  bottom: var(--s4);
+  display: grid;
+  gap: 2px;
+  font-size: var(--t-micro);
+  letter-spacing: 0.06em;
+  color: var(--fog);
+}
+.sky-title {
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 72;
+  font-size: var(--t-h1);
+  font-weight: 800;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+.sky-meta {
+  margin-top: 8px;
+  font-size: var(--t-micro);
+  color: var(--fog);
+  letter-spacing: 0.06em;
+}
+
+.sky-orientation {
+  pointer-events: auto;
+  margin-top: var(--s3);
+  max-width: 280px;
+}
+.sky-orientation p {
+  margin-top: var(--s1);
+  font-size: var(--t-micro);
+  line-height: 1.5;
+  color: var(--fog);
+}
+.sky-sight {
+  position: absolute;
+  inset: 190px var(--s5) 80px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: linear-gradient(transparent 49.8%, var(--line) 50%, transparent 50.2%), linear-gradient(90deg, transparent 49.8%, var(--line) 50%, transparent 50.2%);
+}
+.sky-sight__reticle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  color: var(--ice);
+}
+.sky-sight__target {
+  position: absolute;
+  translate: -50% -50%;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--bone);
+  font: inherit;
+  font-size: var(--t-small);
+  text-align: left;
+  cursor: pointer;
+}
+.sky-sight__label {
+  position: absolute;
+  top: calc(50% + 12px);
+  translate: -50% 0;
+  width: max-content;
+  max-width: 160px;
+  padding: var(--s1) var(--s2);
+  border: 1px solid var(--line);
+  background: var(--void);
+  overflow-wrap: anywhere;
+}
+.sky-sight__label[data-above] {
+  top: auto;
+  bottom: calc(50% + 12px);
+}
+.sky-sight__target[data-selected] {
+  border-color: var(--ice);
+}
+.sky-sight__target:disabled {
+  cursor: default;
+}
+.sky-sight__reading {
+  position: absolute;
+  top: var(--s2);
+  left: var(--s2);
+  color: var(--ice);
+  font-size: var(--t-small);
+  pointer-events: none;
+}
+.sky-sight__empty {
+  position: absolute;
+  bottom: var(--s3);
+  left: var(--s3);
+  right: var(--s3);
+  color: var(--fog);
+  font-size: var(--t-small);
+  text-align: center;
+  pointer-events: none;
+}
+
+.sky-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  padding: var(--s4);
+  overflow: auto;
+  overscroll-behavior: contain;
+  box-shadow: inset 1px 0 0 var(--line);
+}
+
+.sky-list {
+  max-height: 420px;
+  overflow: auto;
+}
+.sky-row {
+  min-height: 46px;
+}
+.sky-row:disabled {
+  cursor: default;
+}
+.sky-look {
+  font-size: var(--t-micro);
+  color: var(--fog);
+  white-space: nowrap;
+}
+.sky-swatch {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.sky-swatch--ice {
+  background: var(--ice);
+}
+.sky-swatch--sodium {
+  background: var(--sodium);
+}
+.sky-swatch--alarm {
+  background: var(--alarm);
+}
+.sky-swatch--mint {
+  background: var(--mint);
+}
+.sky-swatch--bone {
+  background: var(--bone);
+}
+
+@media (max-width: 900px) {
+  .sky {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(360px, 70dvh) auto;
+    overflow: auto;
+  }
+  .sky-side {
+    overflow: visible;
+    box-shadow: inset 0 1px 0 var(--line);
+  }
+  .sky-title {
+    font-size: 36px;
+  }
+}
+
+.sky-layer__desc {
+  display: none;
+}
+@media (hover: none) {
+  .sky-layer__desc {
+    display: block;
+    margin-top: 2px;
+    font-size: var(--t-small);
+    line-height: 1.4;
+    color: var(--fog);
+  }
+  .sky-side .v-toggle {
+    padding-block: var(--s2);
+  }
+}
+
+/* Phones: the title sits above a full-width radar instead of over its corner. */
+@media (max-width: 720px) {
+  .sky {
+    grid-template-rows: auto auto;
+  }
+  /* min-height: auto lets the row grow to the title and radar, so the panels below never slide under them. */
+  .sky-stage {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s3);
+    min-height: auto;
+    padding: var(--s5) var(--s4) var(--s4);
+  }
+  .sky-corner {
+    position: static;
+  }
+  .sky-corner--tl {
+    order: -1;
+  }
+  .sky-radar {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+  .sky-sight {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 400px;
+    flex: none;
+  }
+}

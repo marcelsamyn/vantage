@@ -1,0 +1,18 @@
+services:
+  vantage:
+    image: ${VANTAGE_IMAGE:-ghcr.io/marcelsamyn/vantage:latest}
+    build: .
+    environment:
+      VANTAGE_LOCAL: "0"
+      VANTAGE_ORIGIN: ${VANTAGE_ORIGIN:-http://localhost:4747}
+    ports:
+      - "${VANTAGE_PORT:-4747}:4747"
+    volumes:
+      - vantage-cache:/app/.cache
+      - vantage-data:/app/.data
+    restart: unless-stopped
+    stop_grace_period: 20s
+
+volumes:
+  vantage-cache:
+  vantage-data:

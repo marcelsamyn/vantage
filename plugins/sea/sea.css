@@ -1,0 +1,137 @@
+.sea-profile {
+  display: grid;
+  gap: var(--s3);
+}
+.sea-profile__verdict {
+  margin: 0;
+  font-size: var(--t-small);
+  line-height: 1.55;
+  color: var(--bone);
+}
+
+.sea-chart {
+  display: grid;
+  gap: var(--s2);
+  margin: 0;
+}
+.sea-chart__readout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s1) var(--s3);
+  min-height: 18px;
+  font-family: var(--font-data);
+  font-size: var(--t-small);
+  color: var(--bone);
+}
+.sea-chart__muted {
+  color: var(--fog);
+}
+.sea-chart__svg {
+  display: block;
+  height: auto;
+  overflow: visible;
+  touch-action: pan-y;
+}
+.sea-chart__grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.sea-chart__axis,
+.sea-chart__label {
+  font-family: var(--font-data);
+  font-size: 8.5px;
+  fill: var(--ash);
+  letter-spacing: 0.04em;
+  /* A dark outline keeps labels readable where the curve runs behind them. */
+  paint-order: stroke;
+  stroke: var(--void);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+.sea-chart__label {
+  fill: var(--fog);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.sea-chart__level,
+.sea-chart__tide,
+.sea-chart__flag {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.sea-chart__level {
+  stroke: var(--sodium);
+  stroke-width: 1.5;
+}
+.sea-chart__tide {
+  stroke: var(--fog);
+  stroke-width: 1;
+}
+.sea-chart__flag {
+  stroke-width: 1.6;
+}
+.sea-chart__flag--restless {
+  stroke: var(--sodium);
+}
+.sea-chart__flag--unusual {
+  stroke: var(--alarm);
+}
+.sea-chart__band {
+  fill: rgba(226, 234, 240, 0.06);
+}
+.sea-chart__limit {
+  stroke: var(--line-strong);
+  stroke-width: 1;
+  stroke-dasharray: 2 3;
+}
+.sea-chart__now {
+  fill: var(--sodium);
+}
+.sea-chart__ping {
+  fill: none;
+  stroke: var(--sodium);
+  stroke-width: 1;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: sea-ping 2.2s ease-out infinite var(--v-loop);
+}
+.sea-chart__point {
+  fill: var(--fog);
+  opacity: 0.55;
+}
+.sea-chart__float {
+  fill: var(--ice);
+  filter: drop-shadow(0 0 4px var(--ice));
+}
+.sea-chart__cursor {
+  stroke: var(--line-bright);
+  stroke-width: 1;
+}
+.sea-chart__cursor-dot {
+  fill: var(--ice);
+}
+.sea-chart__caption {
+  margin: 0;
+  font-size: var(--t-micro);
+  line-height: 1.5;
+}
+
+@keyframes sea-ping {
+  from {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sea-chart__ping {
+    animation: none;
+    opacity: 0;
+  }
+}

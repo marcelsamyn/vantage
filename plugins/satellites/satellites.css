@@ -1,0 +1,82 @@
+.satellites-tile {
+  display: flex;
+  align-items: center;
+  gap: var(--s5);
+  width: 100%;
+  padding: 6px;
+  margin: -6px;
+  border-radius: var(--radius);
+  text-align: left;
+  transition: background-color var(--fast);
+}
+.satellites-tile:hover {
+  background: rgba(226, 234, 240, 0.04);
+}
+.satellites-tile__text {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+.satellites-dome {
+  fill: rgba(130, 228, 255, 0.03);
+  stroke: var(--line-strong);
+}
+.satellites-dome--inner {
+  fill: none;
+  stroke: var(--line);
+  stroke-dasharray: 2 3;
+}
+.satellites-dome__n {
+  fill: var(--fog);
+  font-family: var(--font-data);
+  font-size: 8px;
+  text-anchor: middle;
+}
+.satellites-arc {
+  fill: none;
+  stroke: var(--ice);
+  stroke-width: 1.5;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: satellites-draw 1.6s var(--ease-out) 0.2s forwards;
+}
+.satellites-arc__start {
+  fill: var(--ice);
+}
+@keyframes satellites-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.satellites-passes {
+  display: grid;
+  gap: 2px;
+  margin: -8px;
+}
+.satellites-pass {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px var(--s3);
+  width: 100%;
+  padding: 8px;
+  border-radius: var(--radius);
+  text-align: left;
+  transition: background-color var(--fast);
+}
+.satellites-pass:hover {
+  background: rgba(226, 234, 240, 0.04);
+}
+.satellites-pass__name {
+  font-weight: 500;
+}
+.satellites-pass__when,
+.satellites-pass__path {
+  font-size: var(--t-micro);
+  color: var(--fog);
+}
+.satellites-pass .v-tag {
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: end;
+}

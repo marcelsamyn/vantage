@@ -1,0 +1,685 @@
+/* Every class here starts with "webcams-" (enforced by bun run check).
+   Motion on the wall uses only transform and opacity, so it stays on the compositor. */
+
+/* ── Hero: the place, and where to look next ─────────────────────── */
+.webcams-near,
+.webcams-remote,
+.webcams-orbit {
+  display: grid;
+  gap: var(--s4);
+}
+.webcams-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 520px);
+  align-items: end;
+  gap: var(--s5);
+}
+.webcams-hero__titles {
+  min-width: 0;
+}
+.webcams-hero__place {
+  margin-top: var(--s2);
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 72;
+  font-size: clamp(40px, 4.6vw, 64px);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+.webcams-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+.webcams-hero__sub {
+  margin-top: var(--s2);
+  color: var(--fog);
+  font-size: var(--t-small);
+}
+.webcams-hero__tools {
+  display: grid;
+  gap: var(--s2);
+}
+.webcams-hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.webcams-search {
+  position: relative;
+}
+.webcams-search__results {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 320px;
+  overflow: auto;
+}
+.webcams-search__message {
+  padding: var(--s3) var(--s4);
+  color: var(--fog);
+  font-size: var(--t-small);
+}
+
+.webcams-moved {
+  display: flex;
+  gap: var(--s3);
+  padding: var(--s3) var(--s4);
+  border-radius: var(--radius);
+  background: var(--sodium-dim);
+  box-shadow: inset 2px 0 0 var(--sodium);
+  color: var(--sodium);
+}
+.webcams-moved svg {
+  flex: none;
+  margin-top: 2px;
+}
+.webcams-moved__title {
+  color: var(--bone);
+  font-size: var(--t-lead);
+}
+.webcams-moved__sub {
+  margin-top: 2px;
+  color: var(--fog);
+  font-size: var(--t-small);
+}
+
+/* ── Bars above the Remote and Orbit galleries ───────────────────── */
+.webcams-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s3) var(--s5);
+}
+.webcams-bar__count {
+  margin-top: var(--s1);
+  color: var(--fog);
+  font-size: var(--t-small);
+}
+.webcams-bar__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s3);
+}
+.webcams-bar__controls .v-toggle {
+  width: auto;
+  min-width: 190px;
+}
+.webcams-section {
+  display: grid;
+  gap: var(--s3);
+}
+.webcams-section__title {
+  color: var(--fog);
+}
+.webcams-more {
+  display: flex;
+  justify-content: center;
+}
+.webcams-credit {
+  color: var(--ash);
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  letter-spacing: 0.04em;
+}
+
+/* ── The wall ────────────────────────────────────────────────────── */
+.webcams-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s3);
+}
+.webcams-grid--square {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 1100px) {
+  .webcams-grid--square {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 860px) {
+  .webcams-grid,
+  .webcams-grid--square {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .webcams-hero {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+}
+@media (max-width: 560px) {
+  .webcams-grid,
+  .webcams-grid--square {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.webcams-tile {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--raise);
+  box-shadow: inset 0 0 0 1px var(--line);
+  color: var(--bone);
+  text-align: left;
+  cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: var(--fast);
+}
+.webcams-tile[data-square] {
+  aspect-ratio: 1;
+  background: var(--void);
+}
+.webcams-tile:hover {
+  box-shadow: inset 0 0 0 1px var(--line-bright);
+}
+.webcams-tile[data-selected] {
+  box-shadow: inset 0 0 0 1px var(--ice);
+}
+.webcams-tile:focus-visible {
+  outline: 2px solid var(--ice);
+  outline-offset: 2px;
+}
+/* Survey-corner ticks, like the panels. */
+.webcams-tile::before {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  inset: 4px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--line-bright), var(--line-bright)) top left / 8px 1px no-repeat,
+    linear-gradient(var(--line-bright), var(--line-bright)) top left / 1px 8px no-repeat,
+    linear-gradient(var(--line-bright), var(--line-bright)) top right / 8px 1px no-repeat,
+    linear-gradient(var(--line-bright), var(--line-bright)) top right / 1px 8px no-repeat,
+    linear-gradient(var(--line-bright), var(--line-bright)) bottom left / 8px 1px no-repeat,
+    linear-gradient(var(--line-bright), var(--line-bright)) bottom left / 1px 8px no-repeat,
+    linear-gradient(var(--line-bright), var(--line-bright)) bottom right / 8px 1px no-repeat,
+    linear-gradient(var(--line-bright), var(--line-bright)) bottom right / 1px 8px no-repeat;
+}
+
+/* The picture, its scan lines, and the sweep that marks a new frame. */
+.webcams-feed {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--raise);
+}
+.webcams-tile[data-square] .webcams-feed {
+  background: var(--void);
+}
+.webcams-feed::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.16) 0 1px, transparent 1px 3px);
+}
+.webcams-feed__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.82) contrast(1.04);
+}
+.webcams-tile[data-square] .webcams-feed__img,
+.webcams-focus__media[data-square] .webcams-feed__img {
+  object-fit: contain;
+  filter: none;
+}
+.webcams-feed__img--new {
+  animation: webcams-arrive 420ms var(--ease-out) both;
+}
+.webcams-feed__wipe {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28%;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, rgba(230, 236, 240, 0.12) 72%, rgba(230, 236, 240, 0.42) 99%, transparent 100%);
+  transform: translateY(-100%);
+  animation: webcams-wipe 760ms var(--ease-out) both;
+}
+@keyframes webcams-arrive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes webcams-wipe {
+  from {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(360%);
+  }
+}
+/* Ocean buoys: six views in one strip, shown one at a time. */
+.webcams-feed[data-strip] .webcams-feed__img {
+  /* 9% larger on both axes: each view fills the tile and the baked-in caption strip falls off the bottom. */
+  inset: auto;
+  top: 0;
+  left: -4.5%;
+  width: calc(100% * var(--frames) * 1.09);
+  height: 109%;
+  max-width: none;
+  object-position: top;
+  transform: translateX(calc(var(--view) * -100% / var(--frames)));
+  transition-property: transform;
+  transition-duration: 700ms;
+  transition-timing-function: var(--ease-in-out);
+}
+.webcams-feed__view {
+  position: absolute;
+  z-index: 3;
+  top: 8px;
+  right: 8px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  background: rgba(5, 7, 10, 0.7);
+  color: var(--fog);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.webcams-feed__error {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  padding: var(--s4);
+  color: var(--fog);
+  font-size: var(--t-small);
+  text-align: center;
+}
+.webcams-feed__wait {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 30%, rgba(230, 236, 240, 0.05) 50%, transparent 70%);
+  transform: translateX(-100%);
+  animation: webcams-wait 1.6s linear infinite var(--v-loop);
+}
+@keyframes webcams-wait {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.webcams-live {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+  background: var(--void);
+  transition-property: opacity;
+  transition-duration: var(--med);
+}
+.webcams-live--on {
+  opacity: 1;
+}
+.webcams-live video,
+.webcams-live img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay: camera number, REC, notice, and the mono caption. */
+.webcams-tile__tag,
+.webcams-tile__rec {
+  position: absolute;
+  z-index: 5;
+  top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  background: rgba(5, 7, 10, 0.7);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+.webcams-tile__tag {
+  left: 8px;
+  color: var(--bone);
+}
+.webcams-tile__rec {
+  right: 8px;
+  color: var(--alarm);
+}
+.webcams-tile__rec i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--alarm);
+  animation: webcams-rec 1.4s steps(2, jump-none) infinite var(--v-loop);
+}
+@keyframes webcams-rec {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.25;
+  }
+}
+.webcams-tile__note {
+  position: absolute;
+  z-index: 5;
+  top: 34px;
+  left: 8px;
+  max-width: calc(100% - 16px);
+  padding: 3px 7px;
+  border-radius: 2px;
+  background: rgba(5, 7, 10, 0.82);
+  color: var(--fog);
+  font-family: var(--font-data);
+  font-size: 10.5px;
+  line-height: 1.35;
+}
+.webcams-tile__meta {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: var(--s2);
+  padding: 26px 10px 8px;
+  background: linear-gradient(to top, rgba(5, 7, 10, 0.9), transparent);
+}
+.webcams-tile__lines {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+}
+.webcams-tile__name {
+  overflow: hidden;
+  font-size: 12.5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.webcams-tile__sub {
+  overflow: hidden;
+  color: var(--fog);
+  font-size: 10.5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.webcams-tile__age {
+  flex: none;
+  color: var(--fog);
+  font-size: 10.5px;
+}
+.webcams-tile__sun {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--fog);
+}
+.webcams-tile__sun[data-state="day"] {
+  color: var(--sodium);
+}
+
+/* ── The large view ──────────────────────────────────────────────── */
+.webcams-focus {
+  position: fixed;
+  z-index: 33;
+  top: var(--bar);
+  right: 0;
+  bottom: calc(var(--ticker) + var(--tabbar));
+  left: var(--rail);
+  display: grid;
+  place-items: center;
+  padding: var(--s4);
+}
+@media (min-width: 1100px) {
+  .webcams-focus[data-profiled] {
+    padding-right: 372px;
+  }
+}
+@media (max-width: 720px) {
+  .webcams-focus {
+    left: 0;
+    padding: var(--s2);
+  }
+}
+.webcams-focus__scrim {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(5, 7, 10, 0.74);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: default;
+}
+.webcams-focus__panel {
+  outline: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  width: min(1040px, 100%);
+  max-height: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: var(--s4);
+}
+.webcams-focus__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s3);
+}
+.webcams-focus__titles {
+  flex: 1;
+  min-width: 220px;
+}
+.webcams-focus__title {
+  margin-top: var(--s1);
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 72;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+.webcams-focus__subtitle {
+  margin-top: var(--s1);
+  color: var(--fog);
+  font-size: var(--t-small);
+}
+.webcams-focus__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--s1);
+}
+.webcams-focus__count {
+  min-width: 52px;
+  color: var(--fog);
+  font-size: var(--t-small);
+  text-align: center;
+}
+.webcams-focus__media {
+  position: relative;
+  flex: none;
+  aspect-ratio: 16 / 9;
+  max-height: calc(100dvh - 330px);
+  margin-inline: auto;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--void);
+}
+.webcams-focus__media[data-square] {
+  aspect-ratio: 1;
+  width: auto;
+  max-width: 100%;
+  height: clamp(240px, calc(100dvh - 360px), 760px);
+}
+.webcams-focus__feed {
+  position: absolute;
+  inset: 0;
+}
+.webcams-focus__rec {
+  top: 8px;
+}
+.webcams-focus__body {
+  display: grid;
+  gap: var(--s2);
+}
+.webcams-focus__about {
+  max-width: 78ch;
+  color: var(--fog);
+  font-size: var(--t-small);
+  line-height: 1.5;
+}
+.webcams-focus__license {
+  color: var(--ash);
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  letter-spacing: 0.04em;
+}
+
+.webcams-focus__license a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.webcams-focus__license a:hover {
+  color: var(--ice);
+}
+
+/* ── Inside the Profiler ─────────────────────────────────────────── */
+.webcams-profile__mode {
+  margin-bottom: var(--s2);
+}
+.webcams-profile__media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--raise);
+}
+.webcams-profile__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* A public camera next to a surveillance camera, inside that camera's profile. */
+.webcams-close {
+  display: grid;
+  gap: var(--s2);
+  padding-top: var(--s3);
+  box-shadow: inset 0 1px 0 var(--line);
+}
+.webcams-close > .v-eyebrow {
+  margin: 0;
+}
+.webcams-close__meta {
+  margin: 0;
+  font-size: var(--t-small);
+  color: var(--fog);
+}
+
+/* ── Pictures on the map ─────────────────────────────────────────── */
+
+/* MapLibre places the marker element with `transform`, so hover and selection scale the inner button. */
+.webcams-pin {
+  width: 60px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+}
+.webcams-pin:hover,
+.webcams-pin:focus-within {
+  z-index: 2;
+}
+.webcams-pin__body {
+  position: relative;
+  width: 52px;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border: 1.5px solid var(--ice);
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--raise);
+  box-shadow: 0 0 0 1px var(--void), 0 4px 12px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform var(--fast) var(--ease-out);
+}
+.webcams-pin__body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.16) 0 1px, transparent 1px 3px);
+}
+.webcams-pin__body img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+/* Hover enlarges the picture enough to read it without opening the camera. */
+.webcams-pin__body:hover,
+.webcams-pin__body:focus-visible {
+  transform: scale(1.8);
+}
+.webcams-pin__body--selected {
+  border-width: 2px;
+  transform: scale(1.3);
+}
+.webcams-pin__body--blank {
+  border-color: var(--ash);
+}
+.webcams-pin__body--blank img {
+  visibility: hidden;
+}
+.webcams-pin__rec {
+  position: absolute;
+  z-index: 1;
+  top: 3px;
+  right: 3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--alarm);
+  box-shadow: 0 0 0 1px var(--void);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .webcams-feed__img--new,
+  .webcams-feed__wipe,
+  .webcams-feed__wait,
+  .webcams-tile__rec i {
+    animation: none;
+  }
+  .webcams-feed[data-strip] .webcams-feed__img {
+    transition: none;
+  }
+}

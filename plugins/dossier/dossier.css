@@ -1,0 +1,285 @@
+/* ── Place profile sections ───────────────────────────────────── */
+.dossier-fact {
+  display: grid;
+  gap: var(--s2);
+  padding-top: var(--s3);
+  box-shadow: inset 0 1px 0 var(--line);
+}
+.dossier-fact + .dossier-fact {
+  margin-top: var(--s3);
+}
+.dossier-fact__title {
+  margin: 0;
+}
+.dossier-fact__source {
+  font-family: var(--font-data);
+  font-size: 10px;
+  color: var(--ash);
+}
+
+.dossier-list {
+  display: grid;
+  gap: var(--s3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dossier-item {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.dossier-item__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  font-size: var(--t-body);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--bone);
+  overflow-wrap: anywhere;
+}
+.dossier-item__title a {
+  display: inline;
+  color: inherit;
+  text-decoration: none;
+}
+a.dossier-item__title:hover,
+.dossier-item__title a:hover {
+  color: var(--ice);
+}
+.dossier-item__title svg {
+  display: inline;
+  vertical-align: -1px;
+  color: var(--ash);
+}
+.dossier-item__meta {
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: var(--fog);
+  overflow-wrap: anywhere;
+}
+.dossier-item__part + .dossier-item__part::before {
+  content: "·";
+  margin: 0 0.7em;
+  color: var(--ash);
+}
+.dossier-item__note {
+  margin: 2px 0 0;
+  font-size: var(--t-small);
+  line-height: 1.5;
+  color: var(--fog);
+}
+.dossier-note {
+  margin: 0;
+  font-size: var(--t-small);
+  color: var(--fog);
+}
+
+/* Street energy: the street's bar against a tick for the municipality average. */
+.dossier-energy__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s3);
+  font-size: var(--t-small);
+  color: var(--bone);
+}
+.dossier-energy__diff {
+  margin-left: 6px;
+  color: var(--fog);
+}
+.dossier-energy__track {
+  position: relative;
+  height: 5px;
+  margin: 4px 0 2px;
+  background: var(--line);
+}
+.dossier-energy__fill {
+  height: 100%;
+  background: var(--ice);
+  transform-origin: left;
+  animation: dossier-grow var(--slow) var(--ease-out) both;
+}
+.dossier-energy__mark {
+  position: absolute;
+  top: -3px;
+  width: 1px;
+  height: 11px;
+  background: var(--bone);
+}
+@keyframes dossier-grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dossier-energy__fill {
+    animation: none;
+  }
+}
+
+/* Wi-Fi language mix: one bar, parts sized by share. */
+.dossier-mix {
+  display: flex;
+  gap: 2px;
+  height: 6px;
+  margin-top: var(--s2);
+}
+.dossier-mix__part {
+  flex-basis: 0;
+  min-width: 3px;
+  background: var(--sodium);
+}
+.dossier-mix__part:nth-child(2) {
+  opacity: 0.65;
+}
+.dossier-mix__part:nth-child(3) {
+  opacity: 0.4;
+}
+.dossier-mix__part:nth-child(n + 4) {
+  opacity: 0.25;
+}
+
+/* ── Did-you-know tile ─────────────────────────────────────────── */
+.dossier-know {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: var(--s3);
+  min-height: 150px;
+}
+.dossier-know__fact {
+  display: grid;
+  align-content: start;
+  gap: var(--s2);
+}
+.dossier-know__text {
+  margin: 0;
+  font-size: var(--t-lead);
+  line-height: 1.45;
+  color: var(--bone);
+  text-wrap: pretty;
+  overflow-wrap: anywhere;
+}
+.dossier-know__source {
+  font-family: var(--font-data);
+  font-size: 10px;
+  color: var(--ash);
+}
+.dossier-know__dots {
+  display: flex;
+  gap: 6px;
+}
+.dossier-know__dot {
+  width: 14px;
+  height: 2px;
+  background: var(--line-strong);
+  transition: background-color var(--med) var(--ease-out);
+}
+.dossier-know__dot--on {
+  background: var(--sodium);
+}
+
+/* ── Public tenders ───────────────────────────────────────────── */
+.dossier-tender__count {
+  margin: 0;
+  font-size: var(--t-small);
+  line-height: 1.5;
+  color: var(--fog);
+}
+.dossier-tender__n {
+  color: var(--bone);
+}
+.dossier-tender__title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: var(--t-small);
+}
+.dossier-tender__buyer {
+  font-size: var(--t-small);
+  color: var(--sodium);
+  overflow-wrap: anywhere;
+}
+.dossier-tender__value {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--s3);
+}
+.dossier-tender__bar,
+.dossier-buying__bar {
+  position: relative;
+  height: 4px;
+  background: var(--line);
+}
+.dossier-tender__fill,
+.dossier-buying__fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--sodium);
+  transform-origin: left;
+  animation: dossier-grow var(--slow) var(--ease-out) both;
+}
+.dossier-tender__sum {
+  font-size: var(--t-small);
+  color: var(--bone);
+}
+
+/* ── What your city is buying (tile) ──────────────────────────── */
+.dossier-buying {
+  display: grid;
+  gap: var(--s3);
+}
+.dossier-buying__list {
+  display: grid;
+  gap: var(--s3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dossier-buying__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2px var(--s3);
+  padding: 2px 0;
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--fast) var(--ease-out);
+}
+.dossier-buying__row:hover .dossier-buying__buyer {
+  color: var(--ice);
+}
+.dossier-buying__buyer {
+  overflow: hidden;
+  font-size: var(--t-small);
+  color: var(--bone);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dossier-buying__sum {
+  font-size: var(--t-small);
+  color: var(--sodium);
+}
+.dossier-buying__bar {
+  grid-column: 1 / -1;
+}
+.dossier-buying__what {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  font-family: var(--font-data);
+  font-size: var(--t-micro);
+  color: var(--fog);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dossier-tender__fill,
+  .dossier-buying__fill {
+    animation: none;
+  }
+}
