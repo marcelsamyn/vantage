@@ -86,6 +86,12 @@ test("an unsupported area returns empty without asking any upstream", async () =
   expect(records).toEqual({ source: "portugal", fetchedAt: now, incidents: [] });
 });
 
+test("Seattle skips a call it has not geocoded yet and keeps the rest of the feed", () => {
+  const { latitude: _lat, longitude: _lon, report_location: _at, ...unplaced } = seattle[0]!;
+  const records = parseIncidents("seattle", [{ ...unplaced, incident_number: "F-UNPLACED" }, ...seattle], now);
+  expect(records.some((r) => r.id.includes("F-UNPLACED"))).toBe(false);
+  expect(records).toHaveLength(parseIncidents("seattle", seattle, now).length);
+});
 test("Seattle rejects blank and null coordinates instead of drawing them at zero", () => {
   expect(() => parseIncidents("seattle", [{ ...seattle[0], latitude: null }])).toThrow();
   expect(() => parseIncidents("seattle", [{ ...seattle[0], longitude: "" }])).toThrow();

@@ -17,7 +17,7 @@ const LocalDate = z.string().regex(/^\d{2}\/\d{2}\/\d{4} \d{2}:\d{2}:\d{2}$/);
 const Victorian = z.object({ results: z.array(z.object({ incidentNo: z.union([z.string(), z.number()]), latitude: z.number().min(-90).max(90), longitude: z.number().min(-180).max(180), lastUpdatedDt: Epoch, originDateTime: LocalDate, lastUpdateDateTime: LocalDate, incidentType: z.string(), incidentStatus: z.string(), incidentLocation: z.string(), name: z.string(), category1: z.string(), category2: z.string(), territory: Text, agency: Text, incidentSize: Text, municipality: Text, resourceCount: Count })) });
 const NewSouthWales = z.object({ type: z.literal("FeatureCollection"), features: z.array(z.object({ geometry: Geometry.nullable(), properties: z.object({ title: z.string(), guid: z.string(), link: z.string(), category: z.string(), description: z.string(), pubDate: z.string() }) })) });
 const SeattleCoordinate = z.union([z.number(), z.string().regex(/^-?\d+(?:\.\d+)?$/).transform(Number)]);
-const Seattle = z.array(z.object({ incident_number: z.string(), type: z.string(), address: z.string(), datetime: z.string().regex(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?$/), latitude: SeattleCoordinate.pipe(z.number().min(-90).max(90)), longitude: SeattleCoordinate.pipe(z.number().min(-180).max(180)), report_location: Point.optional() }));
+const Seattle = z.array(z.object({ incident_number: z.string(), type: z.string(), address: z.string(), datetime: z.string().regex(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?$/), latitude: SeattleCoordinate.pipe(z.number().min(-90).max(90)).optional(), longitude: SeattleCoordinate.pipe(z.number().min(-180).max(180)).optional(), report_location: Point.optional() }));
 
 const localFormatters = new Map<string, Intl.DateTimeFormat>();
 
@@ -84,7 +84,11 @@ export function parseIncidents(source: IncidentSource, raw: unknown, now = Date.
     case "seattle": return parseUpstream("Seattle Fire 911", Seattle, raw).flatMap((p): Incident[] => {
       const startedAt = localTime(p.datetime, "America/Los_Angeles");
       if (startedAt < now - 48 * 3600000 || startedAt > now + 60000) return [];
-      return [{ ...base(source, p.incident_number), title: p.type, category: p.type, status: "Dispatch record · closure not published", location: p.address, lat: p.latitude, lon: p.longitude, startedAt, updatedAt: null, alert: false, rows: [] }];
+      // Seattle publishes a call before it is geocoded, leaving out every position field; the map cannot place it yet.
+      const lat = p.latitude ?? p.report_location?.coordinates[1];
+      const lon = p.longitude ?? p.report_location?.coordinates[0];
+      if (lat === undefined || lon === undefined) return [];
+      return [{ ...base(source, p.incident_number), title: p.type, category: p.type, status: "Dispatch record · closure not published", location: p.address, lat, lon, startedAt, updatedAt: null, alert: false, rows: [] }];
     });
   }
 }
